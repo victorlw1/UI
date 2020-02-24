@@ -16,5 +16,25 @@ namespace WindowsFormsApp3
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 新建ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 家庭树ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
