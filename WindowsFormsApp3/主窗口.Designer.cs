@@ -30,18 +30,18 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.新建ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.新建成员ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.导入ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.导出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.退出ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.工具ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.操作ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.新建家庭成员ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.删除家庭成员ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.按关系删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.按姓名删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.修改家庭成员信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.按关系删除ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.按姓名删除ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.查询家庭成员信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.修改家庭成员ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.按关系修改ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.按姓名修改ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.查询家庭成员ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.按亲戚关系查找ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.按基本信息查找ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.统计ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,7 +62,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.新建ToolStripMenuItem,
-            this.工具ToolStripMenuItem,
+            this.操作ToolStripMenuItem,
             this.统计ToolStripMenuItem,
             this.视图ToolStripMenuItem,
             this.帮助ToolStripMenuItem});
@@ -75,49 +75,49 @@
             // 新建ToolStripMenuItem
             // 
             this.新建ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.新建成员ToolStripMenuItem,
-            this.退出ToolStripMenuItem,
-            this.退出ToolStripMenuItem1});
+            this.导入ToolStripMenuItem,
+            this.导出ToolStripMenuItem,
+            this.退出ToolStripMenuItem});
             this.新建ToolStripMenuItem.Name = "新建ToolStripMenuItem";
             this.新建ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.新建ToolStripMenuItem.Text = "文件";
             // 
-            // 新建成员ToolStripMenuItem
+            // 导入ToolStripMenuItem
             // 
-            this.新建成员ToolStripMenuItem.Name = "新建成员ToolStripMenuItem";
-            this.新建成员ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
-            this.新建成员ToolStripMenuItem.Text = "导入";
-            this.新建成员ToolStripMenuItem.Click += new System.EventHandler(this.新建成员ToolStripMenuItem_Click);
+            this.导入ToolStripMenuItem.Name = "导入ToolStripMenuItem";
+            this.导入ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.导入ToolStripMenuItem.Text = "导入";
+            this.导入ToolStripMenuItem.Click += new System.EventHandler(this.新建成员ToolStripMenuItem_Click);
+            // 
+            // 导出ToolStripMenuItem
+            // 
+            this.导出ToolStripMenuItem.Name = "导出ToolStripMenuItem";
+            this.导出ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.导出ToolStripMenuItem.Text = "导出";
+            this.导出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
-            this.退出ToolStripMenuItem.Text = "导出";
-            this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.退出ToolStripMenuItem.Text = "退出";
+            this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem1_Click);
             // 
-            // 退出ToolStripMenuItem1
+            // 操作ToolStripMenuItem
             // 
-            this.退出ToolStripMenuItem1.Name = "退出ToolStripMenuItem1";
-            this.退出ToolStripMenuItem1.Size = new System.Drawing.Size(122, 26);
-            this.退出ToolStripMenuItem1.Text = "退出";
-            this.退出ToolStripMenuItem1.Click += new System.EventHandler(this.退出ToolStripMenuItem1_Click);
-            // 
-            // 工具ToolStripMenuItem
-            // 
-            this.工具ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.操作ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.新建家庭成员ToolStripMenuItem,
             this.删除家庭成员ToolStripMenuItem,
-            this.修改家庭成员信息ToolStripMenuItem,
-            this.查询家庭成员信息ToolStripMenuItem});
-            this.工具ToolStripMenuItem.Name = "工具ToolStripMenuItem";
-            this.工具ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
-            this.工具ToolStripMenuItem.Text = "工具";
+            this.修改家庭成员ToolStripMenuItem,
+            this.查询家庭成员ToolStripMenuItem});
+            this.操作ToolStripMenuItem.Name = "操作ToolStripMenuItem";
+            this.操作ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.操作ToolStripMenuItem.Text = "操作";
             // 
             // 新建家庭成员ToolStripMenuItem
             // 
             this.新建家庭成员ToolStripMenuItem.Name = "新建家庭成员ToolStripMenuItem";
-            this.新建家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.新建家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.新建家庭成员ToolStripMenuItem.Text = "新建家庭成员信息";
             this.新建家庭成员ToolStripMenuItem.Click += new System.EventHandler(this.新建家庭成员ToolStripMenuItem_Click);
             // 
@@ -127,67 +127,67 @@
             this.按关系删除ToolStripMenuItem,
             this.按姓名删除ToolStripMenuItem});
             this.删除家庭成员ToolStripMenuItem.Name = "删除家庭成员ToolStripMenuItem";
-            this.删除家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.删除家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.删除家庭成员ToolStripMenuItem.Text = "删除家庭成员信息";
             this.删除家庭成员ToolStripMenuItem.Click += new System.EventHandler(this.删除家庭成员ToolStripMenuItem_Click);
             // 
             // 按关系删除ToolStripMenuItem
             // 
             this.按关系删除ToolStripMenuItem.Name = "按关系删除ToolStripMenuItem";
-            this.按关系删除ToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.按关系删除ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.按关系删除ToolStripMenuItem.Text = "按关系删除";
             this.按关系删除ToolStripMenuItem.Click += new System.EventHandler(this.按关系删除ToolStripMenuItem_Click);
             // 
             // 按姓名删除ToolStripMenuItem
             // 
             this.按姓名删除ToolStripMenuItem.Name = "按姓名删除ToolStripMenuItem";
-            this.按姓名删除ToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.按姓名删除ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.按姓名删除ToolStripMenuItem.Text = "按姓名删除";
             this.按姓名删除ToolStripMenuItem.Click += new System.EventHandler(this.按姓名删除ToolStripMenuItem_Click);
             // 
-            // 修改家庭成员信息ToolStripMenuItem
+            // 修改家庭成员ToolStripMenuItem
             // 
-            this.修改家庭成员信息ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.按关系删除ToolStripMenuItem1,
-            this.按姓名删除ToolStripMenuItem1});
-            this.修改家庭成员信息ToolStripMenuItem.Name = "修改家庭成员信息ToolStripMenuItem";
-            this.修改家庭成员信息ToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
-            this.修改家庭成员信息ToolStripMenuItem.Text = "修改家庭成员信息";
+            this.修改家庭成员ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.按关系修改ToolStripMenuItem,
+            this.按姓名修改ToolStripMenuItem});
+            this.修改家庭成员ToolStripMenuItem.Name = "修改家庭成员ToolStripMenuItem";
+            this.修改家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.修改家庭成员ToolStripMenuItem.Text = "修改家庭成员信息";
             // 
-            // 按关系删除ToolStripMenuItem1
+            // 按关系修改ToolStripMenuItem
             // 
-            this.按关系删除ToolStripMenuItem1.Name = "按关系删除ToolStripMenuItem1";
-            this.按关系删除ToolStripMenuItem1.Size = new System.Drawing.Size(167, 26);
-            this.按关系删除ToolStripMenuItem1.Text = "按关系修改";
-            this.按关系删除ToolStripMenuItem1.Click += new System.EventHandler(this.按关系修改ToolStripMenuItem1_Click);
+            this.按关系修改ToolStripMenuItem.Name = "按关系修改ToolStripMenuItem";
+            this.按关系修改ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.按关系修改ToolStripMenuItem.Text = "按关系修改";
+            this.按关系修改ToolStripMenuItem.Click += new System.EventHandler(this.按关系修改ToolStripMenuItem1_Click);
             // 
-            // 按姓名删除ToolStripMenuItem1
+            // 按姓名修改ToolStripMenuItem
             // 
-            this.按姓名删除ToolStripMenuItem1.Name = "按姓名删除ToolStripMenuItem1";
-            this.按姓名删除ToolStripMenuItem1.Size = new System.Drawing.Size(167, 26);
-            this.按姓名删除ToolStripMenuItem1.Text = "按姓名修改";
-            this.按姓名删除ToolStripMenuItem1.Click += new System.EventHandler(this.按姓名修改ToolStripMenuItem1_Click);
+            this.按姓名修改ToolStripMenuItem.Name = "按姓名修改ToolStripMenuItem";
+            this.按姓名修改ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.按姓名修改ToolStripMenuItem.Text = "按姓名修改";
+            this.按姓名修改ToolStripMenuItem.Click += new System.EventHandler(this.按姓名修改ToolStripMenuItem1_Click);
             // 
-            // 查询家庭成员信息ToolStripMenuItem
+            // 查询家庭成员ToolStripMenuItem
             // 
-            this.查询家庭成员信息ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.查询家庭成员ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.按亲戚关系查找ToolStripMenuItem,
             this.按基本信息查找ToolStripMenuItem});
-            this.查询家庭成员信息ToolStripMenuItem.Name = "查询家庭成员信息ToolStripMenuItem";
-            this.查询家庭成员信息ToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
-            this.查询家庭成员信息ToolStripMenuItem.Text = "查询家庭成员信息";
+            this.查询家庭成员ToolStripMenuItem.Name = "查询家庭成员ToolStripMenuItem";
+            this.查询家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.查询家庭成员ToolStripMenuItem.Text = "查询家庭成员信息";
             // 
             // 按亲戚关系查找ToolStripMenuItem
             // 
             this.按亲戚关系查找ToolStripMenuItem.Name = "按亲戚关系查找ToolStripMenuItem";
-            this.按亲戚关系查找ToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.按亲戚关系查找ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.按亲戚关系查找ToolStripMenuItem.Text = "按关系查找";
             this.按亲戚关系查找ToolStripMenuItem.Click += new System.EventHandler(this.按关系查找ToolStripMenuItem_Click);
             // 
             // 按基本信息查找ToolStripMenuItem
             // 
             this.按基本信息查找ToolStripMenuItem.Name = "按基本信息查找ToolStripMenuItem";
-            this.按基本信息查找ToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.按基本信息查找ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.按基本信息查找ToolStripMenuItem.Text = "按姓名查找";
             this.按基本信息查找ToolStripMenuItem.Click += new System.EventHandler(this.按姓名查找ToolStripMenuItem_Click);
             // 
@@ -204,21 +204,21 @@
             // 平均寿命ToolStripMenuItem
             // 
             this.平均寿命ToolStripMenuItem.Name = "平均寿命ToolStripMenuItem";
-            this.平均寿命ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.平均寿命ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.平均寿命ToolStripMenuItem.Text = "平均寿命";
             this.平均寿命ToolStripMenuItem.Click += new System.EventHandler(this.平均寿命ToolStripMenuItem_Click);
             // 
             // 男女比例ToolStripMenuItem
             // 
             this.男女比例ToolStripMenuItem.Name = "男女比例ToolStripMenuItem";
-            this.男女比例ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.男女比例ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.男女比例ToolStripMenuItem.Text = "男女比例";
             this.男女比例ToolStripMenuItem.Click += new System.EventHandler(this.男女比例ToolStripMenuItem_Click);
             // 
             // 家庭平均人口ToolStripMenuItem
             // 
             this.家庭平均人口ToolStripMenuItem.Name = "家庭平均人口ToolStripMenuItem";
-            this.家庭平均人口ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.家庭平均人口ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.家庭平均人口ToolStripMenuItem.Text = "家庭平均人口";
             this.家庭平均人口ToolStripMenuItem.Click += new System.EventHandler(this.家庭平均人口ToolStripMenuItem_Click);
             // 
@@ -233,7 +233,7 @@
             // 家庭树ToolStripMenuItem
             // 
             this.家庭树ToolStripMenuItem.Name = "家庭树ToolStripMenuItem";
-            this.家庭树ToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
+            this.家庭树ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.家庭树ToolStripMenuItem.Text = "家谱树";
             this.家庭树ToolStripMenuItem.Click += new System.EventHandler(this.家庭树ToolStripMenuItem_Click);
             // 
@@ -248,7 +248,7 @@
             // 关于ToolStripMenuItem
             // 
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.关于ToolStripMenuItem.Text = "关于";
             this.关于ToolStripMenuItem.Click += new System.EventHandler(this.关于ToolStripMenuItem_Click);
             // 
@@ -294,29 +294,29 @@
         #endregion
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 新建ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 新建成员ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 工具ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 修改家庭成员信息ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 导入ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 操作ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 修改家庭成员ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 删除家庭成员ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 查询家庭成员信息ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 查询家庭成员ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 统计ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 平均寿命ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 男女比例ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 家庭平均人口ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 导出ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 视图ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 家庭树ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 按亲戚关系查找ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 按基本信息查找ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 新建家庭成员ToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripMenuItem 按关系删除ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 按姓名删除ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 按关系删除ToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem 按姓名删除ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 按关系修改ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 按姓名修改ToolStripMenuItem;
         private System.Windows.Forms.TreeView treeView1;
     }
 }

@@ -38,23 +38,23 @@
             this.学历水平 = new System.Windows.Forms.Label();
             this.最高职称 = new System.Windows.Forms.Label();
             this.与自己的关系 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.出生日期选择框 = new System.Windows.Forms.DateTimePicker();
+            this.死亡日期选择框 = new System.Windows.Forms.DateTimePicker();
+            this.亲戚关系输入框 = new System.Windows.Forms.Button();
+            this.姓名输入框 = new System.Windows.Forms.TextBox();
+            this.年龄选择框 = new System.Windows.Forms.NumericUpDown();
+            this.省份 = new System.Windows.Forms.ComboBox();
+            this.市区 = new System.Windows.Forms.ComboBox();
+            this.学历水平选择框 = new System.Windows.Forms.ComboBox();
+            this.最高职位输入框 = new System.Windows.Forms.TextBox();
+            this.亲戚关系展示框 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.是否在世_在世 = new System.Windows.Forms.CheckBox();
+            this.性别_男 = new System.Windows.Forms.CheckBox();
+            this.性别_女 = new System.Windows.Forms.CheckBox();
+            this.是否在世_已故 = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.年龄选择框)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -69,27 +69,27 @@
             this.tableLayoutPanel1.Controls.Add(this.姓名, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.性别, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.年龄, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown1, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.姓名输入框, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.年龄选择框, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.与自己的关系, 1, 10);
             this.tableLayoutPanel1.Controls.Add(this.最高职称, 1, 9);
             this.tableLayoutPanel1.Controls.Add(this.学历水平, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.死亡日期, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.label5, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.出生日期, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker2, 2, 7);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox2, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox3, 3, 4);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox4, 2, 8);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 2, 9);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 2, 10);
+            this.tableLayoutPanel1.Controls.Add(this.出生日期选择框, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.死亡日期选择框, 2, 7);
+            this.tableLayoutPanel1.Controls.Add(this.省份, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.市区, 3, 4);
+            this.tableLayoutPanel1.Controls.Add(this.学历水平选择框, 2, 8);
+            this.tableLayoutPanel1.Controls.Add(this.最高职位输入框, 2, 9);
+            this.tableLayoutPanel1.Controls.Add(this.亲戚关系输入框, 2, 10);
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.checkBox1, 2, 6);
-            this.tableLayoutPanel1.Controls.Add(this.checkBox2, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.checkBox3, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.checkBox4, 3, 6);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 3, 10);
+            this.tableLayoutPanel1.Controls.Add(this.是否在世_在世, 2, 6);
+            this.tableLayoutPanel1.Controls.Add(this.性别_男, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.性别_女, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.是否在世_已故, 3, 6);
+            this.tableLayoutPanel1.Controls.Add(this.亲戚关系展示框, 3, 10);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -199,103 +199,103 @@
             this.与自己的关系.TabIndex = 8;
             this.与自己的关系.Text = "与自己的关系";
             // 
-            // dateTimePicker1
+            // 出生日期选择框
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.SetColumnSpan(this.dateTimePicker1, 2);
-            this.dateTimePicker1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dateTimePicker1.Location = new System.Drawing.Point(131, 192);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(210, 25);
-            this.dateTimePicker1.TabIndex = 9;
-            this.dateTimePicker1.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.出生日期选择框.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.SetColumnSpan(this.出生日期选择框, 2);
+            this.出生日期选择框.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.出生日期选择框.Location = new System.Drawing.Point(131, 192);
+            this.出生日期选择框.Name = "出生日期选择框";
+            this.出生日期选择框.Size = new System.Drawing.Size(210, 25);
+            this.出生日期选择框.TabIndex = 9;
+            this.出生日期选择框.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
-            // dateTimePicker2
+            // 死亡日期选择框
             // 
-            this.dateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.SetColumnSpan(this.dateTimePicker2, 2);
-            this.dateTimePicker2.Location = new System.Drawing.Point(131, 274);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(210, 25);
-            this.dateTimePicker2.TabIndex = 10;
-            this.dateTimePicker2.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.死亡日期选择框.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.SetColumnSpan(this.死亡日期选择框, 2);
+            this.死亡日期选择框.Location = new System.Drawing.Point(131, 274);
+            this.死亡日期选择框.Name = "死亡日期选择框";
+            this.死亡日期选择框.Size = new System.Drawing.Size(210, 25);
+            this.死亡日期选择框.TabIndex = 10;
+            this.死亡日期选择框.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
-            // button1
+            // 亲戚关系输入框
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(131, 392);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 35);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "点击输入";
-            this.button1.UseVisualStyleBackColor = true;
+            this.亲戚关系输入框.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.亲戚关系输入框.Location = new System.Drawing.Point(131, 392);
+            this.亲戚关系输入框.Name = "亲戚关系输入框";
+            this.亲戚关系输入框.Size = new System.Drawing.Size(102, 35);
+            this.亲戚关系输入框.TabIndex = 11;
+            this.亲戚关系输入框.Text = "点击输入";
+            this.亲戚关系输入框.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // 姓名输入框
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.SetColumnSpan(this.textBox1, 2);
-            this.textBox1.Location = new System.Drawing.Point(131, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(210, 25);
-            this.textBox1.TabIndex = 12;
+            this.姓名输入框.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.SetColumnSpan(this.姓名输入框, 2);
+            this.姓名输入框.Location = new System.Drawing.Point(131, 28);
+            this.姓名输入框.Name = "姓名输入框";
+            this.姓名输入框.Size = new System.Drawing.Size(210, 25);
+            this.姓名输入框.TabIndex = 12;
             // 
-            // numericUpDown1
+            // 年龄选择框
             // 
-            this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.SetColumnSpan(this.numericUpDown1, 2);
-            this.numericUpDown1.Location = new System.Drawing.Point(131, 110);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(210, 25);
-            this.numericUpDown1.TabIndex = 13;
+            this.年龄选择框.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.SetColumnSpan(this.年龄选择框, 2);
+            this.年龄选择框.Location = new System.Drawing.Point(131, 110);
+            this.年龄选择框.Name = "年龄选择框";
+            this.年龄选择框.Size = new System.Drawing.Size(210, 25);
+            this.年龄选择框.TabIndex = 13;
             // 
-            // comboBox2
+            // 省份
             // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(131, 152);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(102, 23);
-            this.comboBox2.TabIndex = 15;
+            this.省份.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.省份.FormattingEnabled = true;
+            this.省份.Location = new System.Drawing.Point(131, 152);
+            this.省份.Name = "省份";
+            this.省份.Size = new System.Drawing.Size(102, 23);
+            this.省份.TabIndex = 15;
             // 
-            // comboBox3
+            // 市区
             // 
-            this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(239, 152);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(102, 23);
-            this.comboBox3.TabIndex = 16;
+            this.市区.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.市区.FormattingEnabled = true;
+            this.市区.Location = new System.Drawing.Point(239, 152);
+            this.市区.Name = "市区";
+            this.市区.Size = new System.Drawing.Size(102, 23);
+            this.市区.TabIndex = 16;
             // 
-            // comboBox4
+            // 学历水平选择框
             // 
-            this.comboBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.SetColumnSpan(this.comboBox4, 2);
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(131, 316);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(210, 23);
-            this.comboBox4.TabIndex = 17;
+            this.学历水平选择框.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.SetColumnSpan(this.学历水平选择框, 2);
+            this.学历水平选择框.FormattingEnabled = true;
+            this.学历水平选择框.Location = new System.Drawing.Point(131, 316);
+            this.学历水平选择框.Name = "学历水平选择框";
+            this.学历水平选择框.Size = new System.Drawing.Size(210, 23);
+            this.学历水平选择框.TabIndex = 17;
             // 
-            // textBox2
+            // 最高职位输入框
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.SetColumnSpan(this.textBox2, 2);
-            this.textBox2.Location = new System.Drawing.Point(131, 356);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(210, 25);
-            this.textBox2.TabIndex = 18;
+            this.最高职位输入框.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.SetColumnSpan(this.最高职位输入框, 2);
+            this.最高职位输入框.Location = new System.Drawing.Point(131, 356);
+            this.最高职位输入框.Name = "最高职位输入框";
+            this.最高职位输入框.Size = new System.Drawing.Size(210, 25);
+            this.最高职位输入框.TabIndex = 18;
             // 
-            // label1
+            // 亲戚关系展示框
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tableLayoutPanel1.SetColumnSpan(this.label1, 2);
-            this.label1.Location = new System.Drawing.Point(239, 401);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(318, 17);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "label1";
+            this.亲戚关系展示框.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.亲戚关系展示框.AutoSize = true;
+            this.亲戚关系展示框.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tableLayoutPanel1.SetColumnSpan(this.亲戚关系展示框, 2);
+            this.亲戚关系展示框.Location = new System.Drawing.Point(239, 401);
+            this.亲戚关系展示框.Name = "亲戚关系展示框";
+            this.亲戚关系展示框.Size = new System.Drawing.Size(318, 17);
+            this.亲戚关系展示框.TabIndex = 19;
+            this.亲戚关系展示框.Text = "就是我自己";
             // 
             // label2
             // 
@@ -307,49 +307,49 @@
             this.label2.TabIndex = 20;
             this.label2.Text = "出生地";
             // 
-            // checkBox1
+            // 是否在世_在世
             // 
-            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(131, 236);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(102, 19);
-            this.checkBox1.TabIndex = 21;
-            this.checkBox1.Text = "在世";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.是否在世_在世.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.是否在世_在世.AutoSize = true;
+            this.是否在世_在世.Location = new System.Drawing.Point(131, 236);
+            this.是否在世_在世.Name = "是否在世_在世";
+            this.是否在世_在世.Size = new System.Drawing.Size(102, 19);
+            this.是否在世_在世.TabIndex = 21;
+            this.是否在世_在世.Text = "在世";
+            this.是否在世_在世.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // 性别_男
             // 
-            this.checkBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(131, 72);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(102, 19);
-            this.checkBox2.TabIndex = 23;
-            this.checkBox2.Text = "男";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.性别_男.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.性别_男.AutoSize = true;
+            this.性别_男.Location = new System.Drawing.Point(131, 72);
+            this.性别_男.Name = "性别_男";
+            this.性别_男.Size = new System.Drawing.Size(102, 19);
+            this.性别_男.TabIndex = 23;
+            this.性别_男.Text = "男";
+            this.性别_男.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // 性别_女
             // 
-            this.checkBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(239, 72);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(102, 19);
-            this.checkBox3.TabIndex = 24;
-            this.checkBox3.Text = "女";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.性别_女.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.性别_女.AutoSize = true;
+            this.性别_女.Location = new System.Drawing.Point(239, 72);
+            this.性别_女.Name = "性别_女";
+            this.性别_女.Size = new System.Drawing.Size(102, 19);
+            this.性别_女.TabIndex = 24;
+            this.性别_女.Text = "女";
+            this.性别_女.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // 是否在世_已故
             // 
-            this.checkBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(239, 236);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(102, 19);
-            this.checkBox4.TabIndex = 25;
-            this.checkBox4.Text = "已故";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.是否在世_已故.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.是否在世_已故.AutoSize = true;
+            this.是否在世_已故.Location = new System.Drawing.Point(239, 236);
+            this.是否在世_已故.Name = "是否在世_已故";
+            this.是否在世_已故.Size = new System.Drawing.Size(102, 19);
+            this.是否在世_已故.TabIndex = 25;
+            this.是否在世_已故.Text = "已故";
+            this.是否在世_已故.UseVisualStyleBackColor = true;
             // 
             // 新建成员窗口
             // 
@@ -365,7 +365,7 @@
             this.Text = "新建成员窗口";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.年龄选择框)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -382,20 +382,20 @@
         private System.Windows.Forms.Label 学历水平;
         private System.Windows.Forms.Label 最高职称;
         private System.Windows.Forms.Label 与自己的关系;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker 出生日期选择框;
+        private System.Windows.Forms.DateTimePicker 死亡日期选择框;
+        private System.Windows.Forms.Button 亲戚关系输入框;
+        private System.Windows.Forms.TextBox 姓名输入框;
+        private System.Windows.Forms.NumericUpDown 年龄选择框;
+        private System.Windows.Forms.ComboBox 省份;
+        private System.Windows.Forms.ComboBox 市区;
+        private System.Windows.Forms.ComboBox 学历水平选择框;
+        private System.Windows.Forms.TextBox 最高职位输入框;
+        private System.Windows.Forms.Label 亲戚关系展示框;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox 是否在世_在世;
+        private System.Windows.Forms.CheckBox 性别_男;
+        private System.Windows.Forms.CheckBox 性别_女;
+        private System.Windows.Forms.CheckBox 是否在世_已故;
     }
 }
