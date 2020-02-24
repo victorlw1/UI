@@ -12,6 +12,9 @@ namespace WindowsFormsApp3
 {
     public partial class 主窗口 : Form
     {
+
+
+
         public 主窗口()
         {
             InitializeComponent();
