@@ -85,21 +85,21 @@
             // 导入ToolStripMenuItem
             // 
             this.导入ToolStripMenuItem.Name = "导入ToolStripMenuItem";
-            this.导入ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.导入ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
             this.导入ToolStripMenuItem.Text = "导入";
             this.导入ToolStripMenuItem.Click += new System.EventHandler(this.新建成员ToolStripMenuItem_Click);
             // 
             // 导出ToolStripMenuItem
             // 
             this.导出ToolStripMenuItem.Name = "导出ToolStripMenuItem";
-            this.导出ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.导出ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
             this.导出ToolStripMenuItem.Text = "导出";
             this.导出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem1_Click);
             // 
@@ -117,7 +117,7 @@
             // 新建家庭成员ToolStripMenuItem
             // 
             this.新建家庭成员ToolStripMenuItem.Name = "新建家庭成员ToolStripMenuItem";
-            this.新建家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.新建家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.新建家庭成员ToolStripMenuItem.Text = "新建家庭成员信息";
             this.新建家庭成员ToolStripMenuItem.Click += new System.EventHandler(this.新建家庭成员ToolStripMenuItem_Click);
             // 
@@ -127,21 +127,21 @@
             this.按关系删除ToolStripMenuItem,
             this.按姓名删除ToolStripMenuItem});
             this.删除家庭成员ToolStripMenuItem.Name = "删除家庭成员ToolStripMenuItem";
-            this.删除家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.删除家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.删除家庭成员ToolStripMenuItem.Text = "删除家庭成员信息";
             this.删除家庭成员ToolStripMenuItem.Click += new System.EventHandler(this.删除家庭成员ToolStripMenuItem_Click);
             // 
             // 按关系删除ToolStripMenuItem
             // 
             this.按关系删除ToolStripMenuItem.Name = "按关系删除ToolStripMenuItem";
-            this.按关系删除ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.按关系删除ToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.按关系删除ToolStripMenuItem.Text = "按关系删除";
             this.按关系删除ToolStripMenuItem.Click += new System.EventHandler(this.按关系删除ToolStripMenuItem_Click);
             // 
             // 按姓名删除ToolStripMenuItem
             // 
             this.按姓名删除ToolStripMenuItem.Name = "按姓名删除ToolStripMenuItem";
-            this.按姓名删除ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.按姓名删除ToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.按姓名删除ToolStripMenuItem.Text = "按姓名删除";
             this.按姓名删除ToolStripMenuItem.Click += new System.EventHandler(this.按姓名删除ToolStripMenuItem_Click);
             // 
@@ -151,20 +151,20 @@
             this.按关系修改ToolStripMenuItem,
             this.按姓名修改ToolStripMenuItem});
             this.修改家庭成员ToolStripMenuItem.Name = "修改家庭成员ToolStripMenuItem";
-            this.修改家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.修改家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.修改家庭成员ToolStripMenuItem.Text = "修改家庭成员信息";
             // 
             // 按关系修改ToolStripMenuItem
             // 
             this.按关系修改ToolStripMenuItem.Name = "按关系修改ToolStripMenuItem";
-            this.按关系修改ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.按关系修改ToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.按关系修改ToolStripMenuItem.Text = "按关系修改";
             this.按关系修改ToolStripMenuItem.Click += new System.EventHandler(this.按关系修改ToolStripMenuItem1_Click);
             // 
             // 按姓名修改ToolStripMenuItem
             // 
             this.按姓名修改ToolStripMenuItem.Name = "按姓名修改ToolStripMenuItem";
-            this.按姓名修改ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.按姓名修改ToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.按姓名修改ToolStripMenuItem.Text = "按姓名修改";
             this.按姓名修改ToolStripMenuItem.Click += new System.EventHandler(this.按姓名修改ToolStripMenuItem1_Click);
             // 
@@ -174,20 +174,20 @@
             this.按亲戚关系查找ToolStripMenuItem,
             this.按基本信息查找ToolStripMenuItem});
             this.查询家庭成员ToolStripMenuItem.Name = "查询家庭成员ToolStripMenuItem";
-            this.查询家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.查询家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.查询家庭成员ToolStripMenuItem.Text = "查询家庭成员信息";
             // 
             // 按亲戚关系查找ToolStripMenuItem
             // 
             this.按亲戚关系查找ToolStripMenuItem.Name = "按亲戚关系查找ToolStripMenuItem";
-            this.按亲戚关系查找ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.按亲戚关系查找ToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.按亲戚关系查找ToolStripMenuItem.Text = "按关系查找";
             this.按亲戚关系查找ToolStripMenuItem.Click += new System.EventHandler(this.按关系查找ToolStripMenuItem_Click);
             // 
             // 按基本信息查找ToolStripMenuItem
             // 
             this.按基本信息查找ToolStripMenuItem.Name = "按基本信息查找ToolStripMenuItem";
-            this.按基本信息查找ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.按基本信息查找ToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.按基本信息查找ToolStripMenuItem.Text = "按姓名查找";
             this.按基本信息查找ToolStripMenuItem.Click += new System.EventHandler(this.按姓名查找ToolStripMenuItem_Click);
             // 
@@ -204,21 +204,21 @@
             // 平均寿命ToolStripMenuItem
             // 
             this.平均寿命ToolStripMenuItem.Name = "平均寿命ToolStripMenuItem";
-            this.平均寿命ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.平均寿命ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
             this.平均寿命ToolStripMenuItem.Text = "平均寿命";
             this.平均寿命ToolStripMenuItem.Click += new System.EventHandler(this.平均寿命ToolStripMenuItem_Click);
             // 
             // 男女比例ToolStripMenuItem
             // 
             this.男女比例ToolStripMenuItem.Name = "男女比例ToolStripMenuItem";
-            this.男女比例ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.男女比例ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
             this.男女比例ToolStripMenuItem.Text = "男女比例";
             this.男女比例ToolStripMenuItem.Click += new System.EventHandler(this.男女比例ToolStripMenuItem_Click);
             // 
             // 家庭平均人口ToolStripMenuItem
             // 
             this.家庭平均人口ToolStripMenuItem.Name = "家庭平均人口ToolStripMenuItem";
-            this.家庭平均人口ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.家庭平均人口ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
             this.家庭平均人口ToolStripMenuItem.Text = "家庭平均人口";
             this.家庭平均人口ToolStripMenuItem.Click += new System.EventHandler(this.家庭平均人口ToolStripMenuItem_Click);
             // 
@@ -233,7 +233,7 @@
             // 家庭树ToolStripMenuItem
             // 
             this.家庭树ToolStripMenuItem.Name = "家庭树ToolStripMenuItem";
-            this.家庭树ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.家庭树ToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
             this.家庭树ToolStripMenuItem.Text = "家谱树";
             this.家庭树ToolStripMenuItem.Click += new System.EventHandler(this.家庭树ToolStripMenuItem_Click);
             // 
@@ -248,7 +248,7 @@
             // 关于ToolStripMenuItem
             // 
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
             this.关于ToolStripMenuItem.Text = "关于";
             this.关于ToolStripMenuItem.Click += new System.EventHandler(this.关于ToolStripMenuItem_Click);
             // 

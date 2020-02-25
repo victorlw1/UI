@@ -57,13 +57,16 @@ namespace WindowsFormsApp3
 
         private void 按姓名查找ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            输入信息窗口 输入窗口 = new 输入信息窗口();
+            按姓名输入成员窗口 输入窗口 = new 按姓名输入成员窗口();
             输入窗口.MdiParent = this;
             输入窗口.Show();
         }
 
         private void 平均寿命ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            平均寿命窗口 平均寿命 = new 平均寿命窗口();
+            平均寿命.MdiParent = this;
+            平均寿命.Show();
 
         }
 
@@ -108,7 +111,7 @@ namespace WindowsFormsApp3
 
         private void 按姓名删除ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            输入信息窗口 输入窗口 = new 输入信息窗口();
+            按姓名输入成员窗口 输入窗口 = new 按姓名输入成员窗口();
             输入窗口.MdiParent = this;
             输入窗口.Show();
         }
@@ -122,7 +125,7 @@ namespace WindowsFormsApp3
 
         private void 按姓名修改ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            输入信息窗口 输入窗口 = new 输入信息窗口();
+            按姓名输入成员窗口 输入窗口 = new 按姓名输入成员窗口();
             输入窗口.MdiParent = this;
             输入窗口.Show();
         }
