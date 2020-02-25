@@ -10,16 +10,21 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp3
 {
-    public partial class 查询成员窗口 : Form
+    public partial class 男女比例窗口 : Form
     {
-        public 查询成员窗口()
+        public 男女比例窗口()
         {
             InitializeComponent();
         }
 
-        private void 查询成员窗口_Load(object sender, EventArgs e)
+        private void 男女比例窗口_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void 男女比例返回_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

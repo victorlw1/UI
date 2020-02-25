@@ -16,5 +16,30 @@ namespace WindowsFormsApp3
         {
             InitializeComponent();
         }
+
+        private void 平均寿命_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void 单位岁_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void 平均寿命返回_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

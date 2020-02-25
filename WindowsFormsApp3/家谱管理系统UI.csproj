@@ -66,6 +66,18 @@
     <Compile Include="如何查找.Designer.cs">
       <DependentUpon>如何查找.cs</DependentUpon>
     </Compile>
+    <Compile Include="家庭平均人口窗口.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="家庭平均人口窗口.Designer.cs">
+      <DependentUpon>家庭平均人口窗口.cs</DependentUpon>
+    </Compile>
+    <Compile Include="平均寿命窗口.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="平均寿命窗口.Designer.cs">
+      <DependentUpon>平均寿命窗口.cs</DependentUpon>
+    </Compile>
     <Compile Include="新建成员窗口.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +95,12 @@
     </Compile>
     <Compile Include="查询成员窗口.Designer.cs">
       <DependentUpon>查询成员窗口.cs</DependentUpon>
+    </Compile>
+    <Compile Include="男女比例窗口.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="男女比例窗口.Designer.cs">
+      <DependentUpon>男女比例窗口.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="主窗口.resx">
       <DependentUpon>主窗口.cs</DependentUpon>
@@ -102,6 +120,12 @@
     <EmbeddedResource Include="如何查找.resx">
       <DependentUpon>如何查找.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="家庭平均人口窗口.resx">
+      <DependentUpon>家庭平均人口窗口.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="平均寿命窗口.resx">
+      <DependentUpon>平均寿命窗口.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="新建成员窗口.resx">
       <DependentUpon>新建成员窗口.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="查询成员窗口.resx">
       <DependentUpon>查询成员窗口.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="男女比例窗口.resx">
+      <DependentUpon>男女比例窗口.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

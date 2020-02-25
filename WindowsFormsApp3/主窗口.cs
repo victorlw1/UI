@@ -66,5 +66,34 @@ namespace WindowsFormsApp3
             查询窗口.MdiParent = this;
             查询窗口.Show();
         }
+
+        private void 主窗口_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 平均寿命ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            平均寿命窗口 平均寿命 = new 平均寿命窗口();
+            平均寿命.StartPosition = FormStartPosition.CenterParent;
+            平均寿命.ShowDialog();
+
+        }
+
+        private void 男女比例ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            男女比例窗口 男女比例 = new 男女比例窗口();
+            男女比例.StartPosition = FormStartPosition.CenterParent;
+            男女比例.ShowDialog();
+
+        }
+
+        private void 家庭平均人口ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            家庭平均人口窗口 平均人口 = new 家庭平均人口窗口();
+            平均人口.StartPosition = FormStartPosition.CenterParent;
+            平均人口.ShowDialog();
+
+        }
     }
 }
