@@ -21,21 +21,6 @@ namespace WindowsFormsApp3
             InitializeComponent();
         }
 
-        private void 新建成员ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void 退出ToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void 新建家庭成员ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             新建成员窗口 新建窗口 = new 新建成员窗口();
@@ -45,36 +30,9 @@ namespace WindowsFormsApp3
 
         private void 删除家庭成员ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void 按关系查找ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            输入信息窗口 输入窗口 = new 输入信息窗口();
-            输入窗口.MdiParent = this;
-            输入窗口.Show();
-        }
-
-        private void 按姓名查找ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            输入信息窗口 输入窗口 = new 输入信息窗口();
-            输入窗口.MdiParent = this;
-            输入窗口.Show();
-        }
-
-        private void 平均寿命ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void 男女比例ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void 家庭平均人口ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
+            删除成员窗口 删除窗口 = new 删除成员窗口();
+            删除窗口.MdiParent = this;
+            删除窗口.Show();
         }
 
         private void 家庭树ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -89,42 +47,18 @@ namespace WindowsFormsApp3
             }
         }
 
-        private void 关于ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void 修改家庭成员ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            修改成员窗口 修改窗口 = new 修改成员窗口();
+            修改窗口.MdiParent = this;
+            修改窗口.Show();
         }
 
-        private void 主窗口_Load(object sender, EventArgs e)
+        private void 查询家庭成员ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void 按关系删除ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            输入信息窗口 输入窗口= new 输入信息窗口();
-            输入窗口.MdiParent = this;
-            输入窗口.Show();
-        }
-
-        private void 按姓名删除ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            输入信息窗口 输入窗口 = new 输入信息窗口();
-            输入窗口.MdiParent = this;
-            输入窗口.Show();
-        }
-
-        private void 按关系修改ToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            输入信息窗口 输入窗口 = new 输入信息窗口();
-            输入窗口.MdiParent = this;
-            输入窗口.Show();
-        }
-
-        private void 按姓名修改ToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            输入信息窗口 输入窗口 = new 输入信息窗口();
-            输入窗口.MdiParent = this;
-            输入窗口.Show();
+            查询成员窗口 查询窗口 = new 查询成员窗口();
+            查询窗口.MdiParent = this;
+            查询窗口.Show();
         }
     }
 }
