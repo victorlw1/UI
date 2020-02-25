@@ -12,9 +12,6 @@ namespace WindowsFormsApp3
 {
     public partial class 主窗口 : Form
     {
-        //lw666
-        //lb233
-
 
         public 主窗口()
         {
@@ -35,6 +32,8 @@ namespace WindowsFormsApp3
             删除窗口.Show();
         }
 
+
+
         private void 家庭树ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (this.treeView1.Visible)
@@ -47,12 +46,13 @@ namespace WindowsFormsApp3
             }
         }
 
-        private void 修改家庭成员ToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void 主窗口_Load(object sender, EventArgs e)
         {
-            修改成员窗口 修改窗口 = new 修改成员窗口();
-            修改窗口.MdiParent = this;
-            修改窗口.Show();
+
         }
+
+
 
         private void 查询家庭成员ToolStripMenuItem_Click(object sender, EventArgs e)
         {
