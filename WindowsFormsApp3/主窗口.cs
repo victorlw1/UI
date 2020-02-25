@@ -53,6 +53,12 @@ namespace WindowsFormsApp3
         }
 
 
+        private void 修改家庭成员ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            修改成员窗口 修改窗口 = new 修改成员窗口();
+            修改窗口.MdiParent = this;
+            修改窗口.Show();
+        }
 
         private void 查询家庭成员ToolStripMenuItem_Click(object sender, EventArgs e)
         {

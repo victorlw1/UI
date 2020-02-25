@@ -108,31 +108,30 @@
             // 新建家庭成员ToolStripMenuItem
             // 
             this.新建家庭成员ToolStripMenuItem.Name = "新建家庭成员ToolStripMenuItem";
-            this.新建家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.新建家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.新建家庭成员ToolStripMenuItem.Text = "新建家庭成员信息";
             this.新建家庭成员ToolStripMenuItem.Click += new System.EventHandler(this.新建家庭成员ToolStripMenuItem_Click);
             // 
             // 删除家庭成员ToolStripMenuItem
             // 
             this.删除家庭成员ToolStripMenuItem.Name = "删除家庭成员ToolStripMenuItem";
-            this.删除家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.删除家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.删除家庭成员ToolStripMenuItem.Text = "删除家庭成员信息";
             this.删除家庭成员ToolStripMenuItem.Click += new System.EventHandler(this.删除家庭成员ToolStripMenuItem_Click);
             // 
             // 修改家庭成员ToolStripMenuItem
             // 
             this.修改家庭成员ToolStripMenuItem.Name = "修改家庭成员ToolStripMenuItem";
-            this.修改家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.修改家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.修改家庭成员ToolStripMenuItem.Text = "修改家庭成员信息";
-           
+            this.修改家庭成员ToolStripMenuItem.Click += new System.EventHandler(this.修改家庭成员ToolStripMenuItem_Click);
             // 
             // 查询家庭成员ToolStripMenuItem
             // 
             this.查询家庭成员ToolStripMenuItem.Name = "查询家庭成员ToolStripMenuItem";
-            this.查询家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.查询家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.查询家庭成员ToolStripMenuItem.Text = "查询家庭成员信息";
-
-           
+            this.查询家庭成员ToolStripMenuItem.Click += new System.EventHandler(this.查询家庭成员ToolStripMenuItem_Click);
             // 
             // 统计ToolStripMenuItem
             // 
