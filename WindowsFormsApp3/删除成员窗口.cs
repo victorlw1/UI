@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp3
+namespace FamilySys
 {
     public partial class 删除成员窗口 : Form
     {
@@ -17,5 +17,11 @@ namespace WindowsFormsApp3
             InitializeComponent();
         }
 
+        private void 确认删除_Click(object sender, EventArgs e)
+        {
+            主窗口.是否有改动 = true;
+            this.MdiParent.Text = 主窗口.xml + "*";
+            this.Close();
+        }
     }
 }

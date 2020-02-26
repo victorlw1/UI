@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp3
+﻿namespace FamilySys
 {
     partial class 平均寿命窗口
     {
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.平均寿命 = new System.Windows.Forms.Label();
-            this.单位岁 = new System.Windows.Forms.Label();
+            this.平均寿命展示框 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.平均寿命返回 = new System.Windows.Forms.Button();
@@ -48,16 +48,16 @@
             this.平均寿命.Text = "平均寿命：";
             this.平均寿命.Click += new System.EventHandler(this.平均寿命_Click);
             // 
-            // 单位岁
+            // 平均寿命展示框
             // 
-            this.单位岁.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.单位岁.AutoSize = true;
-            this.单位岁.Location = new System.Drawing.Point(187, 52);
-            this.单位岁.Name = "单位岁";
-            this.单位岁.Size = new System.Drawing.Size(46, 15);
-            this.单位岁.TabIndex = 1;
-            this.单位岁.Text = "xxx岁";
-            this.单位岁.Click += new System.EventHandler(this.单位岁_Click);
+            this.平均寿命展示框.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.平均寿命展示框.AutoSize = true;
+            this.平均寿命展示框.Location = new System.Drawing.Point(191, 52);
+            this.平均寿命展示框.Name = "平均寿命展示框";
+            this.平均寿命展示框.Size = new System.Drawing.Size(38, 15);
+            this.平均寿命展示框.TabIndex = 1;
+            this.平均寿命展示框.Text = "xx岁";
+            this.平均寿命展示框.Click += new System.EventHandler(this.单位岁_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -65,7 +65,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.平均寿命, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.单位岁, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.平均寿命展示框, 1, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(-2, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -120,7 +120,7 @@
         #endregion
 
         private System.Windows.Forms.Label 平均寿命;
-        private System.Windows.Forms.Label 单位岁;
+        private System.Windows.Forms.Label 平均寿命展示框;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button 平均寿命返回;

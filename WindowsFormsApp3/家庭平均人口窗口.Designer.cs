@@ -1,6 +1,6 @@
-﻿namespace WindowsFormsApp3
+﻿namespace FamilySys
 {
-    partial class 家庭平均人口窗口
+    partial class 平均人口展示框
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.平均人口返回 = new System.Windows.Forms.Button();
             this.平均人口标签 = new System.Windows.Forms.Label();
             this.单位人标签 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.平均人口返回 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -51,6 +51,26 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(280, 80);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // 平均人口标签
+            // 
+            this.平均人口标签.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.平均人口标签.AutoSize = true;
+            this.平均人口标签.Location = new System.Drawing.Point(29, 52);
+            this.平均人口标签.Name = "平均人口标签";
+            this.平均人口标签.Size = new System.Drawing.Size(82, 15);
+            this.平均人口标签.TabIndex = 0;
+            this.平均人口标签.Text = "平均人口：";
+            // 
+            // 单位人标签
+            // 
+            this.单位人标签.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.单位人标签.AutoSize = true;
+            this.单位人标签.Location = new System.Drawing.Point(195, 52);
+            this.单位人标签.Name = "单位人标签";
+            this.单位人标签.Size = new System.Drawing.Size(30, 15);
+            this.单位人标签.TabIndex = 1;
+            this.单位人标签.Text = "x人";
             // 
             // tableLayoutPanel2
             // 
@@ -76,34 +96,14 @@
             this.平均人口返回.UseVisualStyleBackColor = true;
             this.平均人口返回.Click += new System.EventHandler(this.平均人口返回_Click);
             // 
-            // 平均人口标签
-            // 
-            this.平均人口标签.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.平均人口标签.AutoSize = true;
-            this.平均人口标签.Location = new System.Drawing.Point(29, 52);
-            this.平均人口标签.Name = "平均人口标签";
-            this.平均人口标签.Size = new System.Drawing.Size(82, 15);
-            this.平均人口标签.TabIndex = 0;
-            this.平均人口标签.Text = "平均人口：";
-            // 
-            // 单位人标签
-            // 
-            this.单位人标签.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.单位人标签.AutoSize = true;
-            this.单位人标签.Location = new System.Drawing.Point(195, 52);
-            this.单位人标签.Name = "单位人标签";
-            this.单位人标签.Size = new System.Drawing.Size(30, 15);
-            this.单位人标签.TabIndex = 1;
-            this.单位人标签.Text = "x人";
-            // 
-            // 家庭平均人口窗口
+            // 平均人口展示框
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(282, 153);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "家庭平均人口窗口";
+            this.Name = "平均人口展示框";
             this.Text = "家庭平均人口窗口";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

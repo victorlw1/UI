@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp3
+namespace FamilySys
 {
     public partial class 平均寿命窗口 : Form
     {

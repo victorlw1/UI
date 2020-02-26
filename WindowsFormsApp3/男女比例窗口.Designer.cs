@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp3
+﻿namespace FamilySys
 {
     partial class 男女比例窗口
     {
@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.男女比例 = new System.Windows.Forms.Label();
+            this.男女比例展示框 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.男女比例返回 = new System.Windows.Forms.Button();
-            this.男女比例 = new System.Windows.Forms.Label();
-            this.比例 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -43,7 +43,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.男女比例, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.比例, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.男女比例展示框, 1, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 1);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -51,6 +51,27 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(280, 80);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // 男女比例
+            // 
+            this.男女比例.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.男女比例.AutoSize = true;
+            this.男女比例.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.男女比例.Location = new System.Drawing.Point(29, 52);
+            this.男女比例.Name = "男女比例";
+            this.男女比例.Size = new System.Drawing.Size(82, 15);
+            this.男女比例.TabIndex = 0;
+            this.男女比例.Text = "男女比例：";
+            // 
+            // 男女比例展示框
+            // 
+            this.男女比例展示框.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.男女比例展示框.AutoSize = true;
+            this.男女比例展示框.Location = new System.Drawing.Point(194, 52);
+            this.男女比例展示框.Name = "男女比例展示框";
+            this.男女比例展示框.Size = new System.Drawing.Size(31, 15);
+            this.男女比例展示框.TabIndex = 1;
+            this.男女比例展示框.Text = "x:x";
             // 
             // tableLayoutPanel2
             // 
@@ -76,27 +97,6 @@
             this.男女比例返回.UseVisualStyleBackColor = true;
             this.男女比例返回.Click += new System.EventHandler(this.男女比例返回_Click);
             // 
-            // 男女比例
-            // 
-            this.男女比例.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.男女比例.AutoSize = true;
-            this.男女比例.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.男女比例.Location = new System.Drawing.Point(29, 52);
-            this.男女比例.Name = "男女比例";
-            this.男女比例.Size = new System.Drawing.Size(82, 15);
-            this.男女比例.TabIndex = 0;
-            this.男女比例.Text = "男女比例：";
-            // 
-            // 比例
-            // 
-            this.比例.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.比例.AutoSize = true;
-            this.比例.Location = new System.Drawing.Point(194, 52);
-            this.比例.Name = "比例";
-            this.比例.Size = new System.Drawing.Size(31, 15);
-            this.比例.TabIndex = 1;
-            this.比例.Text = "x:x";
-            // 
             // 男女比例窗口
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -121,6 +121,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label 男女比例;
         private System.Windows.Forms.Button 男女比例返回;
-        private System.Windows.Forms.Label 比例;
+        private System.Windows.Forms.Label 男女比例展示框;
     }
 }

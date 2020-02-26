@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp3
+﻿namespace FamilySys
 {
     partial class 如何查找
     {

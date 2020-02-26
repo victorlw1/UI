@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp3
+﻿namespace FamilySys
 {
     partial class 查询成员窗口
     {

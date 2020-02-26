@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp3
+﻿namespace FamilySys
 {
     partial class 主窗口
     {
@@ -79,20 +79,23 @@
             // 导入ToolStripMenuItem
             // 
             this.导入ToolStripMenuItem.Name = "导入ToolStripMenuItem";
-            this.导入ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
+            this.导入ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.导入ToolStripMenuItem.Text = "导入";
+            this.导入ToolStripMenuItem.Click += new System.EventHandler(this.导入ToolStripMenuItem_Click);
             // 
             // 导出ToolStripMenuItem
             // 
             this.导出ToolStripMenuItem.Name = "导出ToolStripMenuItem";
-            this.导出ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
+            this.导出ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.导出ToolStripMenuItem.Text = "导出";
+            this.导出ToolStripMenuItem.Click += new System.EventHandler(this.导出ToolStripMenuItem_Click);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.退出ToolStripMenuItem.Text = "退出";
+            this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
             // 操作ToolStripMenuItem
             // 
@@ -146,21 +149,21 @@
             // 平均寿命ToolStripMenuItem
             // 
             this.平均寿命ToolStripMenuItem.Name = "平均寿命ToolStripMenuItem";
-            this.平均寿命ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.平均寿命ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
             this.平均寿命ToolStripMenuItem.Text = "平均寿命";
             this.平均寿命ToolStripMenuItem.Click += new System.EventHandler(this.平均寿命ToolStripMenuItem_Click);
             // 
             // 男女比例ToolStripMenuItem
             // 
             this.男女比例ToolStripMenuItem.Name = "男女比例ToolStripMenuItem";
-            this.男女比例ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.男女比例ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
             this.男女比例ToolStripMenuItem.Text = "男女比例";
             this.男女比例ToolStripMenuItem.Click += new System.EventHandler(this.男女比例ToolStripMenuItem_Click);
             // 
             // 家庭平均人口ToolStripMenuItem
             // 
             this.家庭平均人口ToolStripMenuItem.Name = "家庭平均人口ToolStripMenuItem";
-            this.家庭平均人口ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.家庭平均人口ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
             this.家庭平均人口ToolStripMenuItem.Text = "家庭平均人口";
             this.家庭平均人口ToolStripMenuItem.Click += new System.EventHandler(this.家庭平均人口ToolStripMenuItem_Click);
             // 

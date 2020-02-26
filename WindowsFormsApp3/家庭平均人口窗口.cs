@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp3
+namespace FamilySys
 {
-    public partial class 家庭平均人口窗口 : Form
+    public partial class 平均人口展示框 : Form
     {
-        public 家庭平均人口窗口()
+        public 平均人口展示框()
         {
             InitializeComponent();
         }

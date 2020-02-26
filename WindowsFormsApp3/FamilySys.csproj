@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FamilyGraph.cs" />
+    <Compile Include="FamilyGraphNode.cs" />
+    <Compile Include="FamilyTree.cs" />
+    <Compile Include="FamilyTreeNode.cs" />
     <Compile Include="主窗口.cs">
       <SubType>Form</SubType>
     </Compile>

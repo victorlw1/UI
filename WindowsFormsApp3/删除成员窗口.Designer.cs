@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp3
+﻿namespace FamilySys
 {
     partial class 删除成员窗口
     {
@@ -176,6 +176,7 @@
             this.确认删除.TabIndex = 26;
             this.确认删除.Text = "确认删除";
             this.确认删除.UseVisualStyleBackColor = true;
+            this.确认删除.Click += new System.EventHandler(this.确认删除_Click);
             // 
             // 删除成员窗口
             // 
