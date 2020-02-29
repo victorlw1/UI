@@ -4,9 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-
-
 namespace FamilySys
 {
     class FamilyGraph
@@ -382,7 +379,7 @@ namespace FamilySys
             FamilyGraphNode p = startPoi;
             if (p._me != null)
             {
-                p.isVisited = false;
+                p.IsVisited = false;
             }
             if (p._father != null)
             {
@@ -427,11 +424,11 @@ namespace FamilySys
         }
         void setMark(FamilyGraphNode p, bool mark)
         {
-            p._me.isVisited = mark;
+            p._me.IsVisited = mark;
         }
         bool getMark(FamilyGraphNode p)
         {
-            return p._me.isVisited;
+            return p._me.IsVisited;
         }
         #endregion
 
@@ -1409,7 +1406,7 @@ namespace FamilySys
                 BFS_withoutSetVisited(me_startPoi, BFSresult);
                 foreach (var i in BFSresult)
                 {
-                    if (i.name == input)
+                    if (i.Name == input)
                     {
                         queryedPersons.Add(i);
                     }
@@ -1423,7 +1420,7 @@ namespace FamilySys
                 BFS_withoutSetVisited(me_startPoi, BFSresult);
                 foreach (var i in BFSresult)
                 {
-                    if (i.encodeStr == input)
+                    if (i.EncodeStr == input)
                     {
                         queryedPersons.Add(i);
                     }
@@ -1434,15 +1431,15 @@ namespace FamilySys
         }
         //private void showOnePersonMessage(Person p)
         //{
-        //    Console.WriteLine(p.name);
-        //    Console.WriteLine(p.gender);
-        //    Console.WriteLine(p.age);
+        //    Console.WriteLine(p.Name);
+        //    Console.WriteLine(p.Gender);
+        //    Console.WriteLine(p.Age);
         //    Console.WriteLine(p.birthday);
-        //    if (p.isDead == true)
+        //    if (p.IsDead == true)
         //    {
         //        Console.WriteLine(p.deathday);
         //    }
-        //    //Console.WriteLine(p.isDead);
+        //    //Console.WriteLine(p.IsDead);
         //    if (p.bornPlace != null)
         //    {
         //        Console.WriteLine(p.bornPlace);
@@ -1463,11 +1460,11 @@ namespace FamilySys
         //    {
         //        Console.WriteLine(p.level);
         //    }
-        //    if (p.encodeStr != null)
+        //    if (p.EncodeStr != null)
         //    {
-        //        Console.WriteLine(p.encodeStr);
+        //        Console.WriteLine(p.EncodeStr);
         //    }
-        //    //Console.WriteLine(p.isVisited);
+        //    //Console.WriteLine(p.IsVisited);
         //}
         //private void showAllPersonMessage(List<Person> persons)
         //{
@@ -1485,8 +1482,8 @@ namespace FamilySys
                 queryPerson(HowToQuery.ByNAME, input, queryedPersons);
                 foreach (var i in queryedPersons)
                 {
-                    FamilyGraphNode p = setCurrToEncodeStrPosGoingToAdd(i.encodeStr);
-                    FamilyGraphNode q = setCurrToEncodeStrPos(i.encodeStr);
+                    FamilyGraphNode p = setCurrToEncodeStrPosGoingToAdd(i.EncodeStr);
+                    FamilyGraphNode q = setCurrToEncodeStrPos(i.EncodeStr);
                     if (p == q && q == me_startPoi)
                     {
                         me_startPoi = null;
@@ -1520,8 +1517,8 @@ namespace FamilySys
                 queryPerson(HowToQuery.ByNAME, input, queryedPersons);
                 foreach (var i in queryedPersons)
                 {
-                    FamilyGraphNode p = setCurrToEncodeStrPosGoingToAdd(i.encodeStr);
-                    FamilyGraphNode q = setCurrToEncodeStrPos(i.encodeStr);
+                    FamilyGraphNode p = setCurrToEncodeStrPosGoingToAdd(i.EncodeStr);
+                    FamilyGraphNode q = setCurrToEncodeStrPos(i.EncodeStr);
                     if (p == q && q == me_startPoi)
                     {
                         me_startPoi = null;

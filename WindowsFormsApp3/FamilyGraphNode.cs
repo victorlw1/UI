@@ -9,21 +9,21 @@ namespace FamilySys
     class FamilyGraphNode
     {
         #region//属性
-        public string name { get; set; }
-        public string gender { get; set; }
-        public int age { get; set; }
-        public bool isDead { get; set; }
+        public string Name { get; set; }
+        public string Gender { get; set; }
+        public int Age { get; set; }
+        public bool IsDead { get; set; }
         /*
-        public string birthday { get; set; }
-        public string deathday { get; set; }
-        public string bornPlace { get; set; }//出生地
-        public string eduBackground { get; set; }//教育背景
-        public string profession { get; set; }
-        public string highestProfessionRank { get; set; }//职位
-        public int level { get; set; }//家庭地位等级？可用于树结构
+        public string Birthday { get; set; }
+        public string Deathday { get; set; }
+        public string Birthplace { get; set; }//出生地
+        public string Education { get; set; }//教育背景
+        public string Profession { get; set; }
+        public string HighestProfessionRank { get; set; }//职位
+        public int Level { get; set; }//家庭地位等级？可用于树结构
         */
-        public string encodeStr { get; set; }//关系编码
-        public bool isVisited { get; set; }//该节点是否被访问过
+        public string EncodeStr { get; set; }//关系编码
+        public bool IsVisited { get; set; }//该节点是否被访问过
         #endregion
         #region//亲戚关系
         public FamilyGraphNode _me;             //encode:00
@@ -173,51 +173,51 @@ namespace FamilySys
         public FamilyGraphNode(string name, int age, string gender, bool isDead, string encodeStr)
             : this()
         {
-            this.name = name;
-            this.gender = gender;
-            this.age = age;
-            this.isDead = isDead;
-            this.encodeStr = encodeStr;
+            this.Name = name;
+            this.Gender = gender;
+            this.Age = age;
+            this.IsDead = isDead;
+            this.EncodeStr = encodeStr;
 
-            this.isVisited = false;
+            this.IsVisited = false;
         }
         /*
-        public Person(string name, string gender, string encodeStr, string birthday, string deathday, string bornPlace = null, string eduBackground = null, string profession = null, string highestProfessionRank = null)
+        public Person(string Name, string Gender, string EncodeStr, string birthday, string deathday, string bornPlace = null, string eduBackground = null, string profession = null, string highestProfessionRank = null)
             : this()
         {
-            this.isDead = true;
-            this.name = name;
-            this.gender = gender;
-            this.encodeStr = encodeStr;
+            this.IsDead = true;
+            this.Name = Name;
+            this.Gender = Gender;
+            this.EncodeStr = EncodeStr;
             this.birthday = birthday;
             this.deathday = deathday;
             string birthyear = birthday.Substring(0, 4);
             string deathyear = deathday.Substring(0, 4);
-            this.age = int.Parse(deathyear) - int.Parse(birthyear);
+            this.Age = int.Parse(deathyear) - int.Parse(birthyear);
             this.bornPlace = bornPlace;
             this.eduBackground = eduBackground;
             this.profession = profession;
             this.highestProfessionRank = highestProfessionRank;
 
-            this.isVisited = false;
+            this.IsVisited = false;
         }
-        public Person(string name, string gender, string encodeStr, string birthday, string bornPlace = null, string eduBackground = null, string profession = null, string highestProfessionRank = null)
+        public Person(string Name, string Gender, string EncodeStr, string birthday, string bornPlace = null, string eduBackground = null, string profession = null, string highestProfessionRank = null)
             : this()
         {
-            this.isDead = false;
-            this.name = name;
-            this.gender = gender;
-            this.encodeStr = encodeStr;
+            this.IsDead = false;
+            this.Name = Name;
+            this.Gender = Gender;
+            this.EncodeStr = EncodeStr;
             this.birthday = birthday;
             string birthyear = birthday.Substring(0, 4);
             string nowyear = DateTime.Now.Year.ToString();
-            this.age = int.Parse(nowyear) - int.Parse(birthyear);
+            this.Age = int.Parse(nowyear) - int.Parse(birthyear);
             this.bornPlace = bornPlace;
             this.eduBackground = eduBackground;
             this.profession = profession;
             this.highestProfessionRank = highestProfessionRank;
 
-            this.isVisited = false;
+            this.IsVisited = false;
         }
         */
         #endregion
@@ -225,11 +225,11 @@ namespace FamilySys
         private void setToBeFatherOf(FamilyGraphNode p)
         {
             p._father = this;
-            if (p.gender == "male")
+            if (p.Gender == "male")
             {
                 this._son = p;
             }
-            else if (p.gender == "female")
+            else if (p.Gender == "female")
             {
                 this._daughter = p;
             }
@@ -237,11 +237,11 @@ namespace FamilySys
         private void setToBeMotherOf(FamilyGraphNode p)
         {
             p._mother = this;
-            if (p.gender == "male")
+            if (p.Gender == "male")
             {
                 this._son = p; ;
             }
-            else if (p.gender == "female")
+            else if (p.Gender == "female")
             {
                 this._daughter = p; ;
             }
@@ -249,11 +249,11 @@ namespace FamilySys
         private void setToBeSonOf(FamilyGraphNode p)
         {
             p._son = this;
-            if (p.gender == "male")
+            if (p.Gender == "male")
             {
                 this._father = p;
             }
-            else if (p.gender == "female")
+            else if (p.Gender == "female")
             {
                 this._mother = p;
             }
@@ -261,11 +261,11 @@ namespace FamilySys
         private void setToBeDaughterOf(FamilyGraphNode p)
         {
             p._daughter = this;
-            if (p.gender == "male")
+            if (p.Gender == "male")
             {
                 this._father = p;
             }
-            else if (p.gender == "female")
+            else if (p.Gender == "female")
             {
                 this._mother = p;
             }
@@ -273,11 +273,11 @@ namespace FamilySys
         private void setToBeElderBrotherOf(FamilyGraphNode p)
         {
             p._elderBrother = this;
-            if (p.gender == "male")
+            if (p.Gender == "male")
             {
                 this._littleBrother = p;
             }
-            else if (p.gender == "female")
+            else if (p.Gender == "female")
             {
                 this._littleSister = p;
             }
@@ -285,11 +285,11 @@ namespace FamilySys
         private void setToBeElderSisterOf(FamilyGraphNode p)
         {
             p._elderSister = this;
-            if (p.gender == "male")
+            if (p.Gender == "male")
             {
                 this._littleBrother = p;
             }
-            else if (p.gender == "female")
+            else if (p.Gender == "female")
             {
                 this._littleSister = p;
             }
@@ -297,11 +297,11 @@ namespace FamilySys
         private void setToBeLittleBrotherOf(FamilyGraphNode p)
         {
             p._littleBrother = this;
-            if (p.gender == "male")
+            if (p.Gender == "male")
             {
                 this._elderBrother = p;
             }
-            else if (p.gender == "female")
+            else if (p.Gender == "female")
             {
                 this._elderSister = p;
             }
@@ -309,11 +309,11 @@ namespace FamilySys
         private void setToBeLittleSisterOf(FamilyGraphNode p)
         {
             p._littleSister = this;
-            if (p.gender == "male")
+            if (p.Gender == "male")
             {
                 this._elderBrother = p;
             }
-            else if (p.gender == "female")
+            else if (p.Gender == "female")
             {
                 this._elderSister = p;
             }
@@ -332,12 +332,12 @@ namespace FamilySys
         #region//设置亲戚关系接口
         public static bool setHusbandAndWife(FamilyGraphNode husband, FamilyGraphNode wife)
         {
-            if (husband.gender == "male" && wife.gender == "female")
+            if (husband.Gender == "male" && wife.Gender == "female")
             {
                 husband.setToBeHusbandOf(wife);
                 return true;
             }
-            else if (husband.gender == "female" && wife.gender == "male")
+            else if (husband.Gender == "female" && wife.Gender == "male")
             {
                 husband.setToBeWifeOf(wife);
                 return true;
@@ -350,27 +350,27 @@ namespace FamilySys
         }
         public static bool setParentAndKid(FamilyGraphNode parent, FamilyGraphNode kid)
         {
-            if (parent.age >= kid.age)
+            if (parent.Age >= kid.Age)
             {
-                if (parent.gender == "male")
+                if (parent.Gender == "male")
                 {
                     parent.setToBeFatherOf(kid);
                     return true;
                 }
-                else if (parent.gender == "female")
+                else if (parent.Gender == "female")
                 {
                     parent.setToBeMotherOf(kid);
                     return true;
                 }
             }
-            else if (parent.age < kid.age)
+            else if (parent.Age < kid.Age)
             {
-                if (kid.gender == "male")
+                if (kid.Gender == "male")
                 {
                     kid.setToBeFatherOf(parent);
                     return true;
                 }
-                else if (kid.gender == "female")
+                else if (kid.Gender == "female")
                 {
                     kid.setToBeMotherOf(parent);
                     return true;
@@ -385,25 +385,25 @@ namespace FamilySys
         }
         public static bool setBrotherAndSister(FamilyGraphNode elder, FamilyGraphNode younger)
         {
-            if (elder.age >= younger.age)
+            if (elder.Age >= younger.Age)
             {
-                if (elder.gender == "male")
+                if (elder.Gender == "male")
                 {
                     elder.setToBeElderBrotherOf(younger);
                 }
-                else if (elder.gender == "female")
+                else if (elder.Gender == "female")
                 {
                     elder.setToBeElderSisterOf(younger);
                 }
                 return true;
             }
-            else if (elder.age < younger.age)
+            else if (elder.Age < younger.Age)
             {
-                if (elder.gender == "male")
+                if (elder.Gender == "male")
                 {
                     elder.setToBeLittleBrotherOf(younger);
                 }
-                else if (elder.gender == "female")
+                else if (elder.Gender == "female")
                 {
                     elder.setToBeLittleSisterOf(younger);
                 }
@@ -413,11 +413,11 @@ namespace FamilySys
             //{
             //    if ((elder.birthday).CompareTo(younger.birthday) <= 0)
             //    {
-            //        if (elder.gender == "male")
+            //        if (elder.Gender == "male")
             //        {
             //            elder.setToBeElderBrotherOf(younger);
             //        }
-            //        else if (elder.gender == "female")
+            //        else if (elder.Gender == "female")
             //        {
             //            elder.setToBeElderSisterOf(younger);
             //        }
@@ -425,11 +425,11 @@ namespace FamilySys
             //    }
             //    else if ((elder.birthday).CompareTo(younger.birthday) > 0)
             //    {
-            //        if (elder.gender == "male")
+            //        if (elder.Gender == "male")
             //        {
             //            elder.setToBeLittleBrotherOf(younger);
             //        }
-            //        else if (elder.gender == "female")
+            //        else if (elder.Gender == "female")
             //        {
             //            elder.setToBeLittleSisterOf(younger);
             //        }
@@ -448,12 +448,12 @@ namespace FamilySys
         #region//判断亲戚关系接口
         public static bool isHusbandAndWife(FamilyGraphNode husband, FamilyGraphNode wife)
         {
-            if (husband.gender == "male" && wife.gender == "female")
+            if (husband.Gender == "male" && wife.Gender == "female")
             {
                 if (husband._wife == wife)
                     return true;
             }
-            else if (husband.gender == "female" && wife.gender == "male")
+            else if (husband.Gender == "female" && wife.Gender == "male")
             {
                 if (husband._husband == wife)
                     return true;
@@ -467,7 +467,7 @@ namespace FamilySys
         }
         public static bool isParentAndKid(FamilyGraphNode parent, FamilyGraphNode kid)
         {
-            if (parent.age >= kid.age)
+            if (parent.Age >= kid.Age)
             {
                 if (parent._son == kid || parent._daughter == kid)
                 {
@@ -478,7 +478,7 @@ namespace FamilySys
                     return false;
                 }
             }
-            else if (parent.age < kid.age)
+            else if (parent.Age < kid.Age)
             {
                 if (parent._father == kid || parent._mother == kid)
                 {
@@ -523,7 +523,7 @@ namespace FamilySys
         }
         public static bool isBrotherAndSister(FamilyGraphNode elder, FamilyGraphNode younger)
         {
-            if (elder.age >= younger.age)
+            if (elder.Age >= younger.Age)
             {
                 if (elder._littleBrother == younger || elder._littleSister == younger)
                 {
@@ -534,7 +534,7 @@ namespace FamilySys
                     return false;
                 }
             }
-            else if (elder.age < younger.age)
+            else if (elder.Age < younger.Age)
             {
                 if (elder._elderBrother == younger || elder._elderSister == younger)
                 {
@@ -581,13 +581,13 @@ namespace FamilySys
         #region//解除亲戚关系接口
         public static bool unsetHusbandAndWife(FamilyGraphNode husband, FamilyGraphNode wife)
         {
-            if (husband.gender == "male" && wife.gender == "female")
+            if (husband.Gender == "male" && wife.Gender == "female")
             {
                 husband._wife = null;
                 wife._husband = null;
                 return true;
             }
-            else if (husband.gender == "female" && wife.gender == "male")
+            else if (husband.Gender == "female" && wife.Gender == "male")
             {
                 husband._husband = null;
                 wife._wife = null;
@@ -601,30 +601,30 @@ namespace FamilySys
         }
         public static bool unsetParentAndKid(FamilyGraphNode parent, FamilyGraphNode kid)
         {
-            if (parent.age >= kid.age)
+            if (parent.Age >= kid.Age)
             {
-                if (parent.gender == "male")
+                if (parent.Gender == "male")
                 {
-                    if (kid.gender == "male")
+                    if (kid.Gender == "male")
                     {
                         parent._son = null;
                         kid._father = null;
                     }
-                    else if (kid.gender == "female")
+                    else if (kid.Gender == "female")
                     {
                         parent._daughter = null;
                         kid._father = null;
                     }
                     return true;
                 }
-                else if (parent.gender == "female")
+                else if (parent.Gender == "female")
                 {
-                    if (kid.gender == "male")
+                    if (kid.Gender == "male")
                     {
                         parent._son = null;
                         kid._mother = null;
                     }
-                    else if (kid.gender == "female")
+                    else if (kid.Gender == "female")
                     {
                         parent._daughter = null;
                         kid._mother = null;
@@ -632,30 +632,30 @@ namespace FamilySys
                     return true;
                 }
             }
-            else if (parent.age < kid.age)
+            else if (parent.Age < kid.Age)
             {
-                if (parent.gender == "male")
+                if (parent.Gender == "male")
                 {
-                    if (kid.gender == "male")
+                    if (kid.Gender == "male")
                     {
                         parent._father = null;
                         kid._son = null;
                     }
-                    else if (kid.gender == "female")
+                    else if (kid.Gender == "female")
                     {
                         parent._mother = null;
                         kid._son = null;
                     }
                     return true;
                 }
-                else if (parent.gender == "female")
+                else if (parent.Gender == "female")
                 {
-                    if (kid.gender == "male")
+                    if (kid.Gender == "male")
                     {
                         parent._father = null;
                         kid._daughter = null;
                     }
-                    else if (kid.gender == "female")
+                    else if (kid.Gender == "female")
                     {
                         parent._mother = null;
                         kid._daughter = null;
@@ -672,25 +672,25 @@ namespace FamilySys
         }
         public static bool unsetBrotherAndSister(FamilyGraphNode elder, FamilyGraphNode younger)
         {
-            if (elder.age >= younger.age)
+            if (elder.Age >= younger.Age)
             {
-                if (elder.gender == "male")
+                if (elder.Gender == "male")
                 {
                     elder.setToBeElderBrotherOf(younger);
                 }
-                else if (elder.gender == "female")
+                else if (elder.Gender == "female")
                 {
                     elder.setToBeElderSisterOf(younger);
                 }
                 return true;
             }
-            else if (elder.age < younger.age)
+            else if (elder.Age < younger.Age)
             {
-                if (elder.gender == "male")
+                if (elder.Gender == "male")
                 {
                     elder.setToBeLittleBrotherOf(younger);
                 }
-                else if (elder.gender == "female")
+                else if (elder.Gender == "female")
                 {
                     elder.setToBeLittleSisterOf(younger);
                 }
@@ -698,11 +698,11 @@ namespace FamilySys
             }
             //else if ((elder.birthday).CompareTo(younger.birthday) <= 0)
             //{
-            //    if (elder.gender == "male")
+            //    if (elder.Gender == "male")
             //    {
             //        elder.setToBeElderBrotherOf(younger);
             //    }
-            //    else if (elder.gender == "female")
+            //    else if (elder.Gender == "female")
             //    {
             //        elder.setToBeElderSisterOf(younger);
             //    }
@@ -710,11 +710,11 @@ namespace FamilySys
             //}
             //else if ((elder.birthday).CompareTo(younger.birthday) > 0)
             //{
-            //    if (elder.gender == "male")
+            //    if (elder.Gender == "male")
             //    {
             //        elder.setToBeLittleBrotherOf(younger);
             //    }
-            //    else if (elder.gender == "female")
+            //    else if (elder.Gender == "female")
             //    {
             //        elder.setToBeLittleSisterOf(younger);
             //    }

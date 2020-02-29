@@ -10,7 +10,7 @@
         /// <summary>
         /// 清理所有正在使用的资源。
         /// </summary>
-        /// <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        /// <param Name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -30,8 +30,8 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.新建ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.导入ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.导出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.打开ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.保存ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.操作ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.新建家庭成员ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,6 +48,7 @@
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.treeView1 = new System.Windows.Forms.TreeView();
+            this.新建ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,31 +70,32 @@
             // 新建ToolStripMenuItem
             // 
             this.新建ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.导入ToolStripMenuItem,
-            this.导出ToolStripMenuItem,
+            this.新建ToolStripMenuItem1,
+            this.打开ToolStripMenuItem,
+            this.保存ToolStripMenuItem,
             this.退出ToolStripMenuItem});
             this.新建ToolStripMenuItem.Name = "新建ToolStripMenuItem";
             this.新建ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.新建ToolStripMenuItem.Text = "文件";
             // 
-            // 导入ToolStripMenuItem
+            // 打开ToolStripMenuItem
             // 
-            this.导入ToolStripMenuItem.Name = "导入ToolStripMenuItem";
-            this.导入ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.导入ToolStripMenuItem.Text = "导入";
-            this.导入ToolStripMenuItem.Click += new System.EventHandler(this.导入ToolStripMenuItem_Click);
+            this.打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
+            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
+            this.打开ToolStripMenuItem.Text = "打开";
+            this.打开ToolStripMenuItem.Click += new System.EventHandler(this.打开ToolStripMenuItem_Click);
             // 
-            // 导出ToolStripMenuItem
+            // 保存ToolStripMenuItem
             // 
-            this.导出ToolStripMenuItem.Name = "导出ToolStripMenuItem";
-            this.导出ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.导出ToolStripMenuItem.Text = "导出";
-            this.导出ToolStripMenuItem.Click += new System.EventHandler(this.导出ToolStripMenuItem_Click);
+            this.保存ToolStripMenuItem.Name = "保存ToolStripMenuItem";
+            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
+            this.保存ToolStripMenuItem.Text = "保存";
+            this.保存ToolStripMenuItem.Click += new System.EventHandler(this.保存ToolStripMenuItem_Click);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
@@ -213,6 +215,13 @@
             this.treeView1.Size = new System.Drawing.Size(267, 623);
             this.treeView1.TabIndex = 7;
             // 
+            // 新建ToolStripMenuItem1
+            // 
+            this.新建ToolStripMenuItem1.Name = "新建ToolStripMenuItem1";
+            this.新建ToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.新建ToolStripMenuItem1.Text = "新建";
+            this.新建ToolStripMenuItem1.Click += new System.EventHandler(this.新建ToolStripMenuItem1_Click);
+            // 
             // 主窗口
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -227,7 +236,7 @@
             this.Name = "主窗口";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "家谱管理系统UI beta";
-            this.Load += new System.EventHandler(this.主窗口_Load_1);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.主窗口_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -238,7 +247,7 @@
         #endregion
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 新建ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 导入ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 打开ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 操作ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 修改家庭成员ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 删除家庭成员ToolStripMenuItem;
@@ -247,7 +256,7 @@
         private System.Windows.Forms.ToolStripMenuItem 平均寿命ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 男女比例ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 家庭平均人口ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 导出ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 保存ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 视图ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 家庭树ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;
@@ -256,6 +265,7 @@
         private System.Windows.Forms.ToolStripMenuItem 新建家庭成员ToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.ToolStripMenuItem 新建ToolStripMenuItem1;
     }
 }
 

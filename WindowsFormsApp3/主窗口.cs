@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -56,6 +57,8 @@ namespace FamilySys
 
         private void 修改家庭成员ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            查找方法选择窗口 查找方法窗口 = new 查找方法选择窗口();
+            查找方法窗口.ShowDialog();
             修改成员窗口 修改窗口 = new 修改成员窗口();
             修改窗口.MdiParent = this;
             修改窗口.Show();
@@ -68,10 +71,6 @@ namespace FamilySys
             查询窗口.Show();
         }
 
-        private void 主窗口_Load_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void 平均寿命ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -97,11 +96,12 @@ namespace FamilySys
 
         }
 
-        private void 导入ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void 打开ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog 导入窗口 = new OpenFileDialog();
-            导入窗口.Title = "请选择xml文件";
+            导入窗口.Title = "请选择文件";
             导入窗口.Filter = "(*.xml)|*.xml";
+            导入窗口.RestoreDirectory = true;
             if (导入窗口.ShowDialog() == DialogResult.OK)
             {
                 xml = 导入窗口.FileName;
@@ -111,11 +111,6 @@ namespace FamilySys
             }
         }
 
-        private void 导出ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //
-        }
-
         private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (主窗口.是否有改动)
@@ -123,7 +118,18 @@ namespace FamilySys
                 DialogResult 选择结果 = MessageBox.Show("文件尚未保存，是否保存？", "提示", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
                 if (选择结果 == DialogResult.Yes)
                 {
-                    //保存的方法
+                    //保存
+                    SaveFileDialog dialog = new SaveFileDialog();
+                    //dialog.Description = "请选择文件路径";
+                    dialog.Title = "请选择保存路径";
+                    dialog.Filter = "(*.xml)|*.xml";
+                    dialog.RestoreDirectory = true;
+                    dialog.FileName = "famliy.xml";
+                    if (dialog.ShowDialog() == DialogResult.OK)
+                    {
+                        string foldPath = dialog.FileName;
+                        //
+                    }
                     this.Close();
                 }
                 else if (选择结果 == DialogResult.No)
@@ -139,6 +145,57 @@ namespace FamilySys
             {
                 this.Close();
             }
+        }
+
+        private void 保存ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog dialog = new SaveFileDialog();
+            //dialog.Description = "请选择文件路径";
+            dialog.Title = "请选择保存路径";
+            dialog.Filter = "(*.xml)|*.xml";
+            dialog.RestoreDirectory = true;
+            dialog.FileName = "famliy.xml";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                string foldPath = dialog.FileName;
+                //
+            }
+        }
+
+        private void 主窗口_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (主窗口.是否有改动)
+            {
+                DialogResult 选择结果 = MessageBox.Show("文件尚未保存，是否保存？", "提示", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                if (选择结果 == DialogResult.Yes)
+                {
+                    //保存
+                    SaveFileDialog dialog = new SaveFileDialog();
+                    //dialog.Description = "请选择文件路径";
+                    dialog.Title = "请选择保存路径";
+                    dialog.Filter = "(*.xml)|*.xml";
+                    dialog.RestoreDirectory = true;
+                    dialog.FileName = "famliy.xml";
+                    if (dialog.ShowDialog() == DialogResult.OK)
+                    {
+                        string foldPath = dialog.FileName;
+                        //
+                    }
+                }
+                else if (选择结果 == DialogResult.No)
+                {
+                    ;
+                }
+                else if (选择结果 == DialogResult.Cancel)
+                {
+                    e.Cancel = true;//取消关闭窗口
+                }
+            }
+        }
+
+        private void 新建ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

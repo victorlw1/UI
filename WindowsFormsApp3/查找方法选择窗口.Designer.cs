@@ -1,6 +1,6 @@
 ﻿namespace FamilySys
 {
-    partial class 如何查找
+    partial class 查找方法选择窗口
     {
         /// <summary>
         /// Required designer variable.
@@ -10,7 +10,7 @@
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param Name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -91,7 +91,7 @@
             this.与自己的关系选择框.Text = "与自己的关系";
             this.与自己的关系选择框.UseVisualStyleBackColor = true;
             // 
-            // 如何查找
+            // 查找方法选择窗口
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -99,7 +99,8 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.MaximumSize = new System.Drawing.Size(400, 200);
             this.MinimumSize = new System.Drawing.Size(400, 200);
-            this.Name = "如何查找";
+            this.Name = "查找方法选择窗口";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

@@ -10,7 +10,7 @@
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param Name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -49,11 +49,11 @@
             this.亲戚关系输入框 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.是否在世_在世 = new System.Windows.Forms.CheckBox();
-            this.性别_男 = new System.Windows.Forms.CheckBox();
-            this.性别_女 = new System.Windows.Forms.CheckBox();
             this.是否在世_已故 = new System.Windows.Forms.CheckBox();
             this.亲戚关系展示框 = new System.Windows.Forms.Label();
             this.确认新建 = new System.Windows.Forms.Button();
+            this.性别_男 = new System.Windows.Forms.RadioButton();
+            this.性别_女 = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.年龄选择框)).BeginInit();
             this.SuspendLayout();
@@ -88,11 +88,11 @@
             this.tableLayoutPanel1.Controls.Add(this.亲戚关系输入框, 4, 10);
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.是否在世_在世, 2, 6);
-            this.tableLayoutPanel1.Controls.Add(this.性别_男, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.性别_女, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.是否在世_已故, 3, 6);
             this.tableLayoutPanel1.Controls.Add(this.亲戚关系展示框, 2, 10);
             this.tableLayoutPanel1.Controls.Add(this.确认新建, 2, 11);
+            this.tableLayoutPanel1.Controls.Add(this.性别_男, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.性别_女, 3, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -310,28 +310,6 @@
             this.是否在世_在世.Text = "在世";
             this.是否在世_在世.UseVisualStyleBackColor = true;
             // 
-            // 性别_男
-            // 
-            this.性别_男.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.性别_男.AutoSize = true;
-            this.性别_男.Location = new System.Drawing.Point(131, 79);
-            this.性别_男.Name = "性别_男";
-            this.性别_男.Size = new System.Drawing.Size(102, 19);
-            this.性别_男.TabIndex = 23;
-            this.性别_男.Text = "男";
-            this.性别_男.UseVisualStyleBackColor = true;
-            // 
-            // 性别_女
-            // 
-            this.性别_女.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.性别_女.AutoSize = true;
-            this.性别_女.Location = new System.Drawing.Point(239, 79);
-            this.性别_女.Name = "性别_女";
-            this.性别_女.Size = new System.Drawing.Size(102, 19);
-            this.性别_女.TabIndex = 24;
-            this.性别_女.Text = "女";
-            this.性别_女.UseVisualStyleBackColor = true;
-            // 
             // 是否在世_已故
             // 
             this.是否在世_已故.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -366,6 +344,30 @@
             this.确认新建.Text = "确认新建";
             this.确认新建.UseVisualStyleBackColor = true;
             this.确认新建.Click += new System.EventHandler(this.确认新建_Click);
+            // 
+            // 性别_男
+            // 
+            this.性别_男.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.性别_男.AutoSize = true;
+            this.性别_男.Location = new System.Drawing.Point(131, 79);
+            this.性别_男.Name = "性别_男";
+            this.性别_男.Size = new System.Drawing.Size(102, 19);
+            this.性别_男.TabIndex = 27;
+            this.性别_男.TabStop = true;
+            this.性别_男.Text = "男";
+            this.性别_男.UseVisualStyleBackColor = true;
+            // 
+            // 性别_女
+            // 
+            this.性别_女.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.性别_女.AutoSize = true;
+            this.性别_女.Location = new System.Drawing.Point(239, 79);
+            this.性别_女.Name = "性别_女";
+            this.性别_女.Size = new System.Drawing.Size(102, 19);
+            this.性别_女.TabIndex = 28;
+            this.性别_女.TabStop = true;
+            this.性别_女.Text = "女";
+            this.性别_女.UseVisualStyleBackColor = true;
             // 
             // 新建成员窗口
             // 
@@ -410,9 +412,9 @@
         private System.Windows.Forms.Label 亲戚关系展示框;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox 是否在世_在世;
-        private System.Windows.Forms.CheckBox 性别_男;
-        private System.Windows.Forms.CheckBox 性别_女;
         private System.Windows.Forms.CheckBox 是否在世_已故;
         private System.Windows.Forms.Button 确认新建;
+        private System.Windows.Forms.RadioButton 性别_男;
+        private System.Windows.Forms.RadioButton 性别_女;
     }
 }

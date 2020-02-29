@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FamilySys
 {
-    public partial class 如何查找 : Form
+    public partial class 查找方法选择窗口 : Form
     {
-        public 如何查找()
+        public 查找方法选择窗口()
         {
             InitializeComponent();
         }

@@ -15,9 +15,9 @@ namespace WindowsFormsApp3
         {
             root = null;
         }
-        public FamilyTree(string name, string birthplace, string birthday, string deathday, string gender, string height, string education, string profession, string highestProfessionRank)
+        public FamilyTree(string name, int age, string gender, bool isDead, string birthday, string birthplace, string deathday, string height, string education, string profession, string highestProfessionRank)
         {
-            root = new FamilyTreeNode(name, birthplace, birthday, deathday, gender, height, education, profession, highestProfessionRank);
+            root = new FamilyTreeNode(name, age, gender, isDead, birthday, birthplace, deathday, height, education, profession, highestProfessionRank);
         }
 
         public void DFS_output(FamilyTreeNode node)
@@ -83,10 +83,10 @@ namespace WindowsFormsApp3
             }
 
         }
-        public void delete(string name)
+        public void delete(string name)//????LB
         {
             FamilyTreeNode temp = query(root, name);
-            temp.Name = "无";
+            temp.Name = "无";//????LB
             if (temp.LeftChild == null && temp.RightChild == null)
             {
                 if (temp.Parent.LeftChild == temp)
@@ -112,19 +112,23 @@ namespace WindowsFormsApp3
             temp.Profession = "无";
             temp.HighestProfessionRank = "无";
         }
-        public void update(string name, string newName, string newBirthplace, string newBirthday, string newDeathday, string newGender, string newHeight, string newEducation, string newProfession, string newHighestProfessionRank)
+        public void update(string name,string newName, int newAge, string newGender, bool newIsDead, string newBirthday, string newBirthplace, string newDeathday, string newHeight, string newEducation, string newProfession, string newHighestProfessionRank)
         {
             FamilyTreeNode temp = query(root, name);
             if (newName != null)
                 temp.Name = newName;
-            if (newBirthplace != null)
-                temp.Birthplace = newBirthplace;
-            if (newBirthday != null)
-                temp.Birthday = newBirthday;
-            if (newDeathday != null)
-                temp.Deathday = newDeathday;
+            if (newAge != null)
+                temp.Age = newAge;
             if (newGender != null)
                 temp.Gender = newGender;
+            if (newIsDead != null)
+                temp.IsDead = newIsDead;
+            if (newBirthday != null)
+                temp.Birthday = newBirthday;
+            if (newBirthplace != null)
+                temp.Birthplace = newBirthplace;
+            if (newDeathday != null)
+                temp.Deathday = newDeathday;
             if (newHeight != null)
                 temp.Height = newHeight;
             if (newEducation != null)
@@ -305,40 +309,40 @@ namespace WindowsFormsApp3
 
         }
 
-        public void loadTree() //从本地加载一棵树
-        {
-            XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load("familytree.xml");
-            XmlNode xmlNode = xmlDoc.SelectSingleNode("root");
-            XmlElement xmlElem = (XmlElement)xmlNode;
-            root = loadTreeHelper(xmlDoc, xmlElem, null, 0);
-        }
+        //public void loadTree() //从本地加载一棵树
+        //{
+        //    XmlDocument xmlDoc = new XmlDocument();
+        //    xmlDoc.Load("familytree.xml");
+        //    XmlNode xmlNode = xmlDoc.SelectSingleNode("root");
+        //    XmlElement xmlElem = (XmlElement)xmlNode;
+        //    root = loadTreeHelper(xmlDoc, xmlElem, null, 0);
+        //}
 
-        public FamilyTreeNode loadTreeHelper(XmlDocument xmlDoc, XmlElement xmlElem, FamilyTreeNode parentNode, int level)
-        {
-            if (xmlElem.GetAttribute("emp") == "y")
-            {
-                FamilyTreeNode node1 = null;
-                return node1;
-            }
-            string name = xmlElem.GetAttribute("n");
-            string birthplace = xmlElem.GetAttribute("bp");
-            string birthday = xmlElem.GetAttribute("bd");
-            string deathday = xmlElem.GetAttribute("dd");
-            string gender = xmlElem.GetAttribute("g");
-            string height = xmlElem.GetAttribute("h");
-            string education = xmlElem.GetAttribute("e");
-            string profession = xmlElem.GetAttribute("p");
-            string highestProfessionRank = xmlElem.GetAttribute("hp");
-            FamilyTreeNode node = new FamilyTreeNode(name, birthplace, birthday, deathday, gender, height, education, profession, highestProfessionRank);
-            node.Parent = parentNode;
-            node.Level = level;
-            XmlElement lElem = (XmlElement)xmlElem.SelectSingleNode("l");
-            XmlElement rElem = (XmlElement)xmlElem.SelectSingleNode("r");
-            node.LeftChild = loadTreeHelper(xmlDoc, lElem, node, level + 1);
-            node.RightChild = loadTreeHelper(xmlDoc, rElem, parentNode, level);
-            return node;
-        }
+        //public FamilyTreeNode loadTreeHelper(XmlDocument xmlDoc, XmlElement xmlElem, FamilyTreeNode parentNode, int level)
+        //{
+        //    if (xmlElem.GetAttribute("emp") == "y")
+        //    {
+        //        FamilyTreeNode node1 = null;
+        //        return node1;
+        //    }
+        //    string name = xmlElem.GetAttribute("n");
+        //    string birthplace = xmlElem.GetAttribute("bp");
+        //    string birthday = xmlElem.GetAttribute("bd");
+        //    string deathday = xmlElem.GetAttribute("dd");
+        //    string gender = xmlElem.GetAttribute("g");
+        //    string height = xmlElem.GetAttribute("h");
+        //    string education = xmlElem.GetAttribute("e");
+        //    string profession = xmlElem.GetAttribute("p");
+        //    string highestProfessionRank = xmlElem.GetAttribute("hp");
+        //    FamilyTreeNode node = new FamilyTreeNode(name,age,gender,isDead, birthday, birthplace,  deathday, height, education, profession, highestProfessionRank);
+        //    node.Parent = parentNode;
+        //    node.Level = level;
+        //    XmlElement lElem = (XmlElement)xmlElem.SelectSingleNode("l");
+        //    XmlElement rElem = (XmlElement)xmlElem.SelectSingleNode("r");
+        //    node.LeftChild = loadTreeHelper(xmlDoc, lElem, node, level + 1);
+        //    node.RightChild = loadTreeHelper(xmlDoc, rElem, parentNode, level);
+        //    return node;
+        //}
 
     }
 

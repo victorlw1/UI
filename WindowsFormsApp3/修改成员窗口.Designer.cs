@@ -10,7 +10,7 @@
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param Name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -49,11 +49,11 @@
             this.亲戚关系输入框 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.是否在世_在世 = new System.Windows.Forms.CheckBox();
-            this.性别_男 = new System.Windows.Forms.CheckBox();
-            this.性别_女 = new System.Windows.Forms.CheckBox();
             this.是否在世_已故 = new System.Windows.Forms.CheckBox();
             this.亲戚关系展示框 = new System.Windows.Forms.Label();
             this.确认修改 = new System.Windows.Forms.Button();
+            this.性别_男 = new System.Windows.Forms.RadioButton();
+            this.性别_女 = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.年龄选择框)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +67,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.9992F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0032F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.9992F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 22F));
             this.tableLayoutPanel1.Controls.Add(this.姓名, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.性别, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.年龄, 1, 3);
@@ -88,11 +88,11 @@
             this.tableLayoutPanel1.Controls.Add(this.亲戚关系输入框, 4, 10);
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.是否在世_在世, 2, 6);
-            this.tableLayoutPanel1.Controls.Add(this.性别_男, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.性别_女, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.是否在世_已故, 3, 6);
             this.tableLayoutPanel1.Controls.Add(this.亲戚关系展示框, 2, 10);
             this.tableLayoutPanel1.Controls.Add(this.确认修改, 2, 11);
+            this.tableLayoutPanel1.Controls.Add(this.性别_男, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.性别_女, 3, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -147,18 +147,18 @@
             // 
             this.姓名输入框.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.姓名输入框, 2);
-            this.姓名输入框.Location = new System.Drawing.Point(131, 30);
+            this.姓名输入框.Location = new System.Drawing.Point(130, 30);
             this.姓名输入框.Name = "姓名输入框";
-            this.姓名输入框.Size = new System.Drawing.Size(210, 25);
+            this.姓名输入框.Size = new System.Drawing.Size(208, 25);
             this.姓名输入框.TabIndex = 12;
             // 
             // 年龄选择框
             // 
             this.年龄选择框.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.年龄选择框, 2);
-            this.年龄选择框.Location = new System.Drawing.Point(131, 122);
+            this.年龄选择框.Location = new System.Drawing.Point(130, 122);
             this.年龄选择框.Name = "年龄选择框";
-            this.年龄选择框.Size = new System.Drawing.Size(210, 25);
+            this.年龄选择框.Size = new System.Drawing.Size(208, 25);
             this.年龄选择框.TabIndex = 13;
             // 
             // 与自己的关系
@@ -226,9 +226,9 @@
             this.出生日期选择框.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.出生日期选择框, 2);
             this.出生日期选择框.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.出生日期选择框.Location = new System.Drawing.Point(131, 214);
+            this.出生日期选择框.Location = new System.Drawing.Point(130, 214);
             this.出生日期选择框.Name = "出生日期选择框";
-            this.出生日期选择框.Size = new System.Drawing.Size(210, 25);
+            this.出生日期选择框.Size = new System.Drawing.Size(208, 25);
             this.出生日期选择框.TabIndex = 9;
             this.出生日期选择框.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
@@ -236,9 +236,9 @@
             // 
             this.死亡日期选择框.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.死亡日期选择框, 2);
-            this.死亡日期选择框.Location = new System.Drawing.Point(131, 306);
+            this.死亡日期选择框.Location = new System.Drawing.Point(130, 306);
             this.死亡日期选择框.Name = "死亡日期选择框";
-            this.死亡日期选择框.Size = new System.Drawing.Size(210, 25);
+            this.死亡日期选择框.Size = new System.Drawing.Size(208, 25);
             this.死亡日期选择框.TabIndex = 10;
             this.死亡日期选择框.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
@@ -246,18 +246,18 @@
             // 
             this.省份.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.省份.FormattingEnabled = true;
-            this.省份.Location = new System.Drawing.Point(131, 169);
+            this.省份.Location = new System.Drawing.Point(130, 169);
             this.省份.Name = "省份";
-            this.省份.Size = new System.Drawing.Size(102, 23);
+            this.省份.Size = new System.Drawing.Size(101, 23);
             this.省份.TabIndex = 15;
             // 
             // 市区
             // 
             this.市区.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.市区.FormattingEnabled = true;
-            this.市区.Location = new System.Drawing.Point(239, 169);
+            this.市区.Location = new System.Drawing.Point(237, 169);
             this.市区.Name = "市区";
-            this.市区.Size = new System.Drawing.Size(102, 23);
+            this.市区.Size = new System.Drawing.Size(101, 23);
             this.市区.TabIndex = 16;
             // 
             // 学历水平选择框
@@ -265,24 +265,24 @@
             this.学历水平选择框.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.学历水平选择框, 2);
             this.学历水平选择框.FormattingEnabled = true;
-            this.学历水平选择框.Location = new System.Drawing.Point(131, 353);
+            this.学历水平选择框.Location = new System.Drawing.Point(130, 353);
             this.学历水平选择框.Name = "学历水平选择框";
-            this.学历水平选择框.Size = new System.Drawing.Size(210, 23);
+            this.学历水平选择框.Size = new System.Drawing.Size(208, 23);
             this.学历水平选择框.TabIndex = 17;
             // 
             // 最高职位输入框
             // 
             this.最高职位输入框.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.最高职位输入框, 2);
-            this.最高职位输入框.Location = new System.Drawing.Point(131, 398);
+            this.最高职位输入框.Location = new System.Drawing.Point(130, 398);
             this.最高职位输入框.Name = "最高职位输入框";
-            this.最高职位输入框.Size = new System.Drawing.Size(210, 25);
+            this.最高职位输入框.Size = new System.Drawing.Size(208, 25);
             this.最高职位输入框.TabIndex = 18;
             // 
             // 亲戚关系输入框
             // 
             this.亲戚关系输入框.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.亲戚关系输入框.Location = new System.Drawing.Point(347, 439);
+            this.亲戚关系输入框.Location = new System.Drawing.Point(344, 439);
             this.亲戚关系输入框.Name = "亲戚关系输入框";
             this.亲戚关系输入框.Size = new System.Drawing.Size(102, 35);
             this.亲戚关系输入框.TabIndex = 11;
@@ -293,7 +293,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 173);
+            this.label2.Location = new System.Drawing.Point(47, 173);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 15);
             this.label2.TabIndex = 20;
@@ -303,42 +303,20 @@
             // 
             this.是否在世_在世.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.是否在世_在世.AutoSize = true;
-            this.是否在世_在世.Location = new System.Drawing.Point(131, 263);
+            this.是否在世_在世.Location = new System.Drawing.Point(130, 263);
             this.是否在世_在世.Name = "是否在世_在世";
-            this.是否在世_在世.Size = new System.Drawing.Size(102, 19);
+            this.是否在世_在世.Size = new System.Drawing.Size(101, 19);
             this.是否在世_在世.TabIndex = 21;
             this.是否在世_在世.Text = "在世";
             this.是否在世_在世.UseVisualStyleBackColor = true;
-            // 
-            // 性别_男
-            // 
-            this.性别_男.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.性别_男.AutoSize = true;
-            this.性别_男.Location = new System.Drawing.Point(131, 79);
-            this.性别_男.Name = "性别_男";
-            this.性别_男.Size = new System.Drawing.Size(102, 19);
-            this.性别_男.TabIndex = 23;
-            this.性别_男.Text = "男";
-            this.性别_男.UseVisualStyleBackColor = true;
-            // 
-            // 性别_女
-            // 
-            this.性别_女.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.性别_女.AutoSize = true;
-            this.性别_女.Location = new System.Drawing.Point(239, 79);
-            this.性别_女.Name = "性别_女";
-            this.性别_女.Size = new System.Drawing.Size(102, 19);
-            this.性别_女.TabIndex = 24;
-            this.性别_女.Text = "女";
-            this.性别_女.UseVisualStyleBackColor = true;
             // 
             // 是否在世_已故
             // 
             this.是否在世_已故.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.是否在世_已故.AutoSize = true;
-            this.是否在世_已故.Location = new System.Drawing.Point(239, 263);
+            this.是否在世_已故.Location = new System.Drawing.Point(237, 263);
             this.是否在世_已故.Name = "是否在世_已故";
-            this.是否在世_已故.Size = new System.Drawing.Size(102, 19);
+            this.是否在世_已故.Size = new System.Drawing.Size(101, 19);
             this.是否在世_已故.TabIndex = 25;
             this.是否在世_已故.Text = "已故";
             this.是否在世_已故.UseVisualStyleBackColor = true;
@@ -349,9 +327,9 @@
             this.亲戚关系展示框.AutoSize = true;
             this.亲戚关系展示框.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tableLayoutPanel1.SetColumnSpan(this.亲戚关系展示框, 2);
-            this.亲戚关系展示框.Location = new System.Drawing.Point(131, 448);
+            this.亲戚关系展示框.Location = new System.Drawing.Point(130, 448);
             this.亲戚关系展示框.Name = "亲戚关系展示框";
-            this.亲戚关系展示框.Size = new System.Drawing.Size(210, 17);
+            this.亲戚关系展示框.Size = new System.Drawing.Size(208, 17);
             this.亲戚关系展示框.TabIndex = 19;
             this.亲戚关系展示框.Text = "就是我自己";
             // 
@@ -359,13 +337,37 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.确认修改, 2);
             this.确认修改.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.确认修改.Location = new System.Drawing.Point(131, 483);
+            this.确认修改.Location = new System.Drawing.Point(130, 483);
             this.确认修改.Name = "确认修改";
-            this.确认修改.Size = new System.Drawing.Size(210, 44);
+            this.确认修改.Size = new System.Drawing.Size(208, 44);
             this.确认修改.TabIndex = 26;
             this.确认修改.Text = "确认修改";
             this.确认修改.UseVisualStyleBackColor = true;
             this.确认修改.Click += new System.EventHandler(this.确认修改_Click);
+            // 
+            // 性别_男
+            // 
+            this.性别_男.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.性别_男.AutoSize = true;
+            this.性别_男.Location = new System.Drawing.Point(130, 79);
+            this.性别_男.Name = "性别_男";
+            this.性别_男.Size = new System.Drawing.Size(101, 19);
+            this.性别_男.TabIndex = 27;
+            this.性别_男.TabStop = true;
+            this.性别_男.Text = "男";
+            this.性别_男.UseVisualStyleBackColor = true;
+            // 
+            // 性别_女
+            // 
+            this.性别_女.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.性别_女.AutoSize = true;
+            this.性别_女.Location = new System.Drawing.Point(237, 79);
+            this.性别_女.Name = "性别_女";
+            this.性别_女.Size = new System.Drawing.Size(101, 19);
+            this.性别_女.TabIndex = 28;
+            this.性别_女.TabStop = true;
+            this.性别_女.Text = "女";
+            this.性别_女.UseVisualStyleBackColor = true;
             // 
             // 修改成员窗口
             // 
@@ -409,10 +411,10 @@
         private System.Windows.Forms.Button 亲戚关系输入框;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox 是否在世_在世;
-        private System.Windows.Forms.CheckBox 性别_男;
-        private System.Windows.Forms.CheckBox 性别_女;
         private System.Windows.Forms.CheckBox 是否在世_已故;
         private System.Windows.Forms.Label 亲戚关系展示框;
         private System.Windows.Forms.Button 确认修改;
+        private System.Windows.Forms.RadioButton 性别_男;
+        private System.Windows.Forms.RadioButton 性别_女;
     }
 }
