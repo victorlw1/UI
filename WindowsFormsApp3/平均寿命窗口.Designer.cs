@@ -1,4 +1,4 @@
-﻿namespace FamilySys
+namespace FamilySys
 {
     partial class 平均寿命窗口
     {
@@ -107,6 +107,8 @@
             this.ClientSize = new System.Drawing.Size(282, 153);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "平均寿命窗口";
             this.Text = "平均寿命窗口";
             this.tableLayoutPanel1.ResumeLayout(false);

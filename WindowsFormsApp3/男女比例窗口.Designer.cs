@@ -1,4 +1,4 @@
-﻿namespace FamilySys
+namespace FamilySys
 {
     partial class 男女比例窗口
     {
@@ -104,6 +104,8 @@
             this.ClientSize = new System.Drawing.Size(282, 153);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "男女比例窗口";
             this.Text = "男女比例窗口";
             this.Load += new System.EventHandler(this.男女比例窗口_Load);

@@ -1,4 +1,4 @@
-﻿namespace FamilySys
+namespace FamilySys
 {
     partial class 查询成员窗口
     {

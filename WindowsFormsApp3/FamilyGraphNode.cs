@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -178,7 +178,6 @@ namespace FamilySys
             this.Age = age;
             this.IsDead = isDead;
             this.EncodeStr = encodeStr;
-
             this.IsVisited = false;
         }
         /*
@@ -441,7 +440,6 @@ namespace FamilySys
                 Console.WriteLine("Person::setBrotherAndSister()输入有误");
                 return false;
             }
-            return false;
 
         }
         #endregion

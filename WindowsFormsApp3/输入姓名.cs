@@ -10,24 +10,23 @@ using System.Windows.Forms;
 
 namespace FamilySys
 {
-    public partial class 查找方法选择窗口 : Form
+    public partial class 输入姓名 : Form
     {
-        public 查找方法选择窗口()
+        public 输入姓名()
         {
             InitializeComponent();
         }
 
         private void 确定_Click(object sender, EventArgs e)
         {
-            if (姓名选择框.Checked)
+            if (姓名输入框.Text == "")
             {
-                输入姓名 form = new 输入姓名();
-                form.ShowDialog();
-                this.Close();
-            }else if (关系选择框.Checked)
+                MessageBox.Show("请输入内容", null, MessageBoxButtons.OK, MessageBoxIcon.Warning); ;
+            }
+            else
             {
-                输入关系 form = new 输入关系();
-                form.ShowDialog();
+                修改成员窗口.altName = 姓名输入框.Text;
+                删除成员窗口.delName = 姓名输入框.Text;
                 this.Close();
             }
         }

@@ -1,4 +1,4 @@
-﻿namespace FamilySys
+namespace FamilySys
 {
     partial class 删除成员窗口
     {
@@ -35,8 +35,6 @@
             this.性别 = new System.Windows.Forms.Label();
             this.姓名 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.与自己的关系 = new System.Windows.Forms.Label();
-            this.亲戚关系展示框 = new System.Windows.Forms.Label();
             this.确认删除 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +49,6 @@
             this.性别展示框.Name = "性别展示框";
             this.性别展示框.Size = new System.Drawing.Size(208, 17);
             this.性别展示框.TabIndex = 23;
-            this.性别展示框.Text = "性别展示框";
             // 
             // 年龄展示框
             // 
@@ -63,7 +60,6 @@
             this.年龄展示框.Name = "年龄展示框";
             this.年龄展示框.Size = new System.Drawing.Size(208, 17);
             this.年龄展示框.TabIndex = 22;
-            this.年龄展示框.Text = "年龄展示框";
             // 
             // 姓名展示框
             // 
@@ -75,7 +71,6 @@
             this.姓名展示框.Name = "姓名展示框";
             this.姓名展示框.Size = new System.Drawing.Size(208, 17);
             this.姓名展示框.TabIndex = 21;
-            this.姓名展示框.Text = "姓名展示框";
             // 
             // 年龄
             // 
@@ -122,8 +117,6 @@
             this.tableLayoutPanel1.Controls.Add(this.姓名展示框, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.年龄展示框, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.性别展示框, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.与自己的关系, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.亲戚关系展示框, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.确认删除, 2, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -143,28 +136,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(582, 253);
             this.tableLayoutPanel1.TabIndex = 2;
-            // 
-            // 与自己的关系
-            // 
-            this.与自己的关系.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.与自己的关系.AutoSize = true;
-            this.与自己的关系.Location = new System.Drawing.Point(23, 159);
-            this.与自己的关系.Name = "与自己的关系";
-            this.与自己的关系.Size = new System.Drawing.Size(101, 15);
-            this.与自己的关系.TabIndex = 24;
-            this.与自己的关系.Text = "与自己的关系";
-            // 
-            // 亲戚关系展示框
-            // 
-            this.亲戚关系展示框.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.亲戚关系展示框.AutoSize = true;
-            this.亲戚关系展示框.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tableLayoutPanel1.SetColumnSpan(this.亲戚关系展示框, 2);
-            this.亲戚关系展示框.Location = new System.Drawing.Point(130, 158);
-            this.亲戚关系展示框.Name = "亲戚关系展示框";
-            this.亲戚关系展示框.Size = new System.Drawing.Size(208, 17);
-            this.亲戚关系展示框.TabIndex = 25;
-            this.亲戚关系展示框.Text = "亲戚关系展示框";
             // 
             // 确认删除
             // 
@@ -190,6 +161,9 @@
             this.MinimumSize = new System.Drawing.Size(600, 300);
             this.Name = "删除成员窗口";
             this.Text = "删除成员窗口";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.删除成员窗口_FormClosed);
+            this.Load += new System.EventHandler(this.删除成员窗口_Load);
+            this.Shown += new System.EventHandler(this.删除成员窗口_Shown);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -204,8 +178,6 @@
         private System.Windows.Forms.Label 姓名展示框;
         private System.Windows.Forms.Label 年龄展示框;
         private System.Windows.Forms.Label 性别展示框;
-        private System.Windows.Forms.Label 与自己的关系;
-        private System.Windows.Forms.Label 亲戚关系展示框;
         private System.Windows.Forms.Button 确认删除;
     }
 }

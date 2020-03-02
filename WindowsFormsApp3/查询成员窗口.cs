@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +19,8 @@ namespace FamilySys
 
         private void 查询成员窗口_Load(object sender, EventArgs e)
         {
-
+            查找方法选择窗口 查找方法窗口 = new 查找方法选择窗口();
+            查找方法窗口.ShowDialog();
         }
     }
 }

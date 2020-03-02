@@ -50,6 +50,8 @@
     <Compile Include="FamilyGraphNode.cs" />
     <Compile Include="FamilyTree.cs" />
     <Compile Include="FamilyTreeNode.cs" />
+    <Compile Include="IOmodule.cs" />
+    <Compile Include="R.cs" />
     <Compile Include="主窗口.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +108,18 @@
     <Compile Include="男女比例窗口.Designer.cs">
       <DependentUpon>男女比例窗口.cs</DependentUpon>
     </Compile>
+    <Compile Include="输入关系.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="输入关系.Designer.cs">
+      <DependentUpon>输入关系.cs</DependentUpon>
+    </Compile>
+    <Compile Include="输入姓名.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="输入姓名.Designer.cs">
+      <DependentUpon>输入姓名.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="主窗口.resx">
       <DependentUpon>主窗口.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,6 +155,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="男女比例窗口.resx">
       <DependentUpon>男女比例窗口.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="输入关系.resx">
+      <DependentUpon>输入关系.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="输入姓名.resx">
+      <DependentUpon>输入姓名.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>

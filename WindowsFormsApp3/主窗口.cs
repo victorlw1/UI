@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +13,7 @@ namespace FamilySys
 {
     public partial class 主窗口 : Form
     {
+        public static string title = "家谱管理系统UI beta";
         public static string xml = null;
         public static bool 是否有改动 = false;
         public 主窗口()
@@ -57,8 +58,6 @@ namespace FamilySys
 
         private void 修改家庭成员ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            查找方法选择窗口 查找方法窗口 = new 查找方法选择窗口();
-            查找方法窗口.ShowDialog();
             修改成员窗口 修改窗口 = new 修改成员窗口();
             修改窗口.MdiParent = this;
             修改窗口.Show();
@@ -195,7 +194,10 @@ namespace FamilySys
 
         private void 新建ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            新建成员窗口 新建窗口 = new 新建成员窗口();
+            新建窗口.MdiParent = this;
+            新建窗口.Show();
         }
+
     }
 }
