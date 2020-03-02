@@ -50,7 +50,25 @@ namespace FamilySys
             return resNode;
         }
 
-        public void insert(FamilyTreeNode node, string fatherName)
+        public void insert_parent(FamilyTreeNode node)
+        {
+            if (root == null)
+            {
+                node.Parent = null;
+                node.Level = 1;
+                root = node;
+                return;
+            }
+            else 
+            {
+                node.Level = root.Level - 1;
+                node.Parent = null;
+                node.LeftChild = root;
+                root.Parent = node;
+                root = node;
+            }
+        }
+        public void insert_child(FamilyTreeNode node, string fatherName)
         {
             if (root == null)
             {
@@ -293,6 +311,7 @@ namespace FamilySys
             elem.SetAttribute("n", node.Name);
             elem.SetAttribute("bp", node.Birthplace);
             elem.SetAttribute("bd", node.Birthday);
+            elem.SetAttribute("id", node.IsDead.ToString());
             elem.SetAttribute("dd", node.Deathday);
             elem.SetAttribute("g", node.Gender);
             elem.SetAttribute("h", node.Height);
@@ -309,40 +328,64 @@ namespace FamilySys
 
         }
 
-        //public void loadTree() //从本地加载一棵树
-        //{
-        //    XmlDocument xmlDoc = new XmlDocument();
-        //    xmlDoc.Load("familytree.xml");
-        //    XmlNode xmlNode = xmlDoc.SelectSingleNode("root");
-        //    XmlElement xmlElem = (XmlElement)xmlNode;
-        //    root = loadTreeHelper(xmlDoc, xmlElem, null, 0);
-        //}
+        public void loadtree() //从本地加载一棵树
+        {
+            XmlDocument xmldoc = new XmlDocument();
+            xmldoc.Load("familytree.xml");
+            XmlNode xmlnode = xmldoc.SelectSingleNode("root");
+            XmlElement xmlelem = (XmlElement)xmlnode;
+            root = loadTreeHelper(xmldoc, xmlelem, null, 0);
+        }
 
-        //public FamilyTreeNode loadTreeHelper(XmlDocument xmlDoc, XmlElement xmlElem, FamilyTreeNode parentNode, int level)
-        //{
-        //    if (xmlElem.GetAttribute("emp") == "y")
-        //    {
-        //        FamilyTreeNode node1 = null;
-        //        return node1;
-        //    }
-        //    string name = xmlElem.GetAttribute("n");
-        //    string birthplace = xmlElem.GetAttribute("bp");
-        //    string birthday = xmlElem.GetAttribute("bd");
-        //    string deathday = xmlElem.GetAttribute("dd");
-        //    string gender = xmlElem.GetAttribute("g");
-        //    string height = xmlElem.GetAttribute("h");
-        //    string education = xmlElem.GetAttribute("e");
-        //    string profession = xmlElem.GetAttribute("p");
-        //    string highestProfessionRank = xmlElem.GetAttribute("hp");
-        //    FamilyTreeNode node = new FamilyTreeNode(name,age,gender,isDead, birthday, birthplace,  deathday, height, education, profession, highestProfessionRank);
-        //    node.Parent = parentNode;
-        //    node.Level = level;
-        //    XmlElement lElem = (XmlElement)xmlElem.SelectSingleNode("l");
-        //    XmlElement rElem = (XmlElement)xmlElem.SelectSingleNode("r");
-        //    node.LeftChild = loadTreeHelper(xmlDoc, lElem, node, level + 1);
-        //    node.RightChild = loadTreeHelper(xmlDoc, rElem, parentNode, level);
-        //    return node;
-        //}
+        public FamilyTreeNode loadTreeHelper(XmlDocument xmlDoc, XmlElement xmlElem, FamilyTreeNode parentNode, int level)
+        {
+            if (xmlElem.GetAttribute("emp") == "y")
+            {
+                FamilyTreeNode node1 = null;
+                return node1;
+            }
+            string name = xmlElem.GetAttribute("n");
+            string birthplace = xmlElem.GetAttribute("bp");
+            string birthday = xmlElem.GetAttribute("bd");
+            string isDead_str = xmlElem.GetAttribute("id");
+            bool isDead;
+            if (isDead_str == "True")
+            {
+                isDead = true;
+            }
+            else
+            {
+                isDead = false;
+            }
+            string deathday = xmlElem.GetAttribute("dd");
+            int birthday_int = (int)Double.Parse(birthday.Substring(0, 4));
+            int age = 0;
+            if (isDead)
+            {
+                int deathday_int = (int)Double.Parse(deathday.Substring(0, 4));
+                age = deathday_int - birthday_int;
+            }
+            else 
+            {
+                DateTime currentTime = System.DateTime.Now;
+                int defaultYear = currentTime.Year;
+                age = defaultYear - birthday_int;
+            }
+
+            string gender = xmlElem.GetAttribute("g");
+            string height = xmlElem.GetAttribute("h");
+            string education = xmlElem.GetAttribute("e");
+            string profession = xmlElem.GetAttribute("p");
+            string highestProfessionRank = xmlElem.GetAttribute("hp");
+            FamilyTreeNode node = new FamilyTreeNode(name, age, gender, isDead, birthday, birthplace, deathday, height, education, profession, highestProfessionRank);
+            node.Parent = parentNode;
+            node.Level = level;
+            XmlElement lElem = (XmlElement)xmlElem.SelectSingleNode("l");
+            XmlElement rElem = (XmlElement)xmlElem.SelectSingleNode("r");
+            node.LeftChild = loadTreeHelper(xmlDoc, lElem, node, level + 1);
+            node.RightChild = loadTreeHelper(xmlDoc, rElem, parentNode, level);
+            return node;
+        }
 
     }
 
