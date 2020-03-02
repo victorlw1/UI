@@ -311,6 +311,7 @@ namespace WindowsFormsApp3
             elem.SetAttribute("n", node.Name);
             elem.SetAttribute("bp", node.Birthplace);
             elem.SetAttribute("bd", node.Birthday);
+            elem.SetAttribute("id", node.IsDead.ToString());
             elem.SetAttribute("dd", node.Deathday);
             elem.SetAttribute("g", node.Gender);
             elem.SetAttribute("h", node.Height);
@@ -346,7 +347,31 @@ namespace WindowsFormsApp3
             string name = xmlElem.GetAttribute("n");
             string birthplace = xmlElem.GetAttribute("bp");
             string birthday = xmlElem.GetAttribute("bd");
+            string isDead_str = xmlElem.GetAttribute("id");
+            bool isDead;
+            if (isDead_str == "True")
+            {
+                isDead = true;
+            }
+            else
+            {
+                isDead = false;
+            }
             string deathday = xmlElem.GetAttribute("dd");
+            int birthday_int = (int)Double.Parse(birthday.Substring(0, 4));
+            int age = 0;
+            if (isDead)
+            {
+                int deathday_int = (int)Double.Parse(deathday.Substring(0, 4));
+                age = deathday_int - birthday_int;
+            }
+            else 
+            {
+                DateTime currentTime = System.DateTime.Now;
+                int defaultYear = currentTime.Year;
+                age = defaultYear - birthday_int;
+            }
+
             string gender = xmlElem.GetAttribute("g");
             string height = xmlElem.GetAttribute("h");
             string education = xmlElem.GetAttribute("e");
