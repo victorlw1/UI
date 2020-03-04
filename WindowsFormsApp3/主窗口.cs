@@ -116,7 +116,9 @@ namespace FamilySys
                 //需要加载操作
 
                 myFamilyTree.loadTree(xml);
-
+                TreeNode rootNode = new TreeNode("家族树");
+                bulidTreeView(myFamilyTree.root, rootNode);
+                树视图展示.Nodes.Add(rootNode);
             }
         }
 
@@ -217,19 +219,18 @@ namespace FamilySys
             新建窗口.Show();
         }
 
-        //public static TreeNode 更新treeView(FamilyTreeNode root,TreeNode tNode)
-        //{
-        //    if (root == null)
-        //    {
-        //        return tNode;
-        //    }
-        //    tNode = new TreeNode(root.Name);
-        //    TreeNode ttNode=new TreeNode();
-        //    更新treeView( root.LeftChild, ttNode);
-        //    更新treeView( root.RightChild, ttNode);
-        //    tNode.Nodes.Add(ttNode);
-
-        //}
-
+        public static void bulidTreeView(FamilyTreeNode root, TreeNode tNode)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            for (var p = root; p != null; p = p.RightChild)
+            {
+                TreeNode ttNode = new TreeNode(p.Name);
+                tNode.Nodes.Add(ttNode);
+                bulidTreeView(p.LeftChild, ttNode);
+            }
+        }
     }
 }
