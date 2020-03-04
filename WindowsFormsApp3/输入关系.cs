@@ -20,10 +20,10 @@ namespace FamilySys
         private void 输入关系_Load(object sender, EventArgs e)
         {
             主窗口.familyTreeNodes.Clear();
-            if (主窗口.famliyTree != null)
+            if (主窗口.myFamilyTree != null)
             {
                 List<FamilyTreeNode> allNodes = new List<FamilyTreeNode>();
-                FamilyTree.DFS_getAll(主窗口.famliyTree.root, allNodes);
+                FamilyTree.DFS_getAll(主窗口.myFamilyTree.root, allNodes);
                 foreach (var node in allNodes)
                 {
                     一个人.Items.Add(node.Name);
@@ -47,7 +47,7 @@ namespace FamilySys
             {
                 string name = 一个人.SelectedItem.ToString();
                 List<FamilyTreeNode> Nodes=new List<FamilyTreeNode>();
-                主窗口.famliyTree.get_sons(name, Nodes);
+                主窗口.myFamilyTree.get_sons(name, Nodes);
                 foreach(var i in Nodes)
                 {
                     另一个人.Items.Add(i.Name);
@@ -57,7 +57,7 @@ namespace FamilySys
             {
                 string name = 一个人.SelectedItem.ToString();
                 List<FamilyTreeNode> Nodes = new List<FamilyTreeNode>();
-                主窗口.famliyTree.get_elderBrothers(name, Nodes);
+                主窗口.myFamilyTree.get_elderBrothers(name, Nodes);
                 foreach (var i in Nodes)
                 {
                     另一个人.Items.Add(i.Name);
@@ -67,7 +67,7 @@ namespace FamilySys
             {
                 string name = 一个人.SelectedItem.ToString();
                 List<FamilyTreeNode> Nodes = new List<FamilyTreeNode>();
-                主窗口.famliyTree.get_littleBrothers(name, Nodes);
+                主窗口.myFamilyTree.get_littleBrothers(name, Nodes);
                 foreach (var i in Nodes)
                 {
                     另一个人.Items.Add(i.Name);
@@ -77,7 +77,7 @@ namespace FamilySys
             {
                 string name = 一个人.SelectedItem.ToString();
                 List<FamilyTreeNode> Nodes = new List<FamilyTreeNode>();
-                主窗口.famliyTree.get_daughters(name, Nodes);
+                主窗口.myFamilyTree.get_daughters(name, Nodes);
                 foreach (var i in Nodes)
                 {
                     另一个人.Items.Add(i.Name);
@@ -87,7 +87,7 @@ namespace FamilySys
             {
                 string name = 一个人.SelectedItem.ToString();
                 List<FamilyTreeNode> Nodes = new List<FamilyTreeNode>();
-                主窗口.famliyTree.get_elderSisters(name, Nodes);
+                主窗口.myFamilyTree.get_elderSisters(name, Nodes);
                 foreach (var i in Nodes)
                 {
                     另一个人.Items.Add(i.Name);
@@ -97,7 +97,7 @@ namespace FamilySys
             {
                 string name = 一个人.SelectedItem.ToString();
                 List<FamilyTreeNode> Nodes = new List<FamilyTreeNode>();
-                主窗口.famliyTree.get_littleSisters(name, Nodes);
+                主窗口.myFamilyTree.get_littleSisters(name, Nodes);
                 foreach (var i in Nodes)
                 {
                     另一个人.Items.Add(i.Name);
