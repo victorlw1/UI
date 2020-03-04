@@ -34,13 +34,13 @@ namespace FamilySys
                 UIgender = "女";
             int UIage = (int)年龄选择框.Value;
             String UIBirthplace = 省份.Text;
-            DateTime UIBirthday = 出生日期选择框.Value;
+            String UIBirthday = 出生日期选择框.Value.ToString();
             bool UIisdead;
             if (是否在世_在世.Checked)
                 UIisdead = false;
             else
                 UIisdead = true;
-            DateTime UIDeathday = 死亡日期选择框.Value;
+            String UIDeathday = 死亡日期选择框.Value.ToString();
             String UIeducation = 学历水平选择框.Text;
             String UIHighestProfessionRank = 最高职位输入框.Text;
             String UIheight = "1";//？？？UI里没有身高输入

@@ -37,13 +37,13 @@ namespace FamilySys
                 UIgender = "女";
             int UIage = (int)年龄选择框.Value;
             String UIBirthplace = 省份.Text;
-            DateTime UIBirthday = 出生日期选择框.Value;
+            String UIBirthday = 出生日期选择框.Value.ToString();
             bool UIisdead;
             if (是否在世_在世.Checked)
                 UIisdead = false;
             else
                 UIisdead = true;
-            DateTime UIDeathday = 死亡日期选择框.Value;
+            String UIDeathday = 死亡日期选择框.Value.ToString();
             String UIeducation = 学历水平选择框.Text;
             String UIHighestProfessionRank = 最高职位输入框.Text;
             String UIheight = "1";//？？？UI里没有身高输入
@@ -85,12 +85,12 @@ namespace FamilySys
                 性别_女.Checked = true;
             年龄选择框.Value = BfaltNode.Age;
             省份.Text = BfaltNode.Birthplace;
-            出生日期选择框.Value = BfaltNode.Birthday;
+            出生日期选择框.Value = Convert.ToDateTime(BfaltNode.Birthday);
             if (BfaltNode.IsDead == true)
                 是否在世_在世.Checked = true;
             else
                 是否在世_已故.Checked = true;
-            死亡日期选择框.Value = BfaltNode.Deathday;
+            死亡日期选择框.Value = Convert.ToDateTime(BfaltNode.Deathday);
             学历水平选择框.Text = BfaltNode.Education;
             最高职位输入框.Text = BfaltNode.HighestProfessionRank;
 
