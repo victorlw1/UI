@@ -16,9 +16,11 @@ namespace FamilySys
         public static string title = "家谱管理系统UI beta";
         public static string xml = null;
         public static bool 是否有改动 = false;
+        public static FamilyTree myFamilyTree;
         public 主窗口()
         {
             InitializeComponent();
+            myFamilyTree = new FamilyTree();
         }
 
         private void 新建家庭成员ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -107,6 +109,7 @@ namespace FamilySys
                 this.Text = xml;
                 //得到了xml的路径在url里
                 //需要把xml转换成树的函数
+                myFamilyTree.loadTree(xml);
             }
         }
 
@@ -128,6 +131,7 @@ namespace FamilySys
                     {
                         string foldPath = dialog.FileName;
                         //
+                        myFamilyTree.saveTree(foldPath);
                     }
                     this.Close();
                 }
@@ -158,6 +162,7 @@ namespace FamilySys
             {
                 string foldPath = dialog.FileName;
                 //
+                myFamilyTree.saveTree(foldPath);
             }
         }
 
@@ -197,6 +202,7 @@ namespace FamilySys
             新建成员窗口 新建窗口 = new 新建成员窗口();
             新建窗口.MdiParent = this;
             新建窗口.Show();
+            myFamilyTree = new FamilyTree();
         }
 
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FamilySys
 {
-    class FamilyTreeNode
+    public class FamilyTreeNode
     {
         public string Name { get; set; }
         public string Gender { get; set; }
