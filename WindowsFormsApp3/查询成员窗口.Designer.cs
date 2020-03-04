@@ -36,9 +36,9 @@ namespace FamilySys
             this.最高职称 = new System.Windows.Forms.Label();
             this.学历水平 = new System.Windows.Forms.Label();
             this.死亡日期 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.是否在世 = new System.Windows.Forms.Label();
             this.出生日期 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.出生地 = new System.Windows.Forms.Label();
             this.姓名展示框 = new System.Windows.Forms.Label();
             this.年龄展示框 = new System.Windows.Forms.Label();
             this.性别展示框 = new System.Windows.Forms.Label();
@@ -68,9 +68,9 @@ namespace FamilySys
             this.tableLayoutPanel1.Controls.Add(this.最高职称, 1, 9);
             this.tableLayoutPanel1.Controls.Add(this.学历水平, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.死亡日期, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.是否在世, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.出生日期, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.出生地, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.姓名展示框, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.年龄展示框, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.性别展示框, 2, 2);
@@ -170,15 +170,15 @@ namespace FamilySys
             this.死亡日期.TabIndex = 5;
             this.死亡日期.Text = "死亡日期";
             // 
-            // label5
+            // 是否在世
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(40, 237);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 15);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "是否在世";
+            this.是否在世.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.是否在世.AutoSize = true;
+            this.是否在世.Location = new System.Drawing.Point(40, 237);
+            this.是否在世.Name = "是否在世";
+            this.是否在世.Size = new System.Drawing.Size(67, 15);
+            this.是否在世.TabIndex = 4;
+            this.是否在世.Text = "是否在世";
             // 
             // 出生日期
             // 
@@ -190,15 +190,15 @@ namespace FamilySys
             this.出生日期.TabIndex = 3;
             this.出生日期.Text = "出生日期";
             // 
-            // label2
+            // 出生地
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 156);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 15);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "出生地";
+            this.出生地.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.出生地.AutoSize = true;
+            this.出生地.Location = new System.Drawing.Point(48, 156);
+            this.出生地.Name = "出生地";
+            this.出生地.Size = new System.Drawing.Size(52, 15);
+            this.出生地.TabIndex = 20;
+            this.出生地.Text = "出生地";
             // 
             // 姓名展示框
             // 
@@ -349,9 +349,9 @@ namespace FamilySys
         private System.Windows.Forms.Label 最高职称;
         private System.Windows.Forms.Label 学历水平;
         private System.Windows.Forms.Label 死亡日期;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label 是否在世;
         private System.Windows.Forms.Label 出生日期;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label 出生地;
         private System.Windows.Forms.Label 姓名展示框;
         private System.Windows.Forms.Label 年龄展示框;
         private System.Windows.Forms.Label 性别展示框;

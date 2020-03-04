@@ -290,7 +290,7 @@ namespace FamilySys
             return result;
         }
 
-        public void saveTree() //将树保存到本地
+        public void saveTree(string xml) //将树保存到本地
         {
             XmlDocument xmlDoc = new XmlDocument();
             XmlDeclaration xmlDeclaration = xmlDoc.CreateXmlDeclaration("1.0", "UTF-8", "yes");
@@ -298,7 +298,7 @@ namespace FamilySys
             XmlElement rootElem = xmlDoc.CreateElement("root");
             xmlDoc.AppendChild(rootElem);
             saveTreeHelper(xmlDoc, rootElem, root);
-            xmlDoc.Save("familytree.xml");
+            xmlDoc.Save(xml);
         }
 
         public void saveTreeHelper(XmlDocument xmlDoc, XmlElement elem, FamilyTreeNode node)
@@ -328,10 +328,10 @@ namespace FamilySys
 
         }
 
-        public void loadtree() //从本地加载一棵树
+        public void loadtree(string xml) //从本地加载一棵树
         {
             XmlDocument xmldoc = new XmlDocument();
-            xmldoc.Load("familytree.xml");
+            xmldoc.Load(xml);
             XmlNode xmlnode = xmldoc.SelectSingleNode("root");
             XmlElement xmlelem = (XmlElement)xmlnode;
             root = loadTreeHelper(xmldoc, xmlelem, null, 0);
