@@ -106,7 +106,7 @@ namespace FamilySys
                 xml = 导入窗口.FileName;
                 this.Text = xml;
                 //得到了xml的路径在url里
-                //需要把xml转换成树的函数
+                //需要加载操作
             }
         }
 
@@ -127,7 +127,7 @@ namespace FamilySys
                     if (dialog.ShowDialog() == DialogResult.OK)
                     {
                         string foldPath = dialog.FileName;
-                        //
+                        //需要保存操作
                     }
                     this.Close();
                 }
@@ -157,7 +157,7 @@ namespace FamilySys
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 string foldPath = dialog.FileName;
-                //
+                //需要保存操作
             }
         }
 
@@ -178,7 +178,7 @@ namespace FamilySys
                     if (dialog.ShowDialog() == DialogResult.OK)
                     {
                         string foldPath = dialog.FileName;
-                        //
+                        //需要保存操作
                     }
                 }
                 else if (选择结果 == DialogResult.No)
