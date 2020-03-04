@@ -48,7 +48,7 @@ namespace FamilySys
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.树视图展示 = new System.Windows.Forms.TreeView();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,28 +81,28 @@ namespace FamilySys
             // 新建ToolStripMenuItem1
             // 
             this.新建ToolStripMenuItem1.Name = "新建ToolStripMenuItem1";
-            this.新建ToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.新建ToolStripMenuItem1.Size = new System.Drawing.Size(122, 26);
             this.新建ToolStripMenuItem1.Text = "新建";
             this.新建ToolStripMenuItem1.Click += new System.EventHandler(this.新建ToolStripMenuItem1_Click);
             // 
             // 打开ToolStripMenuItem
             // 
             this.打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
-            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
             this.打开ToolStripMenuItem.Text = "打开";
             this.打开ToolStripMenuItem.Click += new System.EventHandler(this.打开ToolStripMenuItem_Click);
             // 
             // 保存ToolStripMenuItem
             // 
             this.保存ToolStripMenuItem.Name = "保存ToolStripMenuItem";
-            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
             this.保存ToolStripMenuItem.Text = "保存";
             this.保存ToolStripMenuItem.Click += new System.EventHandler(this.保存ToolStripMenuItem_Click);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
@@ -120,28 +120,28 @@ namespace FamilySys
             // 新建家庭成员ToolStripMenuItem
             // 
             this.新建家庭成员ToolStripMenuItem.Name = "新建家庭成员ToolStripMenuItem";
-            this.新建家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.新建家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.新建家庭成员ToolStripMenuItem.Text = "新建家庭成员信息";
             this.新建家庭成员ToolStripMenuItem.Click += new System.EventHandler(this.新建家庭成员ToolStripMenuItem_Click);
             // 
             // 删除家庭成员ToolStripMenuItem
             // 
             this.删除家庭成员ToolStripMenuItem.Name = "删除家庭成员ToolStripMenuItem";
-            this.删除家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.删除家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.删除家庭成员ToolStripMenuItem.Text = "删除家庭成员信息";
             this.删除家庭成员ToolStripMenuItem.Click += new System.EventHandler(this.删除家庭成员ToolStripMenuItem_Click);
             // 
             // 修改家庭成员ToolStripMenuItem
             // 
             this.修改家庭成员ToolStripMenuItem.Name = "修改家庭成员ToolStripMenuItem";
-            this.修改家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.修改家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.修改家庭成员ToolStripMenuItem.Text = "修改家庭成员信息";
             this.修改家庭成员ToolStripMenuItem.Click += new System.EventHandler(this.修改家庭成员ToolStripMenuItem_Click);
             // 
             // 查询家庭成员ToolStripMenuItem
             // 
             this.查询家庭成员ToolStripMenuItem.Name = "查询家庭成员ToolStripMenuItem";
-            this.查询家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.查询家庭成员ToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.查询家庭成员ToolStripMenuItem.Text = "查询家庭成员信息";
             this.查询家庭成员ToolStripMenuItem.Click += new System.EventHandler(this.查询家庭成员ToolStripMenuItem_Click);
             // 
@@ -187,7 +187,7 @@ namespace FamilySys
             // 家庭树ToolStripMenuItem
             // 
             this.家庭树ToolStripMenuItem.Name = "家庭树ToolStripMenuItem";
-            this.家庭树ToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
+            this.家庭树ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.家庭树ToolStripMenuItem.Text = "家谱树";
             this.家庭树ToolStripMenuItem.Click += new System.EventHandler(this.家庭树ToolStripMenuItem_Click);
             // 
@@ -214,20 +214,20 @@ namespace FamilySys
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // treeView1
+            // 树视图展示
             // 
-            this.treeView1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.treeView1.Location = new System.Drawing.Point(0, 28);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(267, 623);
-            this.treeView1.TabIndex = 7;
+            this.树视图展示.Dock = System.Windows.Forms.DockStyle.Left;
+            this.树视图展示.Location = new System.Drawing.Point(0, 28);
+            this.树视图展示.Name = "树视图展示";
+            this.树视图展示.Size = new System.Drawing.Size(267, 623);
+            this.树视图展示.TabIndex = 7;
             // 
             // 主窗口
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
-            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.树视图展示);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
@@ -264,7 +264,7 @@ namespace FamilySys
         private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 新建家庭成员ToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TreeView 树视图展示;
         private System.Windows.Forms.ToolStripMenuItem 新建ToolStripMenuItem1;
     }
 }

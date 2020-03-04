@@ -45,13 +45,13 @@ namespace FamilySys
 
         private void 家庭树ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (this.treeView1.Visible)
+            if (this.树视图展示.Visible)
             {
-                this.treeView1.Hide();
+                this.树视图展示.Hide();
             }
             else
             {
-                treeView1.Show();
+                树视图展示.Show();
             }
         }
 
@@ -195,6 +195,7 @@ namespace FamilySys
                     {
                         string foldPath = dialog.FileName;
                         //需要保存操作
+                        myFamilyTree.saveTree(foldPath);
                     }
                 }
                 else if (选择结果 == DialogResult.No)
@@ -210,11 +211,25 @@ namespace FamilySys
 
         private void 新建ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            myFamilyTree = new FamilyTree();
             新建成员窗口 新建窗口 = new 新建成员窗口();
             新建窗口.MdiParent = this;
             新建窗口.Show();
-            myFamilyTree = new FamilyTree();
         }
+
+        //public static TreeNode 更新treeView(FamilyTreeNode root,TreeNode tNode)
+        //{
+        //    if (root == null)
+        //    {
+        //        return tNode;
+        //    }
+        //    tNode = new TreeNode(root.Name);
+        //    TreeNode ttNode=new TreeNode();
+        //    更新treeView( root.LeftChild, ttNode);
+        //    更新treeView( root.RightChild, ttNode);
+        //    tNode.Nodes.Add(ttNode);
+
+        //}
 
     }
 }
