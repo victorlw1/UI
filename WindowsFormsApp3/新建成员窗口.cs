@@ -35,6 +35,16 @@ namespace FamilySys
             {
                 学历水平选择框.Items.Add(edu);
             }
+            主窗口.familyTreeNodes.Clear();
+            if (主窗口.famliyTree != null)
+            {
+                List<FamilyTreeNode> allNodes = new List<FamilyTreeNode>();
+                FamilyTree.DFS_getAll(主窗口.famliyTree.root, allNodes);
+                foreach (var node in allNodes)
+                {
+                    已有的人.Items.Add(node.Name);
+                }
+            }
         }
 
         private void 性别_男_CheckedChanged(object sender, EventArgs e)

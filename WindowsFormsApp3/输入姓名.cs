@@ -27,6 +27,7 @@ namespace FamilySys
             {
                 修改成员窗口.altName = 姓名输入框.Text;
                 删除成员窗口.delName = 姓名输入框.Text;
+                查询成员窗口.findName= 姓名输入框.Text;
                 this.Close();
             }
         }

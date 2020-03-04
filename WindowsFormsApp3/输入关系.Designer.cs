@@ -32,9 +32,9 @@ namespace FamilySys
             this.请输入关系 = new System.Windows.Forms.Label();
             this.确定 = new System.Windows.Forms.Button();
             this.的 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.一个人 = new System.Windows.Forms.ComboBox();
+            this.亲戚关系 = new System.Windows.Forms.ComboBox();
+            this.另一个人 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,9 +50,9 @@ namespace FamilySys
             this.tableLayoutPanel1.Controls.Add(this.请输入关系, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.确定, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.的, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox1, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox2, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox3, 4, 2);
+            this.tableLayoutPanel1.Controls.Add(this.一个人, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.亲戚关系, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.另一个人, 4, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 8);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
@@ -85,6 +85,7 @@ namespace FamilySys
             this.确定.TabIndex = 3;
             this.确定.Text = "确定";
             this.确定.UseVisualStyleBackColor = true;
+            this.确定.Click += new System.EventHandler(this.确定_Click);
             // 
             // 的
             // 
@@ -96,29 +97,30 @@ namespace FamilySys
             this.的.TabIndex = 5;
             this.的.Text = "的";
             // 
-            // comboBox1
+            // 一个人
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(45, 60);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(78, 23);
-            this.comboBox1.TabIndex = 6;
+            this.一个人.FormattingEnabled = true;
+            this.一个人.Location = new System.Drawing.Point(45, 60);
+            this.一个人.Name = "一个人";
+            this.一个人.Size = new System.Drawing.Size(78, 23);
+            this.一个人.TabIndex = 6;
             // 
-            // comboBox2
+            // 亲戚关系
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(171, 60);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(78, 23);
-            this.comboBox2.TabIndex = 7;
+            this.亲戚关系.FormattingEnabled = true;
+            this.亲戚关系.Location = new System.Drawing.Point(171, 60);
+            this.亲戚关系.Name = "亲戚关系";
+            this.亲戚关系.Size = new System.Drawing.Size(78, 23);
+            this.亲戚关系.TabIndex = 7;
+            this.亲戚关系.SelectedIndexChanged += new System.EventHandler(this.亲戚关系_SelectedIndexChanged);
             // 
-            // comboBox3
+            // 另一个人
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(255, 60);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(78, 23);
-            this.comboBox3.TabIndex = 8;
+            this.另一个人.FormattingEnabled = true;
+            this.另一个人.Location = new System.Drawing.Point(255, 60);
+            this.另一个人.Name = "另一个人";
+            this.另一个人.Size = new System.Drawing.Size(78, 23);
+            this.另一个人.TabIndex = 8;
             // 
             // 输入关系
             // 
@@ -132,6 +134,7 @@ namespace FamilySys
             this.MinimumSize = new System.Drawing.Size(400, 200);
             this.Name = "输入关系";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.输入关系_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -144,8 +147,8 @@ namespace FamilySys
         private System.Windows.Forms.Label 请输入关系;
         private System.Windows.Forms.Button 确定;
         private System.Windows.Forms.Label 的;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox 一个人;
+        private System.Windows.Forms.ComboBox 亲戚关系;
+        private System.Windows.Forms.ComboBox 另一个人;
     }
 }

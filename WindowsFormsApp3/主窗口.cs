@@ -16,6 +16,8 @@ namespace FamilySys
         public static string title = "家谱管理系统UI beta";
         public static string xml = null;
         public static bool 是否有改动 = false;
+        public static FamilyTree famliyTree;
+        public static List<FamilyTreeNode> familyTreeNodes=new List<FamilyTreeNode>();
         public 主窗口()
         {
             InitializeComponent();

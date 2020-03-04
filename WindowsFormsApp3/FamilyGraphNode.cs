@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FamilySys
 {
-    class FamilyGraphNode
+    public class FamilyGraphNode
     {
         #region//属性
         public string Name { get; set; }
@@ -517,7 +517,6 @@ namespace FamilySys
                 Console.WriteLine("Person::isParentAndKid()输入有误");
                 return false;
             }
-            return false;
         }
         public static bool isBrotherAndSister(FamilyGraphNode elder, FamilyGraphNode younger)
         {
@@ -573,7 +572,6 @@ namespace FamilySys
                 Console.WriteLine("Person::isBrotherAndSister()输入有误");
                 return false;
             }
-            return false;
         }
         #endregion
         #region//解除亲戚关系接口
@@ -723,7 +721,6 @@ namespace FamilySys
                 Console.WriteLine("Person::unsetBrotherAndSister()输入有误");
                 return false;
             }
-            return false;
         }
         #endregion
     }

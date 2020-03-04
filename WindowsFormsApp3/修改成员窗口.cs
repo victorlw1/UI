@@ -30,7 +30,6 @@ namespace FamilySys
         {
             查找方法选择窗口 查找方法窗口 = new 查找方法选择窗口();
             查找方法窗口.ShowDialog();
-           //FamilyTreeNode altNode=
             foreach (string province in R.provinces)
             {
                 省份.Items.Add(province);
@@ -38,6 +37,16 @@ namespace FamilySys
             foreach (string edu in R.education)
             {
                 学历水平选择框.Items.Add(edu);
+            }
+            主窗口.familyTreeNodes.Clear();
+            if (主窗口.famliyTree != null)
+            {
+                List<FamilyTreeNode> allNodes = new List<FamilyTreeNode>();
+                FamilyTree.DFS_getAll(主窗口.famliyTree.root, allNodes);
+                foreach (var node in allNodes)
+                {
+                    已有的人.Items.Add(node.Name);
+                }
             }
         }
 
@@ -80,5 +89,6 @@ namespace FamilySys
         {
             altName = null;
         }
+
     }
 }

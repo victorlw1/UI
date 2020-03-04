@@ -332,7 +332,9 @@ namespace FamilySys
             this.MinimumSize = new System.Drawing.Size(600, 500);
             this.Name = "查询成员窗口";
             this.Text = "查询成员窗口";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.查询成员窗口_FormClosed);
             this.Load += new System.EventHandler(this.查询成员窗口_Load);
+            this.Shown += new System.EventHandler(this.查询成员窗口_Shown);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

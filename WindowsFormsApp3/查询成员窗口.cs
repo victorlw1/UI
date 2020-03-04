@@ -17,10 +17,26 @@ namespace FamilySys
             InitializeComponent();
         }
 
+        public static string findName = null;
+
         private void 查询成员窗口_Load(object sender, EventArgs e)
         {
             查找方法选择窗口 查找方法窗口 = new 查找方法选择窗口();
             查找方法窗口.ShowDialog();
+        }
+
+        private void 查询成员窗口_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            findName = null;
+        }
+
+        private void 查询成员窗口_Shown(object sender, EventArgs e)
+        {
+            if (findName == null)
+            {
+                this.Close();
+                return;
+            }
         }
     }
 }

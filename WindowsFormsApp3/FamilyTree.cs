@@ -8,7 +8,7 @@ using System.Xml;
 namespace FamilySys
 {
     
-    class FamilyTree
+    public class FamilyTree
     {
         public FamilyTreeNode root;
         public FamilyTree()
@@ -20,12 +20,21 @@ namespace FamilySys
             root = new FamilyTreeNode(name, age, gender, isDead, birthday, birthplace, deathday, height, education, profession, highestProfessionRank);
         }
 
-        public void DFS_output(FamilyTreeNode node)
+        public static void DFS_output(FamilyTreeNode node)
         {
             if (node == null) return;
             Console.WriteLine(node.Name);
             DFS_output(node.LeftChild);
             DFS_output(node.RightChild);
+        }
+
+
+        public static void DFS_getAll(FamilyTreeNode node,List<FamilyTreeNode> familyTreeNodes)
+        {
+            if (node == null) return;
+            familyTreeNodes.Add(node);
+            DFS_getAll(node.LeftChild, familyTreeNodes);
+            DFS_getAll(node.RightChild, familyTreeNodes);
         }
 
         public FamilyTreeNode query(FamilyTreeNode startNode, string name)//HowToQuery
@@ -99,7 +108,131 @@ namespace FamilySys
                     node.Level = p.Level + 1;
                 }
             }
+        }
 
+        public void get_sons(string name,List<FamilyTreeNode> sonNodes)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            FamilyTreeNode temp = query(root, name);
+            if (temp != null)
+            {
+                if (temp.LeftChild == null)
+                {
+                    return;
+                }
+                else
+                {
+                    FamilyTreeNode p = temp;
+                    temp = temp.LeftChild;
+                    while (temp != null)
+                    {
+                        if (temp.Gender == "male")
+                        {
+                            sonNodes.Add(temp);
+                        }
+                        temp = temp.RightChild;
+                    }
+                }
+            }
+        }
+        public void get_daughters(string name, List<FamilyTreeNode> sonNodes)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            FamilyTreeNode temp = query(root, name);
+            if (temp != null)
+            {
+                if (temp.LeftChild == null)
+                {
+                    return;
+                }
+                else
+                {
+                    FamilyTreeNode p = temp;
+                    temp = temp.LeftChild;
+                    while (temp != null)
+                    {
+                        if (temp.Gender == "female")
+                        {
+                            sonNodes.Add(temp);
+                        }
+                        temp = temp.RightChild;
+                    }
+                }
+            }
+        }
+        public void get_elderBrothers(string name, List<FamilyTreeNode> elderBrotherNodes)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            FamilyTreeNode temp = query(root, name);
+            FamilyTreeNode p = temp.RightChild;
+            while (p != null)
+            {
+                if (p.Gender == "male" && p.Age > temp.Age)//最好多一个日期比较
+                {
+                    elderBrotherNodes.Add(p);
+                }
+                p = p.RightChild;
+            }
+        }
+        public void get_littleBrothers(string name, List<FamilyTreeNode> littleBrotherNodes)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            FamilyTreeNode temp = query(root, name);
+            FamilyTreeNode p = temp.RightChild;
+            while (p != null)
+            {
+                if (p.Gender == "male" && p.Age < temp.Age)//最好多一个日期比较
+                {
+                    littleBrotherNodes.Add(p);
+                }
+                p = p.RightChild;
+            }
+        }
+        public void get_elderSisters(string name, List<FamilyTreeNode> elderSisterNodes)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            FamilyTreeNode temp = query(root, name);
+            FamilyTreeNode p = temp.RightChild;
+            while (p != null)
+            {
+                if (p.Gender == "female" && p.Age > temp.Age)//最好多一个日期比较
+                {
+                    elderSisterNodes.Add(p);
+                }
+                p = p.RightChild;
+            }
+        }
+        public void get_littleSisters(string name, List<FamilyTreeNode> littleSisterNodes)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            FamilyTreeNode temp = query(root, name);
+            FamilyTreeNode p = temp.RightChild;
+            while (p != null)
+            {
+                if (p.Gender == "female" && p.Age < temp.Age)//最好多一个日期比较
+                {
+                    littleSisterNodes.Add(p);
+                }
+                p = p.RightChild;
+            }
         }
         public void delete(string name)//????LB
         {
