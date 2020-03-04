@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace FamilySys
 {
+    
     public partial class 新建成员窗口 : Form
     {
+        public static FamilyTreeNode newNode;
         public 新建成员窗口()
         {
             InitializeComponent();
@@ -22,6 +24,34 @@ namespace FamilySys
             主窗口.是否有改动 = true;
             this.MdiParent.Text = 主窗口.title + " - " + 主窗口.xml + "*";
             this.Close();
+            String UIname = 姓名输入框.Text;
+            String UIgender;
+            if (性别_男.Checked)
+            {
+                UIgender = "男";
+            }
+            else
+                UIgender = "女";
+            int UIage = (int)年龄选择框.Value;
+            String UIBirthplace = 省份.Text;
+            DateTime UIBirthday = 出生日期选择框.Value;
+            bool UIisdead;
+            if (是否在世_在世.Checked)
+                UIisdead = false;
+            else
+                UIisdead = true;
+            DateTime UIDeathday = 死亡日期选择框.Value;
+            String UIeducation = 学历水平选择框.Text;
+            String UIHighestProfessionRank = 最高职位输入框.Text;
+            String UIheight = "1";//？？？UI里没有身高输入
+            String UIprofession =" balabala";//？？？UI里没有职业
+            newNode = new FamilyTreeNode(UIname, UIage, UIgender, UIisdead, UIBirthday, UIBirthplace, UIDeathday, UIheight, UIeducation, UIprofession, UIHighestProfessionRank);
+            //出生日期和死亡日期是date类型，没办法转到String去
+
+
+
+
+
             //需要增加TreeNode的函数
         }
 
@@ -71,6 +101,11 @@ namespace FamilySys
                 }
 
             }
+        }
+
+        private void 姓名输入框_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
