@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace FamilySys
 {
-    public partial class 男女比例窗口 : Form
+    public partial class malefemale比例窗口 : Form
     {
-        public 男女比例窗口()
+        public malefemale比例窗口()
         {
             InitializeComponent();
         }
 
-        private void 男女比例窗口_Load(object sender, EventArgs e)
+        private void malefemale比例窗口_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void 男女比例返回_Click(object sender, EventArgs e)
+        private void malefemale比例返回_Click(object sender, EventArgs e)
         {
             this.Close();
         }

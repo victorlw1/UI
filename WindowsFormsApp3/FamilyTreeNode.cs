@@ -13,9 +13,9 @@ namespace FamilySys
         public int Age { get; set; }
         public bool IsDead { get; set; }
 
-        public string Birthday { get; set; }
+        public DateTime Birthday { get; set; }
         public string Birthplace { get; set; }
-        public string Deathday { get; set; }
+        public DateTime Deathday { get; set; }
         public string Height { get; set; }
         public string Education { get; set; }
         public string Profession { get; set; }
@@ -25,7 +25,7 @@ namespace FamilySys
         public FamilyTreeNode RightChild { get; set; }
         public FamilyTreeNode Parent { get; set; }
         public FamilyTreeNode() { }
-        public FamilyTreeNode(string name,int age, string gender, bool isDead, string birthday, string birthplace, string deathday, string height, string education, string profession, string highestProfessionRank)
+        public FamilyTreeNode(string name,int age, string gender, bool isDead, DateTime birthday, string birthplace, DateTime deathday, string height, string education, string profession, string highestProfessionRank)
         {
             Name = name;
             Age = age;

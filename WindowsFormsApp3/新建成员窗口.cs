@@ -23,36 +23,40 @@ namespace FamilySys
         {
             主窗口.是否有改动 = true;
             this.MdiParent.Text = 主窗口.title + " - " + 主窗口.xml + "*";
-            this.Close();
             String UIname = 姓名输入框.Text;
             String UIgender;
-            if (性别_男.Checked)
+            if (性别_male.Checked)
             {
-                UIgender = "男";
+                UIgender = "male";
             }
             else
-                UIgender = "女";
+                UIgender = "female";
             int UIage = (int)年龄选择框.Value;
             String UIBirthplace = 省份.Text;
-            String UIBirthday = 出生日期选择框.Value.ToString();
+            DateTime UIBirthday = 出生日期选择框.Value;
             bool UIisdead;
             if (是否在世_在世.Checked)
                 UIisdead = false;
             else
                 UIisdead = true;
-            String UIDeathday = 死亡日期选择框.Value.ToString();
+            DateTime UIDeathday = 死亡日期选择框.Value;
             String UIeducation = 学历水平选择框.Text;
             String UIHighestProfessionRank = 最高职位输入框.Text;
             String UIheight = "1";//？？？UI里没有身高输入
-            String UIprofession =" balabala";//？？？UI里没有职业
+            String UIprofession = " balabala";//？？？UI里没有职业
             newNode = new FamilyTreeNode(UIname, UIage, UIgender, UIisdead, UIBirthday, UIBirthplace, UIDeathday, UIheight, UIeducation, UIprofession, UIHighestProfessionRank);
             //出生日期和死亡日期是date类型，没办法转到String去
-
-
-
-
-
             //需要增加TreeNode的函数
+
+
+
+            newNode = null;
+
+            ((主窗口)(this.MdiParent)).树视图展示.Nodes.Clear();
+            TreeNode rootNode = new TreeNode("家族树");
+            主窗口.bulidTreeView(主窗口.myFamilyTree.root, rootNode);
+            ((主窗口)(this.MdiParent)).树视图展示.Nodes.Add(rootNode);
+            this.Close();
         }
 
         private void 新建成员窗口_Load(object sender, EventArgs e)
@@ -77,9 +81,9 @@ namespace FamilySys
             }
         }
 
-        private void 性别_男_CheckedChanged(object sender, EventArgs e)
+        private void 性别_male_CheckedChanged(object sender, EventArgs e)
         {
-            if (性别_男.Checked)
+            if (性别_male.Checked)
             {
                 亲戚关系.Items.Clear();
                 foreach (string relation in R.male_relation)
@@ -90,9 +94,9 @@ namespace FamilySys
             }
         }
 
-        private void 性别_女_CheckedChanged(object sender, EventArgs e)
+        private void 性别_female_CheckedChanged(object sender, EventArgs e)
         {
-            if (性别_女.Checked)
+            if (性别_female.Checked)
             {
                 亲戚关系.Items.Clear();
                 foreach (string relation in R.female_relation)
@@ -103,9 +107,5 @@ namespace FamilySys
             }
         }
 
-        private void 姓名输入框_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

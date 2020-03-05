@@ -41,7 +41,7 @@ namespace FamilySys
             this.查询家庭成员ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.统计ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.平均寿命ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.男女比例ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.malefemale比例ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.家庭平均人口ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.视图ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.家庭树ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -149,7 +149,7 @@ namespace FamilySys
             // 
             this.统计ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.平均寿命ToolStripMenuItem,
-            this.男女比例ToolStripMenuItem,
+            this.malefemale比例ToolStripMenuItem,
             this.家庭平均人口ToolStripMenuItem});
             this.统计ToolStripMenuItem.Name = "统计ToolStripMenuItem";
             this.统计ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
@@ -162,12 +162,12 @@ namespace FamilySys
             this.平均寿命ToolStripMenuItem.Text = "平均寿命";
             this.平均寿命ToolStripMenuItem.Click += new System.EventHandler(this.平均寿命ToolStripMenuItem_Click);
             // 
-            // 男女比例ToolStripMenuItem
+            // malefemale比例ToolStripMenuItem
             // 
-            this.男女比例ToolStripMenuItem.Name = "男女比例ToolStripMenuItem";
-            this.男女比例ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
-            this.男女比例ToolStripMenuItem.Text = "男女比例";
-            this.男女比例ToolStripMenuItem.Click += new System.EventHandler(this.男女比例ToolStripMenuItem_Click);
+            this.malefemale比例ToolStripMenuItem.Name = "malefemale比例ToolStripMenuItem";
+            this.malefemale比例ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.malefemale比例ToolStripMenuItem.Text = "malefemale比例";
+            this.malefemale比例ToolStripMenuItem.Click += new System.EventHandler(this.malefemale比例ToolStripMenuItem_Click);
             // 
             // 家庭平均人口ToolStripMenuItem
             // 
@@ -254,7 +254,7 @@ namespace FamilySys
         private System.Windows.Forms.ToolStripMenuItem 查询家庭成员ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 统计ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 平均寿命ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 男女比例ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem malefemale比例ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 家庭平均人口ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 保存ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 视图ToolStripMenuItem;
@@ -264,7 +264,7 @@ namespace FamilySys
         private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 新建家庭成员ToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.TreeView 树视图展示;
+        public System.Windows.Forms.TreeView 树视图展示;
         private System.Windows.Forms.ToolStripMenuItem 新建ToolStripMenuItem1;
     }
 }

@@ -73,7 +73,7 @@ namespace FamilySys
                     另一个人.Items.Add(i.Name);
                 }
             }
-            else if (亲戚关系.SelectedItem == "女儿")
+            else if (亲戚关系.SelectedItem == "female儿")
             {
                 string name = 一个人.SelectedItem.ToString();
                 List<FamilyTreeNode> Nodes = new List<FamilyTreeNode>();

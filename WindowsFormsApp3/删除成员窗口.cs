@@ -24,6 +24,17 @@ namespace FamilySys
         {
             主窗口.是否有改动 = true;
             this.MdiParent.Text = 主窗口.title+" - "+主窗口.xml + "*";
+
+
+
+
+
+
+
+            ((主窗口)(this.MdiParent)).树视图展示.Nodes.Clear();
+            TreeNode rootNode = new TreeNode("家族树");
+            主窗口.bulidTreeView(主窗口.myFamilyTree.root, rootNode);
+            ((主窗口)(this.MdiParent)).树视图展示.Nodes.Add(rootNode);
             this.Close();
         }
 

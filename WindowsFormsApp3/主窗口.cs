@@ -17,6 +17,7 @@ namespace FamilySys
         public static string xml = null;
         public static bool 是否有改动 = false;
 
+
         public static List<FamilyTreeNode> familyTreeNodes=new List<FamilyTreeNode>();
 
         public static FamilyTree myFamilyTree;
@@ -85,11 +86,11 @@ namespace FamilySys
 
         }
 
-        private void 男女比例ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void malefemale比例ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            男女比例窗口 男女比例 = new 男女比例窗口();
-            男女比例.StartPosition = FormStartPosition.CenterParent;
-            男女比例.ShowDialog();
+            malefemale比例窗口 malefemale比例 = new malefemale比例窗口();
+            malefemale比例.StartPosition = FormStartPosition.CenterParent;
+            malefemale比例.ShowDialog();
 
         }
 
@@ -116,6 +117,8 @@ namespace FamilySys
                 //需要加载操作
 
                 myFamilyTree.loadTree(xml);
+
+                树视图展示.Nodes.Clear();
                 TreeNode rootNode = new TreeNode("家族树");
                 bulidTreeView(myFamilyTree.root, rootNode);
                 树视图展示.Nodes.Add(rootNode);

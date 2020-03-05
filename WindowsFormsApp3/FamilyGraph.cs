@@ -471,13 +471,13 @@ namespace FamilySys
                                     case "11":
                                         {
                                             decode += "的儿子";
-                                            result = "我（男）、大哥、小弟";
+                                            result = "我（male）、大哥、小弟";
                                             break;
                                         }
                                     case "12":
                                         {
-                                            decode += "的女儿";
-                                            result = "我（女）、大姐、小妹";
+                                            decode += "的female儿";
+                                            result = "我（female）、大姐、小妹";
                                             break;
                                         }
                                     case "21":
@@ -544,13 +544,13 @@ namespace FamilySys
                                     case "11":
                                         {
                                             decode += "的儿子";
-                                            result = "我（男）、大哥、小弟";
+                                            result = "我（male）、大哥、小弟";
                                             break;
                                         }
                                     case "12":
                                         {
-                                            decode += "的女儿";
-                                            result = "我（女）、大姐、小妹";
+                                            decode += "的female儿";
+                                            result = "我（female）、大姐、小妹";
                                             break;
                                         }
                                     case "21":
@@ -605,13 +605,13 @@ namespace FamilySys
                                     case "01":
                                         {
                                             decode += "的父亲";
-                                            result = "我（男）、丈夫";
+                                            result = "我（male）、丈夫";
                                             break;
                                         }
                                     case "02":
                                         {
                                             decode += "的母亲";
-                                            result = "我（女）、妻子";
+                                            result = "我（female）、妻子";
                                             break;
                                         }
                                     case "11":
@@ -622,8 +622,8 @@ namespace FamilySys
                                         }
                                     case "12":
                                         {
-                                            decode += "的女儿";
-                                            result = "孙女";
+                                            decode += "的female儿";
+                                            result = "孙female";
                                             break;
                                         }
                                     case "21":
@@ -635,7 +635,7 @@ namespace FamilySys
                                     case "22":
                                         {
                                             decode += "的大姐";
-                                            result = "女儿";
+                                            result = "female儿";
                                             break;
                                         }
                                     case "31":
@@ -647,7 +647,7 @@ namespace FamilySys
                                     case "32":
                                         {
                                             decode += "的小妹";
-                                            result = "女儿";
+                                            result = "female儿";
                                             break;
                                         }
                                     case "41":
@@ -666,10 +666,10 @@ namespace FamilySys
                             }
                             break;
                         }
-                    case "12"://女儿
+                    case "12"://female儿
                         {
-                            decode += "女儿";
-                            result = "女儿";
+                            decode += "female儿";
+                            result = "female儿";
                             for (string unit_1 = encodeStr.Substring(0, 2); encodeStr.Length > 0; encodeStr = encodeStr.Substring(2, encodeStr.Length - 2))
                             {
                                 encodeStr = encodeStr.Substring(2, encodeStr.Length - 2);
@@ -678,13 +678,13 @@ namespace FamilySys
                                     case "01":
                                         {
                                             decode += "的父亲";
-                                            result = "我（男）、丈夫";
+                                            result = "我（male）、丈夫";
                                             break;
                                         }
                                     case "02":
                                         {
                                             decode += "的母亲";
-                                            result = "我（女）、妻子";
+                                            result = "我（female）、妻子";
                                             break;
                                         }
                                     case "11":
@@ -695,8 +695,8 @@ namespace FamilySys
                                         }
                                     case "12":
                                         {
-                                            decode += "的女儿";
-                                            result = "孙女";
+                                            decode += "的female儿";
+                                            result = "孙female";
                                             break;
                                         }
                                     case "21":
@@ -708,7 +708,7 @@ namespace FamilySys
                                     case "22":
                                         {
                                             decode += "的大姐";
-                                            result = "女儿";
+                                            result = "female儿";
                                             break;
                                         }
                                     case "31":
@@ -720,13 +720,13 @@ namespace FamilySys
                                     case "32":
                                         {
                                             decode += "的小妹";
-                                            result = "女儿";
+                                            result = "female儿";
                                             break;
                                         }
                                     case "41":
                                         {
                                             decode += "的丈夫";
-                                            result = "女婿";
+                                            result = "female婿";
                                             break;
                                         }
                                     case "42":
@@ -768,8 +768,8 @@ namespace FamilySys
                                         }
                                     case "12":
                                         {
-                                            decode += "的女儿";
-                                            result = "侄女";
+                                            decode += "的female儿";
+                                            result = "侄female";
                                             break;
                                         }
                                     case "21":
@@ -787,13 +787,13 @@ namespace FamilySys
                                     case "31":
                                         {
                                             decode += "的小弟";
-                                            result = "我（男）、大哥、小弟";
+                                            result = "我（male）、大哥、小弟";
                                             break;
                                         }
                                     case "32":
                                         {
                                             decode += "的小妹";
-                                            result = "我（女）、大姐、小妹";
+                                            result = "我（female）、大姐、小妹";
                                             break;
                                         }
                                     case "41":
@@ -841,8 +841,8 @@ namespace FamilySys
                                         }
                                     case "12":
                                         {
-                                            decode += "的女儿";
-                                            result = "外甥女";
+                                            decode += "的female儿";
+                                            result = "外甥female";
                                             break;
                                         }
                                     case "21":
@@ -860,13 +860,13 @@ namespace FamilySys
                                     case "31":
                                         {
                                             decode += "的小弟";
-                                            result = "我（男）、大哥、小弟";
+                                            result = "我（male）、大哥、小弟";
                                             break;
                                         }
                                     case "32":
                                         {
                                             decode += "的小妹";
-                                            result = "我（女）、大姐、小妹";
+                                            result = "我（female）、大姐、小妹";
                                             break;
                                         }
                                     case "41":
@@ -914,20 +914,20 @@ namespace FamilySys
                                         }
                                     case "12":
                                         {
-                                            decode += "的女儿";
-                                            result = "侄女";
+                                            decode += "的female儿";
+                                            result = "侄female";
                                             break;
                                         }
                                     case "21":
                                         {
                                             decode += "的大哥";
-                                            result = "我（男）、大哥、小弟";
+                                            result = "我（male）、大哥、小弟";
                                             break;
                                         }
                                     case "22":
                                         {
                                             decode += "的大姐";
-                                            result = "我（女）、大姐、小妹";
+                                            result = "我（female）、大姐、小妹";
                                             break;
                                         }
                                     case "31":
@@ -987,20 +987,20 @@ namespace FamilySys
                                         }
                                     case "12":
                                         {
-                                            decode += "的女儿";
-                                            result = "外甥女";
+                                            decode += "的female儿";
+                                            result = "外甥female";
                                             break;
                                         }
                                     case "21":
                                         {
                                             decode += "的大哥";
-                                            result = "我（男）、大哥、小弟";
+                                            result = "我（male）、大哥、小弟";
                                             break;
                                         }
                                     case "22":
                                         {
                                             decode += "的大姐";
-                                            result = "我（女）、大姐、小妹";
+                                            result = "我（female）、大姐、小妹";
                                             break;
                                         }
                                     case "31":
@@ -1060,8 +1060,8 @@ namespace FamilySys
                                         }
                                     case "12":
                                         {
-                                            decode += "的女儿";
-                                            result = "女儿";
+                                            decode += "的female儿";
+                                            result = "female儿";
                                             break;
                                         }
                                     case "21":
@@ -1098,7 +1098,7 @@ namespace FamilySys
                                     case "42":
                                         {
                                             decode += "的妻子";
-                                            result = "我（女）";
+                                            result = "我（female）";
                                             break;
                                         }
                                 }
@@ -1134,8 +1134,8 @@ namespace FamilySys
                                         }
                                     case "12":
                                         {
-                                            decode += "的女儿";
-                                            result = "女儿";
+                                            decode += "的female儿";
+                                            result = "female儿";
                                             break;
                                         }
                                     case "21":
@@ -1165,7 +1165,7 @@ namespace FamilySys
                                     case "41":
                                         {
                                             decode += "的丈夫";
-                                            result = "我（男）";
+                                            result = "我（male）";
                                             break;
                                         }
                                     case "42":
@@ -1211,7 +1211,7 @@ namespace FamilySys
                             p = p._son;
                             break;
                         }
-                    case "12"://女儿
+                    case "12"://female儿
                         {
                             p = p._daughter;
                             break;
@@ -1282,7 +1282,7 @@ namespace FamilySys
                             p = p._son;
                             break;
                         }
-                    case "12"://女儿
+                    case "12"://female儿
                         {
                             p = p._daughter;
                             break;

@@ -52,8 +52,8 @@ namespace FamilySys
             this.的 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.性别_男 = new System.Windows.Forms.RadioButton();
-            this.性别_女 = new System.Windows.Forms.RadioButton();
+            this.性别_male = new System.Windows.Forms.RadioButton();
+            this.性别_female = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.是否在世_在世 = new System.Windows.Forms.RadioButton();
@@ -346,8 +346,8 @@ namespace FamilySys
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.性别_男, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.性别_女, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.性别_male, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.性别_female, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -357,31 +357,31 @@ namespace FamilySys
             this.tableLayoutPanel2.Size = new System.Drawing.Size(233, 40);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
-            // 性别_男
+            // 性别_male
             // 
-            this.性别_男.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.性别_男.AutoSize = true;
-            this.性别_男.Location = new System.Drawing.Point(3, 10);
-            this.性别_男.Name = "性别_男";
-            this.性别_男.Size = new System.Drawing.Size(110, 19);
-            this.性别_男.TabIndex = 0;
-            this.性别_男.TabStop = true;
-            this.性别_男.Text = "男";
-            this.性别_男.UseVisualStyleBackColor = true;
-            this.性别_男.CheckedChanged += new System.EventHandler(this.性别_男_CheckedChanged);
+            this.性别_male.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.性别_male.AutoSize = true;
+            this.性别_male.Location = new System.Drawing.Point(3, 10);
+            this.性别_male.Name = "性别_male";
+            this.性别_male.Size = new System.Drawing.Size(110, 19);
+            this.性别_male.TabIndex = 0;
+            this.性别_male.TabStop = true;
+            this.性别_male.Text = "male";
+            this.性别_male.UseVisualStyleBackColor = true;
+            this.性别_male.CheckedChanged += new System.EventHandler(this.性别_male_CheckedChanged);
             // 
-            // 性别_女
+            // 性别_female
             // 
-            this.性别_女.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.性别_女.AutoSize = true;
-            this.性别_女.Location = new System.Drawing.Point(119, 10);
-            this.性别_女.Name = "性别_女";
-            this.性别_女.Size = new System.Drawing.Size(111, 19);
-            this.性别_女.TabIndex = 1;
-            this.性别_女.TabStop = true;
-            this.性别_女.Text = "女";
-            this.性别_女.UseVisualStyleBackColor = true;
-            this.性别_女.CheckedChanged += new System.EventHandler(this.性别_女_CheckedChanged);
+            this.性别_female.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.性别_female.AutoSize = true;
+            this.性别_female.Location = new System.Drawing.Point(119, 10);
+            this.性别_female.Name = "性别_female";
+            this.性别_female.Size = new System.Drawing.Size(111, 19);
+            this.性别_female.TabIndex = 1;
+            this.性别_female.TabStop = true;
+            this.性别_female.Text = "female";
+            this.性别_female.UseVisualStyleBackColor = true;
+            this.性别_female.CheckedChanged += new System.EventHandler(this.性别_female_CheckedChanged);
             // 
             // panel2
             // 
@@ -488,8 +488,8 @@ namespace FamilySys
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.RadioButton 性别_男;
-        private System.Windows.Forms.RadioButton 性别_女;
+        private System.Windows.Forms.RadioButton 性别_male;
+        private System.Windows.Forms.RadioButton 性别_female;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.RadioButton 是否在世_在世;
         private System.Windows.Forms.RadioButton 是否在世_已故;

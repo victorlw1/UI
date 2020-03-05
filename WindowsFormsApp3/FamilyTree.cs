@@ -1,13 +1,10 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 
 namespace FamilySys
 {
-    
+
     public class FamilyTree
     {
         public FamilyTreeNode root;
@@ -15,7 +12,7 @@ namespace FamilySys
         {
             root = null;
         }
-        public FamilyTree(string name, int age, string gender, bool isDead, string birthday, string birthplace, string deathday, string height, string education, string profession, string highestProfessionRank)
+        public FamilyTree(string name, int age, string gender, bool isDead, DateTime birthday, string birthplace, DateTime deathday, string height, string education, string profession, string highestProfessionRank)
         {
             root = new FamilyTreeNode(name, age, gender, isDead, birthday, birthplace, deathday, height, education, profession, highestProfessionRank);
         }
@@ -234,10 +231,9 @@ namespace FamilySys
                 p = p.RightChild;
             }
         }
-        public void delete(string name)//????LB
+        public void delete(string name)
         {
             FamilyTreeNode temp = query(root, name);
-            temp.Name = "无";//????LB
             if (temp.LeftChild == null && temp.RightChild == null)
             {
                 if (temp.Parent.LeftChild == temp)
@@ -254,16 +250,17 @@ namespace FamilySys
                     p.RightChild = null;
                 }
             }
-            temp.Birthplace = "无";
-            temp.Birthday = "无";
-            temp.Deathday = "无";
-            temp.Gender = "无";
-            temp.Height = "无";
-            temp.Education = "无";
-            temp.Profession = "无";
-            temp.HighestProfessionRank = "无";
+            temp.Name = null;
+            temp.Birthplace = null;
+            temp.Birthday = new DateTime(2000, 1, 1);
+            temp.Deathday = new DateTime(2000, 1, 1);
+            temp.Gender = null;
+            temp.Height = null;
+            temp.Education = null;
+            temp.Profession = null;
+            temp.HighestProfessionRank = null;
         }
-        public void update(string name,string newName, int newAge, string newGender, bool newIsDead, string newBirthday, string newBirthplace, string newDeathday, string newHeight, string newEducation, string newProfession, string newHighestProfessionRank)
+        public void update(string name,string newName, int newAge, string newGender, bool newIsDead, DateTime newBirthday, string newBirthplace, DateTime newDeathday, string newHeight, string newEducation, string newProfession, string newHighestProfessionRank)
         {
             FamilyTreeNode temp = query(root, name);
             if (newName != null)
@@ -327,13 +324,13 @@ namespace FamilySys
 
         public bool isElder(FamilyTreeNode node1, FamilyTreeNode node2) //判断年龄大小
         {
-            string str1 = node1.Birthday;
-            string str2 = node2.Birthday;
+            DateTime str1 = node1.Birthday;
+            DateTime str2 = node2.Birthday;
             for (int i = 0; i < 8; i++)
             {
-                if (str1[i] > str2[i])
+                if (str1 > str2)
                     return false;
-                if (str1[i] < str2[i])
+                if (str1 < str2)
                     return true;
             }
             return true;
@@ -346,7 +343,7 @@ namespace FamilySys
         * 父亲 01
         * 母亲 02
         * 儿子 11
-        * 女儿 12
+        * female儿 12
         * 大哥 21
         * 大姐 22
         * 小弟 31
@@ -365,7 +362,7 @@ namespace FamilySys
                 while (node1.Level != node2.Level)
                 {
                     node1 = node1.Parent;
-                    if (node1.Gender == "男")
+                    if (node1.Gender == "male")
                         result += "01";
                     else
                         result += "02";
@@ -375,7 +372,7 @@ namespace FamilySys
             {
                 while (node1.Level != node2.Level)
                 {
-                    if (node2.Gender == "男")
+                    if (node2.Gender == "male")
                         result_rev += "11";
                     else
                         result_rev += "21";
@@ -386,11 +383,11 @@ namespace FamilySys
             while (isSibling(node1, node2) == -1)
             {
                 node1 = node1.Parent;
-                if (node1.Gender == "男")
+                if (node1.Gender == "male")
                     result += "01";
                 else
                     result += "02";
-                if (node2.Gender == "男")
+                if (node2.Gender == "male")
                     result_rev += "11";
                 else
                     result_rev += "21";
@@ -399,7 +396,7 @@ namespace FamilySys
 
             if (isSibling(node1, node2) != 0)
             {
-                if (node2.Gender == "男")
+                if (node2.Gender == "male")
                 {
                     if (isElder(node1, node2))
                         result += "31";
@@ -445,9 +442,9 @@ namespace FamilySys
             }
             elem.SetAttribute("n", node.Name);
             elem.SetAttribute("bp", node.Birthplace);
-            elem.SetAttribute("bd", node.Birthday);
+            elem.SetAttribute("bd", node.Birthday.ToString());
             elem.SetAttribute("id", node.IsDead.ToString());
-            elem.SetAttribute("dd", node.Deathday);
+            elem.SetAttribute("dd", node.Deathday.ToString());
             elem.SetAttribute("g", node.Gender);
             elem.SetAttribute("h", node.Height);
             elem.SetAttribute("e", node.Education);
@@ -481,7 +478,8 @@ namespace FamilySys
             }
             string name = xmlElem.GetAttribute("n");
             string birthplace = xmlElem.GetAttribute("bp");
-            string birthday = xmlElem.GetAttribute("bd");
+            string birthdayStr = xmlElem.GetAttribute("bd");
+            DateTime birthday = Convert.ToDateTime(birthdayStr);
             string isDead_str = xmlElem.GetAttribute("id");
             bool isDead;
             if (isDead_str == "True")
@@ -492,12 +490,13 @@ namespace FamilySys
             {
                 isDead = false;
             }
-            string deathday = xmlElem.GetAttribute("dd");
-            int birthday_int = (int)Double.Parse(birthday.Substring(0, 4));
+            string deathdayStr = xmlElem.GetAttribute("dd");
+            DateTime deathday = Convert.ToDateTime(birthdayStr);
+            int birthday_int = (int)Double.Parse(birthdayStr.Substring(0, 4));
             int age = 0;
             if (isDead)
             {
-                int deathday_int = (int)Double.Parse(deathday.Substring(0, 4));
+                int deathday_int = (int)Double.Parse(deathdayStr.Substring(0, 4));
                 age = deathday_int - birthday_int;
             }
             else 
