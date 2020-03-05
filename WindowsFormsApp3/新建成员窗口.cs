@@ -45,8 +45,10 @@ namespace FamilySys
             String UIheight = "1";//？？？UI里没有身高输入
             String UIprofession = " balabala";//？？？UI里没有职业
             newNode = new FamilyTreeNode(UIname, UIage, UIgender, UIisdead, UIBirthday, UIBirthplace, UIDeathday, UIheight, UIeducation, UIprofession, UIHighestProfessionRank);
-            //出生日期和死亡日期是date类型，没办法转到String去
+            //出生日期和死亡日期是date类型，没办法转到String去（已经解决）
             //需要增加TreeNode的函数
+
+            
 
 
 

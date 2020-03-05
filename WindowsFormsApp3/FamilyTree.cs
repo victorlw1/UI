@@ -491,7 +491,7 @@ namespace FamilySys
                 isDead = false;
             }
             string deathdayStr = xmlElem.GetAttribute("dd");
-            DateTime deathday = Convert.ToDateTime(birthdayStr);
+            DateTime deathday = Convert.ToDateTime(deathdayStr);
             int birthday_int = (int)Double.Parse(birthdayStr.Substring(0, 4));
             int age = 0;
             if (isDead)

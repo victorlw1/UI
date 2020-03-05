@@ -50,7 +50,6 @@
     <Compile Include="FamilyGraphNode.cs" />
     <Compile Include="FamilyTree.cs" />
     <Compile Include="FamilyTreeNode.cs" />
-    <Compile Include="IOmodule.cs" />
     <Compile Include="R.cs" />
     <Compile Include="主窗口.cs">
       <SubType>Form</SubType>
