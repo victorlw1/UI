@@ -107,13 +107,7 @@ namespace FamilySys
 
         }
 
-        private void 家庭平均人口ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            平均人口展示框 平均人口 = new 平均人口展示框();
-            平均人口.StartPosition = FormStartPosition.CenterParent;
-            平均人口.ShowDialog();
-
-        }
+        
 
         private void 打开ToolStripMenuItem_Click(object sender, EventArgs e)
         {

@@ -174,7 +174,7 @@ namespace FamilySys
             this.家庭平均人口ToolStripMenuItem.Name = "家庭平均人口ToolStripMenuItem";
             this.家庭平均人口ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
             this.家庭平均人口ToolStripMenuItem.Text = "家庭平均人口";
-            this.家庭平均人口ToolStripMenuItem.Click += new System.EventHandler(this.家庭平均人口ToolStripMenuItem_Click);
+            
             // 
             // 视图ToolStripMenuItem
             // 
@@ -237,7 +237,6 @@ namespace FamilySys
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "家谱管理系统UI beta";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.主窗口_FormClosing);
-            this.Load += new System.EventHandler(this.主窗口_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

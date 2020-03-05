@@ -137,5 +137,27 @@ namespace FamilySys
         {
 
         }
+
+        private void 是否在世_在世_CheckedChanged(object sender, EventArgs e)
+        {
+            if(是否在世_在世.Checked)
+            {
+                死亡日期.Visible = false;
+                死亡日期选择框.Visible = false;
+                死亡日期选择框.Value = 死亡日期选择框.MaxDate;
+            }
+            
+        }
+
+        private void 是否在世_已故_CheckedChanged(object sender, EventArgs e)
+        {
+            if (是否在世_已故.Checked)
+            {
+                死亡日期.Visible = true;
+                死亡日期选择框.Visible = true;
+                死亡日期选择框.Value = new DateTime(2000,1,1);
+            }
+
+        }
     }
 }

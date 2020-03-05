@@ -14,7 +14,7 @@ namespace FamilySys
     {
         public static FamilyTreeNode delNode; 
 
-        public static string delName;
+        public static string delName=null;
 
         public 删除成员窗口()
         {
@@ -43,9 +43,7 @@ namespace FamilySys
         {
             查找方法选择窗口 查找方法窗口 = new 查找方法选择窗口();
             查找方法窗口.ShowDialog();
-            姓名展示框.Text = delNode.Name;
-            性别展示框.Text = delNode.Gender;
-            年龄展示框.Text = Convert.ToString(delNode.Age);
+            
 
         }
 
@@ -60,6 +58,13 @@ namespace FamilySys
             {
                 this.Close();
                 return;
+            }
+            else
+            {
+                delNode = 主窗口.myFamilyTree.query(主窗口.myFamilyTree.root, delName);
+                姓名展示框.Text = delNode.Name;
+                性别展示框.Text = delNode.Gender;
+                年龄展示框.Text = Convert.ToString(delNode.Age);
             }
         }
     }
