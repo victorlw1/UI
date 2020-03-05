@@ -1332,20 +1332,11 @@ namespace FamilySys
         {
 
             //输入Person信息
-            string name = Console.ReadLine();
-            int age = int.Parse(Console.ReadLine());
-            string gender = Console.ReadLine();
-            bool isDead = bool.Parse(Console.ReadLine());
-            string encodeStr = Console.ReadLine();
-
-
-            //string birthday = Console.ReadLine();
-            //string deathday = Console.ReadLine();
-            //string bornPlace = null;
-            //string eduBackground = null;
-            //string profession = null;
-            //string highestProfessionRank = null;
-            //int level = int.Parse(Console.ReadLine());
+            string name = null;
+            int age = -1;
+            string gender = null;
+            bool isDead = false;
+            string encodeStr = null;
 
             FamilyGraphNode p = new FamilyGraphNode(name, age, gender, isDead, encodeStr);
             return p;
