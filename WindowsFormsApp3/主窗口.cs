@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,25 @@ namespace FamilySys
         {
             InitializeComponent();
             myFamilyTree = new FamilyTree();
+            //压力测试
+            pressureTest();
+
+        }
+
+        private void pressureTest() 
+        {
+            ArrayList list = new ArrayList();
+            Random rd = new Random();
+            for (int i = 0; i < 1000; i++)
+            {
+                string name= rd.Next(1, 10000).ToString();
+                
+                list.Add(name);
+                int index = rd.Next(0, list.Count);
+                FamilyTreeNode familyTreeNode = new FamilyTreeNode(name, 1, "man", false, new DateTime(rd.Next(1800,9000),rd.Next(1,13),rd.Next(1,28)), "china", new DateTime(rd.Next(1800, 9000), rd.Next(1, 13), rd.Next(1, 28)), "180", "stu", "hhh", "hhhhh");
+                myFamilyTree.insert_child(familyTreeNode, list[index].ToString());
+            }
+            myFamilyTree.saveTree("treeTest.xml");
         }
 
         private void 新建家庭成员ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -207,13 +227,10 @@ namespace FamilySys
             }
         }
 
-        //private void 新建ToolStripMenuItem1_Click(object sender, EventArgs e)
-        //{
-        //    myFamilyTree = new FamilyTree();
-        //    新建成员窗口 新建窗口 = new 新建成员窗口();
-        //    新建窗口.MdiParent = this;
-        //    新建窗口.Show();
-        //}
+        private void 新建ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+           (new 主窗口()).Show();
+        }
 
         public static void bulidTreeView(FamilyTreeNode root, TreeNode tNode)
         {
@@ -229,9 +246,6 @@ namespace FamilySys
             }
         }
 
-        private void 主窗口_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }
