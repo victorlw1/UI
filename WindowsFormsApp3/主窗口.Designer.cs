@@ -82,27 +82,28 @@ namespace FamilySys
             // 新建ToolStripMenuItem1
             // 
             this.新建ToolStripMenuItem1.Name = "新建ToolStripMenuItem1";
-            this.新建ToolStripMenuItem1.Size = new System.Drawing.Size(122, 26);
+            this.新建ToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.新建ToolStripMenuItem1.Text = "新建";
+            this.新建ToolStripMenuItem1.Click += new System.EventHandler(this.新建ToolStripMenuItem1_Click);
             // 
             // 打开ToolStripMenuItem
             // 
             this.打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
-            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
+            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.打开ToolStripMenuItem.Text = "打开";
             this.打开ToolStripMenuItem.Click += new System.EventHandler(this.打开ToolStripMenuItem_Click);
             // 
             // 保存ToolStripMenuItem
             // 
             this.保存ToolStripMenuItem.Name = "保存ToolStripMenuItem";
-            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
+            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.保存ToolStripMenuItem.Text = "保存";
             this.保存ToolStripMenuItem.Click += new System.EventHandler(this.保存ToolStripMenuItem_Click);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
@@ -175,7 +176,7 @@ namespace FamilySys
             this.家庭平均人口ToolStripMenuItem.Name = "家庭平均人口ToolStripMenuItem";
             this.家庭平均人口ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
             this.家庭平均人口ToolStripMenuItem.Text = "家庭平均人口";
-            this.家庭平均人口ToolStripMenuItem.Click += new System.EventHandler(this.家庭平均人口ToolStripMenuItem_Click);
+            
             // 
             // 视图ToolStripMenuItem
             // 

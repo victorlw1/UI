@@ -111,6 +111,7 @@ namespace FamilySys
             this.MinimizeBox = false;
             this.Name = "平均寿命窗口";
             this.Text = "平均寿命窗口";
+            this.Load += new System.EventHandler(this.平均寿命窗口_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);

@@ -76,7 +76,7 @@ namespace FamilySys
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.85714F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.85714F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.85714F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 47F));
             this.tableLayoutPanel1.Controls.Add(this.姓名, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.性别, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.年龄, 1, 3);
@@ -119,6 +119,7 @@ namespace FamilySys
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(582, 553);
             this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // 姓名
             // 
@@ -154,16 +155,16 @@ namespace FamilySys
             // 
             this.姓名输入框.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.姓名输入框, 3);
-            this.姓名输入框.Location = new System.Drawing.Point(115, 30);
+            this.姓名输入框.Location = new System.Drawing.Point(114, 30);
             this.姓名输入框.Name = "姓名输入框";
-            this.姓名输入框.Size = new System.Drawing.Size(233, 25);
+            this.姓名输入框.Size = new System.Drawing.Size(231, 25);
             this.姓名输入框.TabIndex = 12;
             // 
             // 年龄选择框
             // 
             this.年龄选择框.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.年龄选择框, 3);
-            this.年龄选择框.Location = new System.Drawing.Point(115, 122);
+            this.年龄选择框.Location = new System.Drawing.Point(114, 122);
             this.年龄选择框.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -175,7 +176,7 @@ namespace FamilySys
             0,
             -2147483648});
             this.年龄选择框.Name = "年龄选择框";
-            this.年龄选择框.Size = new System.Drawing.Size(233, 25);
+            this.年龄选择框.Size = new System.Drawing.Size(231, 25);
             this.年龄选择框.TabIndex = 13;
             // 
             // 该成员是
@@ -243,9 +244,9 @@ namespace FamilySys
             this.出生日期选择框.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.出生日期选择框, 3);
             this.出生日期选择框.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.出生日期选择框.Location = new System.Drawing.Point(115, 214);
+            this.出生日期选择框.Location = new System.Drawing.Point(114, 214);
             this.出生日期选择框.Name = "出生日期选择框";
-            this.出生日期选择框.Size = new System.Drawing.Size(233, 25);
+            this.出生日期选择框.Size = new System.Drawing.Size(231, 25);
             this.出生日期选择框.TabIndex = 9;
             this.出生日期选择框.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
@@ -253,9 +254,9 @@ namespace FamilySys
             // 
             this.死亡日期选择框.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.死亡日期选择框, 3);
-            this.死亡日期选择框.Location = new System.Drawing.Point(115, 306);
+            this.死亡日期选择框.Location = new System.Drawing.Point(114, 306);
             this.死亡日期选择框.Name = "死亡日期选择框";
-            this.死亡日期选择框.Size = new System.Drawing.Size(233, 25);
+            this.死亡日期选择框.Size = new System.Drawing.Size(231, 25);
             this.死亡日期选择框.TabIndex = 10;
             this.死亡日期选择框.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
@@ -264,9 +265,9 @@ namespace FamilySys
             this.省份.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.省份, 3);
             this.省份.FormattingEnabled = true;
-            this.省份.Location = new System.Drawing.Point(115, 169);
+            this.省份.Location = new System.Drawing.Point(114, 169);
             this.省份.Name = "省份";
-            this.省份.Size = new System.Drawing.Size(233, 23);
+            this.省份.Size = new System.Drawing.Size(231, 23);
             this.省份.TabIndex = 15;
             this.省份.Text = "请选择";
             // 
@@ -275,9 +276,9 @@ namespace FamilySys
             this.学历水平选择框.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.学历水平选择框, 3);
             this.学历水平选择框.FormattingEnabled = true;
-            this.学历水平选择框.Location = new System.Drawing.Point(115, 353);
+            this.学历水平选择框.Location = new System.Drawing.Point(114, 353);
             this.学历水平选择框.Name = "学历水平选择框";
-            this.学历水平选择框.Size = new System.Drawing.Size(233, 23);
+            this.学历水平选择框.Size = new System.Drawing.Size(231, 23);
             this.学历水平选择框.TabIndex = 17;
             this.学历水平选择框.Text = "请选择";
             // 
@@ -285,16 +286,16 @@ namespace FamilySys
             // 
             this.最高职位输入框.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.最高职位输入框, 3);
-            this.最高职位输入框.Location = new System.Drawing.Point(115, 398);
+            this.最高职位输入框.Location = new System.Drawing.Point(114, 398);
             this.最高职位输入框.Name = "最高职位输入框";
-            this.最高职位输入框.Size = new System.Drawing.Size(233, 25);
+            this.最高职位输入框.Size = new System.Drawing.Size(231, 25);
             this.最高职位输入框.TabIndex = 18;
             // 
             // 出生地
             // 
             this.出生地.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.出生地.AutoSize = true;
-            this.出生地.Location = new System.Drawing.Point(40, 173);
+            this.出生地.Location = new System.Drawing.Point(39, 173);
             this.出生地.Name = "出生地";
             this.出生地.Size = new System.Drawing.Size(52, 15);
             this.出生地.TabIndex = 20;
@@ -304,9 +305,9 @@ namespace FamilySys
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.确认新建, 3);
             this.确认新建.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.确认新建.Location = new System.Drawing.Point(115, 483);
+            this.确认新建.Location = new System.Drawing.Point(114, 483);
             this.确认新建.Name = "确认新建";
-            this.确认新建.Size = new System.Drawing.Size(233, 40);
+            this.确认新建.Size = new System.Drawing.Size(231, 40);
             this.确认新建.TabIndex = 26;
             this.确认新建.Text = "确认新建";
             this.确认新建.UseVisualStyleBackColor = true;
@@ -316,25 +317,25 @@ namespace FamilySys
             // 
             this.已有的人.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.已有的人.FormattingEnabled = true;
-            this.已有的人.Location = new System.Drawing.Point(115, 445);
+            this.已有的人.Location = new System.Drawing.Point(114, 445);
             this.已有的人.Name = "已有的人";
-            this.已有的人.Size = new System.Drawing.Size(86, 23);
+            this.已有的人.Size = new System.Drawing.Size(85, 23);
             this.已有的人.TabIndex = 29;
             // 
             // 亲戚关系
             // 
             this.亲戚关系.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.亲戚关系.FormattingEnabled = true;
-            this.亲戚关系.Location = new System.Drawing.Point(262, 445);
+            this.亲戚关系.Location = new System.Drawing.Point(260, 445);
             this.亲戚关系.Name = "亲戚关系";
-            this.亲戚关系.Size = new System.Drawing.Size(86, 23);
+            this.亲戚关系.Size = new System.Drawing.Size(85, 23);
             this.亲戚关系.TabIndex = 30;
             // 
             // 的
             // 
             this.的.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.的.AutoSize = true;
-            this.的.Location = new System.Drawing.Point(220, 449);
+            this.的.Location = new System.Drawing.Point(218, 449);
             this.的.Name = "的";
             this.的.Size = new System.Drawing.Size(22, 15);
             this.的.TabIndex = 31;
@@ -345,9 +346,9 @@ namespace FamilySys
             this.tableLayoutPanel1.SetColumnSpan(this.panel1, 3);
             this.panel1.Controls.Add(this.tableLayoutPanel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(115, 69);
+            this.panel1.Location = new System.Drawing.Point(114, 69);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(233, 40);
+            this.panel1.Size = new System.Drawing.Size(231, 40);
             this.panel1.TabIndex = 32;
             // 
             // tableLayoutPanel2
@@ -363,7 +364,7 @@ namespace FamilySys
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(233, 40);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(231, 40);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // 性别_male
@@ -372,7 +373,7 @@ namespace FamilySys
             this.性别_male.AutoSize = true;
             this.性别_male.Location = new System.Drawing.Point(3, 10);
             this.性别_male.Name = "性别_male";
-            this.性别_male.Size = new System.Drawing.Size(110, 19);
+            this.性别_male.Size = new System.Drawing.Size(109, 19);
             this.性别_male.TabIndex = 0;
             this.性别_male.TabStop = true;
             this.性别_male.Text = "male";
@@ -383,9 +384,9 @@ namespace FamilySys
             // 
             this.性别_female.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.性别_female.AutoSize = true;
-            this.性别_female.Location = new System.Drawing.Point(119, 10);
+            this.性别_female.Location = new System.Drawing.Point(118, 10);
             this.性别_female.Name = "性别_female";
-            this.性别_female.Size = new System.Drawing.Size(111, 19);
+            this.性别_female.Size = new System.Drawing.Size(110, 19);
             this.性别_female.TabIndex = 1;
             this.性别_female.TabStop = true;
             this.性别_female.Text = "female";
@@ -397,9 +398,9 @@ namespace FamilySys
             this.tableLayoutPanel1.SetColumnSpan(this.panel2, 3);
             this.panel2.Controls.Add(this.tableLayoutPanel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(115, 253);
+            this.panel2.Location = new System.Drawing.Point(114, 253);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(233, 40);
+            this.panel2.Size = new System.Drawing.Size(231, 40);
             this.panel2.TabIndex = 33;
             // 
             // tableLayoutPanel3
@@ -415,7 +416,7 @@ namespace FamilySys
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(233, 40);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(231, 40);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // 是否在世_在世
@@ -424,23 +425,25 @@ namespace FamilySys
             this.是否在世_在世.AutoSize = true;
             this.是否在世_在世.Location = new System.Drawing.Point(3, 10);
             this.是否在世_在世.Name = "是否在世_在世";
-            this.是否在世_在世.Size = new System.Drawing.Size(110, 19);
+            this.是否在世_在世.Size = new System.Drawing.Size(109, 19);
             this.是否在世_在世.TabIndex = 0;
             this.是否在世_在世.TabStop = true;
             this.是否在世_在世.Text = "在世";
             this.是否在世_在世.UseVisualStyleBackColor = true;
+            this.是否在世_在世.CheckedChanged += new System.EventHandler(this.是否在世_在世_CheckedChanged);
             // 
             // 是否在世_已故
             // 
             this.是否在世_已故.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.是否在世_已故.AutoSize = true;
-            this.是否在世_已故.Location = new System.Drawing.Point(119, 10);
+            this.是否在世_已故.Location = new System.Drawing.Point(118, 10);
             this.是否在世_已故.Name = "是否在世_已故";
-            this.是否在世_已故.Size = new System.Drawing.Size(111, 19);
+            this.是否在世_已故.Size = new System.Drawing.Size(110, 19);
             this.是否在世_已故.TabIndex = 1;
             this.是否在世_已故.TabStop = true;
             this.是否在世_已故.Text = "已故";
             this.是否在世_已故.UseVisualStyleBackColor = true;
+            this.是否在世_已故.CheckedChanged += new System.EventHandler(this.是否在世_已故_CheckedChanged);
             // 
             // 新建成员窗口
             // 

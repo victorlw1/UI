@@ -77,12 +77,6 @@
     <Compile Include="查找方法选择窗口.Designer.cs">
       <DependentUpon>查找方法选择窗口.cs</DependentUpon>
     </Compile>
-    <Compile Include="家庭平均人口窗口.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="家庭平均人口窗口.Designer.cs">
-      <DependentUpon>家庭平均人口窗口.cs</DependentUpon>
-    </Compile>
     <Compile Include="平均寿命窗口.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,9 +139,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="查找方法选择窗口.resx">
       <DependentUpon>查找方法选择窗口.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="家庭平均人口窗口.resx">
-      <DependentUpon>家庭平均人口窗口.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="平均寿命窗口.resx">
       <DependentUpon>平均寿命窗口.cs</DependentUpon>

@@ -47,8 +47,7 @@ namespace FamilySys
             String UIheight = "1";//？？？UI里没有身高输入
             String UIprofession = " balabala";//？？？UI里没有职业
             newNode = new FamilyTreeNode(UIname, UIage, UIgender, UIisdead, UIBirthday, UIBirthplace, UIDeathday, UIheight, UIeducation, UIprofession, UIHighestProfessionRank);
-            //出生日期和死亡日期是date类型，没办法转到String去（已经解决）
-            //需要增加TreeNode的函数
+            
 
             if (已有的人.SelectedIndex == -1)//没有选择与“已有的人”来设置亲戚关系
             {
@@ -68,6 +67,7 @@ namespace FamilySys
                         //需要一个添加兄弟的函数
                         //或者添加一个找到父亲的函数，再给父亲加孩子，相当于加兄弟
                         //szm
+                        主窗口.myFamilyTree.insert_child(newNode, 主窗口.myFamilyTree.query(主窗口.myFamilyTree.root, Name).Parent.Name);
                     }
                 }
             }
@@ -133,5 +133,31 @@ namespace FamilySys
             }
         }
 
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void 是否在世_在世_CheckedChanged(object sender, EventArgs e)
+        {
+            if(是否在世_在世.Checked)
+            {
+                死亡日期.Visible = false;
+                死亡日期选择框.Visible = false;
+                死亡日期选择框.Value = 死亡日期选择框.MaxDate;
+            }
+            
+        }
+
+        private void 是否在世_已故_CheckedChanged(object sender, EventArgs e)
+        {
+            if (是否在世_已故.Checked)
+            {
+                死亡日期.Visible = true;
+                死亡日期选择框.Visible = true;
+                死亡日期选择框.Value = new DateTime(2000,1,1);
+            }
+
+        }
     }
 }

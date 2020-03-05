@@ -40,8 +40,14 @@ namespace FamilySys
             bool UIisdead;
             if (是否在世_在世.Checked)
                 UIisdead = false;
+
             else
+            { 
                 UIisdead = true;
+                死亡日期选择框.Value = 死亡日期选择框.MaxDate;
+
+            }
+
             DateTime UIDeathday = 死亡日期选择框.Value;
             String UIeducation = 学历水平选择框.Text;
             String UIHighestProfessionRank = 最高职位输入框.Text;
@@ -165,9 +171,17 @@ namespace FamilySys
                 省份.Text = altNode.Birthplace;
                 出生日期选择框.Value = altNode.Birthday;
                 if (altNode.IsDead == true)
+                {
                     是否在世_已故.Checked = true;
+                    死亡日期.Visible = true;
+                    死亡日期选择框.Visible = true;                   
+                }
                 else
+                {
                     是否在世_在世.Checked = true;
+                    死亡日期.Visible = false;
+                    死亡日期选择框.Visible = false;
+                }
                 死亡日期选择框.Value = altNode.Deathday;
                 学历水平选择框.Text = altNode.Education;
                 最高职位输入框.Text = altNode.HighestProfessionRank;
@@ -179,5 +193,24 @@ namespace FamilySys
             altName = null;
         }
 
+        private void 是否在世_在世_CheckedChanged(object sender, EventArgs e)
+        {
+            if (是否在世_在世.Checked)
+            {
+                死亡日期.Visible = false;
+                死亡日期选择框.Visible = false;
+                死亡日期选择框.Value = 死亡日期选择框.MaxDate;
+            }
+        }
+
+        private void 是否在世_已故_CheckedChanged(object sender, EventArgs e)
+        {
+            if (是否在世_已故.Checked)
+            {
+                死亡日期.Visible = true;
+                死亡日期选择框.Visible = true;
+                死亡日期选择框.Value = new DateTime(2000, 1, 1);
+            }
+        }
     }
 }
