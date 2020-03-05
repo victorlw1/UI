@@ -23,6 +23,8 @@ namespace FamilySys
         {
             主窗口.是否有改动 = true;
             this.MdiParent.Text = 主窗口.title + " - " + 主窗口.xml + "*";
+
+            //封装
             String UIname = 姓名输入框.Text;
             String UIgender;
             if (性别_male.Checked)
@@ -48,7 +50,27 @@ namespace FamilySys
             //出生日期和死亡日期是date类型，没办法转到String去（已经解决）
             //需要增加TreeNode的函数
 
-            
+            if (已有的人.SelectedIndex == -1)//没有选择与“已有的人”来设置亲戚关系
+            {
+                //将newNode默认设置成为root的父亲，作为老祖宗
+            }
+            else
+            {
+                string Name = 已有的人.SelectedItem.ToString();
+                {
+                    string relation=亲戚关系.SelectedItem.ToString();
+                    if (relation == "儿子"|| relation == "女儿") 
+                    {
+                        主窗口.myFamilyTree.insert_child(newNode, Name);
+                    }
+                    else//兄弟姐妹关系
+                    {
+                        //需要一个添加兄弟的函数
+                        //或者添加一个找到父亲的函数，再给父亲加孩子，相当于加兄弟
+                        //szm
+                    }
+                }
+            }
 
 
 
@@ -88,6 +110,7 @@ namespace FamilySys
             if (性别_male.Checked)
             {
                 亲戚关系.Items.Clear();
+                亲戚关系.Text = "";
                 foreach (string relation in R.male_relation)
                 {
                     亲戚关系.Items.Add(relation);
@@ -101,6 +124,7 @@ namespace FamilySys
             if (性别_female.Checked)
             {
                 亲戚关系.Items.Clear();
+                亲戚关系.Text = "";
                 foreach (string relation in R.female_relation)
                 {
                     亲戚关系.Items.Add(relation);

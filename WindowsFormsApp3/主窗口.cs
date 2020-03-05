@@ -19,7 +19,6 @@ namespace FamilySys
 
 
         public static List<FamilyTreeNode> familyTreeNodes=new List<FamilyTreeNode>();
-
         public static FamilyTree myFamilyTree;
 
         public 主窗口()
@@ -57,12 +56,6 @@ namespace FamilySys
         }
 
 
-        private void 主窗口_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
         private void 修改家庭成员ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             修改成员窗口 修改窗口 = new 修改成员窗口();
@@ -86,11 +79,11 @@ namespace FamilySys
 
         }
 
-        private void malefemale比例ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void 男女比例ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            malefemale比例窗口 malefemale比例 = new malefemale比例窗口();
-            malefemale比例.StartPosition = FormStartPosition.CenterParent;
-            malefemale比例.ShowDialog();
+            男女比例窗口 男女比例 = new 男女比例窗口();
+            男女比例.StartPosition = FormStartPosition.CenterParent;
+            男女比例.ShowDialog();
 
         }
 
@@ -214,13 +207,13 @@ namespace FamilySys
             }
         }
 
-        private void 新建ToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            myFamilyTree = new FamilyTree();
-            新建成员窗口 新建窗口 = new 新建成员窗口();
-            新建窗口.MdiParent = this;
-            新建窗口.Show();
-        }
+        //private void 新建ToolStripMenuItem1_Click(object sender, EventArgs e)
+        //{
+        //    myFamilyTree = new FamilyTree();
+        //    新建成员窗口 新建窗口 = new 新建成员窗口();
+        //    新建窗口.MdiParent = this;
+        //    新建窗口.Show();
+        //}
 
         public static void bulidTreeView(FamilyTreeNode root, TreeNode tNode)
         {

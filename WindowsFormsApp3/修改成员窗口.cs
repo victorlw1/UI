@@ -12,8 +12,7 @@ namespace FamilySys
 {
     public partial class 修改成员窗口 : Form
     {
-        public static FamilyTreeNode AfaltNode;
-        public static FamilyTreeNode BfaltNode;
+        public static FamilyTreeNode altNode;
         public static string altName = null;
         public 修改成员窗口()
         {
@@ -48,13 +47,40 @@ namespace FamilySys
             String UIHighestProfessionRank = 最高职位输入框.Text;
             String UIheight = "1";//？？？UI里没有身高输入
             String UIprofession = " balabala";//？？？UI里没有职业
-            AfaltNode = new FamilyTreeNode(UIname, UIage, UIgender, UIisdead, UIBirthday, UIBirthplace, UIDeathday, UIheight, UIeducation, UIprofession, UIHighestProfessionRank);
+
+            altNode.Name = UIname;altNode.Gender = UIgender;altNode.Age = UIage;
+            altNode.Birthplace = UIBirthplace;altNode.Birthday = UIBirthday;altNode.Deathday = UIDeathday;
+            altNode.IsDead = UIisdead;altNode.Education = UIeducation;
+
+            //altNode.Height = UIheight;
+            //altNode.Profession = UIprofession;
+
+
+            //altNode = new FamilyTreeNode(UIname, UIage, UIgender, UIisdead, UIBirthday, UIBirthplace, UIDeathday, UIheight, UIeducation, UIprofession, UIHighestProfessionRank);
             //出生日期和死亡日期是date类型，没办法转到String去（已经解决）
 
 
-            //需要修改TreeNode的函数
-
-
+            //if (已有的人.SelectedIndex == -1)//没有选择与“已有的人”来设置亲戚关系
+            //{
+            //    //将newNode默认设置成为root的父亲，作为老祖宗
+            //}
+            //else
+            //{
+            //    string Name = 已有的人.SelectedItem.ToString();
+            //    {
+            //        string relation = 亲戚关系.SelectedItem.ToString();
+            //        if (relation == "儿子" || relation == "女儿")
+            //        {
+            //            主窗口.myFamilyTree.insert_child(altNode, Name);
+            //        }
+            //        else//兄弟姐妹关系
+            //        {
+            //            //需要一个添加兄弟的函数
+            //            //或者添加一个找到父亲的函数，再给父亲加孩子，相当于加兄弟
+            //            //szm
+            //        }
+            //    }
+            //}
 
             ((主窗口)(this.MdiParent)).树视图展示.Nodes.Clear();
             TreeNode rootNode = new TreeNode("家族树");
@@ -75,63 +101,46 @@ namespace FamilySys
             {
                 学历水平选择框.Items.Add(edu);
             }
-            主窗口.familyTreeNodes.Clear();
-            if (主窗口.myFamilyTree != null)
-            {
-                List<FamilyTreeNode> allNodes = new List<FamilyTreeNode>();
-                FamilyTree.DFS_getAll(主窗口.myFamilyTree.root, allNodes);
-                foreach (var node in allNodes)
-                {
-                    已有的人.Items.Add(node.Name);
-                }
-            }
-            //lw
-            BfaltNode = 主窗口.myFamilyTree.query(主窗口.myFamilyTree.root, altName);
 
-            姓名输入框.Text = BfaltNode.Name;
-            if (BfaltNode.Gender == "male")
-            {
-                性别_male.Checked = true;
-            }
-            else
-                性别_female.Checked = true;
-            年龄选择框.Value = BfaltNode.Age;
-            省份.Text = BfaltNode.Birthplace;
-            出生日期选择框.Value = BfaltNode.Birthday;
-            if (BfaltNode.IsDead == true)
-                是否在世_在世.Checked = true;
-            else
-                是否在世_已故.Checked = true;
-            死亡日期选择框.Value = BfaltNode.Deathday;
-            学历水平选择框.Text = BfaltNode.Education;
-            最高职位输入框.Text = BfaltNode.HighestProfessionRank;
+            //if (主窗口.myFamilyTree != null)
+            //{
+            //    List<FamilyTreeNode> allNodes = new List<FamilyTreeNode>();
+            //    FamilyTree.DFS_getAll(主窗口.myFamilyTree.root, allNodes);
+            //    foreach (var node in allNodes)
+            //    {
+            //        已有的人.Items.Add(node.Name);
+            //    }
+            //}
+
         }
 
-        private void 性别_male_CheckedChanged(object sender, EventArgs e)
-        {
-            if (性别_male.Checked)
-            {
-                亲戚关系.Items.Clear();
-                foreach (string relation in R.male_relation)
-                {
-                    亲戚关系.Items.Add(relation);
-                }
+        //private void 性别_male_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (性别_male.Checked)
+        //    {
+        //        亲戚关系.Items.Clear();
+        //        亲戚关系.Text = "";
+        //        foreach (string relation in R.male_relation)
+        //        {
+        //            亲戚关系.Items.Add(relation);
+        //        }
 
-            }
-        }
+        //    }
+        //}
 
-        private void 性别_female_CheckedChanged(object sender, EventArgs e)
-        {
-            if (性别_female.Checked)
-            {
-                亲戚关系.Items.Clear();
-                foreach (string relation in R.female_relation)
-                {
-                    亲戚关系.Items.Add(relation);
-                }
+        //private void 性别_female_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (性别_female.Checked)
+        //    {
+        //        亲戚关系.Items.Clear();
+        //        亲戚关系.Text = "";
+        //        foreach (string relation in R.female_relation)
+        //        {
+        //            亲戚关系.Items.Add(relation);
+        //        }
 
-            }
-        }
+        //    }
+        //}
 
         private void 修改成员窗口_Shown(object sender, EventArgs e)
         {
@@ -139,6 +148,29 @@ namespace FamilySys
             {
                 this.Close();
                 return;
+            }else
+            {
+                altNode = 主窗口.myFamilyTree.query(主窗口.myFamilyTree.root, altName);
+
+                姓名输入框.Text = altNode.Name;
+                if (altNode.Gender == "male")
+                {
+                    性别_male.Checked = true;
+                }
+                else
+                {
+                    性别_female.Checked = true;
+                }
+                年龄选择框.Value = altNode.Age;
+                省份.Text = altNode.Birthplace;
+                出生日期选择框.Value = altNode.Birthday;
+                if (altNode.IsDead == true)
+                    是否在世_已故.Checked = true;
+                else
+                    是否在世_在世.Checked = true;
+                死亡日期选择框.Value = altNode.Deathday;
+                学历水平选择框.Text = altNode.Education;
+                最高职位输入框.Text = altNode.HighestProfessionRank;
             }
         }
 

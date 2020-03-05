@@ -19,7 +19,6 @@ namespace FamilySys
 
         private void 输入关系_Load(object sender, EventArgs e)
         {
-            主窗口.familyTreeNodes.Clear();
             if (主窗口.myFamilyTree != null)
             {
                 List<FamilyTreeNode> allNodes = new List<FamilyTreeNode>();
@@ -29,7 +28,6 @@ namespace FamilySys
                     一个人.Items.Add(node.Name);
                 }
             }
-            亲戚关系.Items.Clear();
             foreach (string relation in R.male_relation)
             {
                 亲戚关系.Items.Add(relation);
@@ -43,6 +41,7 @@ namespace FamilySys
         private void 亲戚关系_SelectedIndexChanged(object sender, EventArgs e)
         {
             另一个人.Items.Clear();
+            另一个人.Text = "";
             if (亲戚关系.SelectedItem == "儿子")
             {
                 string name = 一个人.SelectedItem.ToString();
@@ -73,7 +72,7 @@ namespace FamilySys
                     另一个人.Items.Add(i.Name);
                 }
             }
-            else if (亲戚关系.SelectedItem == "female儿")
+            else if (亲戚关系.SelectedItem == "女儿")
             {
                 string name = 一个人.SelectedItem.ToString();
                 List<FamilyTreeNode> Nodes = new List<FamilyTreeNode>();
@@ -107,10 +106,17 @@ namespace FamilySys
 
         private void 确定_Click(object sender, EventArgs e)
         {
-            修改成员窗口.altName = 另一个人.SelectedItem.ToString();
-            删除成员窗口.delName = 另一个人.SelectedItem.ToString();
-            查询成员窗口.findName = 另一个人.SelectedItem.ToString();
-            this.Close();
+            if (另一个人.Text == "")
+            {
+                MessageBox.Show("请输入关系", null, MessageBoxButtons.OK, MessageBoxIcon.Warning); ;
+            }
+            else
+            {
+                修改成员窗口.altName = 另一个人.SelectedItem.ToString();
+                删除成员窗口.delName = 另一个人.SelectedItem.ToString();
+                查询成员窗口.findName = 另一个人.SelectedItem.ToString();
+                this.Close();
+            }
         }
     }
 }

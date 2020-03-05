@@ -173,7 +173,7 @@ namespace FamilySys
             FamilyTreeNode p = temp.RightChild;
             while (p != null)
             {
-                if (p.Gender == "male" && p.Age > temp.Age)//最好多一个日期比较
+                if (p.Gender == "male" &&( p.Age > temp.Age||DateTime.Compare(p.Birthday,temp.Birthday)<0))
                 {
                     elderBrotherNodes.Add(p);
                 }
@@ -190,7 +190,7 @@ namespace FamilySys
             FamilyTreeNode p = temp.RightChild;
             while (p != null)
             {
-                if (p.Gender == "male" && p.Age < temp.Age)//最好多一个日期比较
+                if (p.Gender == "male" && (p.Age < temp.Age || DateTime.Compare(p.Birthday, temp.Birthday) > 0))
                 {
                     littleBrotherNodes.Add(p);
                 }
@@ -207,7 +207,7 @@ namespace FamilySys
             FamilyTreeNode p = temp.RightChild;
             while (p != null)
             {
-                if (p.Gender == "female" && p.Age > temp.Age)//最好多一个日期比较
+                if (p.Gender == "female" && ( p.Age > temp.Age||DateTime.Compare(p.Birthday,temp.Birthday)<0))
                 {
                     elderSisterNodes.Add(p);
                 }
@@ -224,7 +224,7 @@ namespace FamilySys
             FamilyTreeNode p = temp.RightChild;
             while (p != null)
             {
-                if (p.Gender == "female" && p.Age < temp.Age)//最好多一个日期比较
+                if (p.Gender == "female" && (p.Age < temp.Age || DateTime.Compare(p.Birthday, temp.Birthday) > 0))
                 {
                     littleSisterNodes.Add(p);
                 }
