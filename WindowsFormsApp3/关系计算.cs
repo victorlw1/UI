@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +15,11 @@ namespace WindowsFormsApp3
         public 关系计算()
         {
             InitializeComponent();
+        }
+
+        private void 关系计算_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
