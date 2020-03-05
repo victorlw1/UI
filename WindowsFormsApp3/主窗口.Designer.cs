@@ -81,27 +81,28 @@ namespace FamilySys
             // 新建ToolStripMenuItem1
             // 
             this.新建ToolStripMenuItem1.Name = "新建ToolStripMenuItem1";
-            this.新建ToolStripMenuItem1.Size = new System.Drawing.Size(122, 26);
+            this.新建ToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.新建ToolStripMenuItem1.Text = "新建";
+            this.新建ToolStripMenuItem1.Click += new System.EventHandler(this.新建ToolStripMenuItem1_Click);
             // 
             // 打开ToolStripMenuItem
             // 
             this.打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
-            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
+            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.打开ToolStripMenuItem.Text = "打开";
             this.打开ToolStripMenuItem.Click += new System.EventHandler(this.打开ToolStripMenuItem_Click);
             // 
             // 保存ToolStripMenuItem
             // 
             this.保存ToolStripMenuItem.Name = "保存ToolStripMenuItem";
-            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
+            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.保存ToolStripMenuItem.Text = "保存";
             this.保存ToolStripMenuItem.Click += new System.EventHandler(this.保存ToolStripMenuItem_Click);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
@@ -186,7 +187,7 @@ namespace FamilySys
             // 家庭树ToolStripMenuItem
             // 
             this.家庭树ToolStripMenuItem.Name = "家庭树ToolStripMenuItem";
-            this.家庭树ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.家庭树ToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
             this.家庭树ToolStripMenuItem.Text = "家谱树";
             this.家庭树ToolStripMenuItem.Click += new System.EventHandler(this.家庭树ToolStripMenuItem_Click);
             // 
