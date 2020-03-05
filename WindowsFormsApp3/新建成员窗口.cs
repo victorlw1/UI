@@ -47,8 +47,7 @@ namespace FamilySys
             String UIheight = "1";//？？？UI里没有身高输入
             String UIprofession = " balabala";//？？？UI里没有职业
             newNode = new FamilyTreeNode(UIname, UIage, UIgender, UIisdead, UIBirthday, UIBirthplace, UIDeathday, UIheight, UIeducation, UIprofession, UIHighestProfessionRank);
-            //出生日期和死亡日期是date类型，没办法转到String去（已经解决）
-            //需要增加TreeNode的函数
+            
 
             if (已有的人.SelectedIndex == -1)//没有选择与“已有的人”来设置亲戚关系
             {
@@ -133,5 +132,9 @@ namespace FamilySys
             }
         }
 
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

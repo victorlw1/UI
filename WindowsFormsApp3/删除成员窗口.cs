@@ -12,6 +12,7 @@ namespace FamilySys
 {
     public partial class 删除成员窗口 : Form
     {
+        public static FamilyTreeNode delNode; 
 
         public static string delName;
 
@@ -42,6 +43,10 @@ namespace FamilySys
         {
             查找方法选择窗口 查找方法窗口 = new 查找方法选择窗口();
             查找方法窗口.ShowDialog();
+            姓名展示框.Text = delNode.Name;
+            性别展示框.Text = delNode.Gender;
+            年龄展示框.Text = Convert.ToString(delNode.Age);
+
         }
 
         private void 删除成员窗口_FormClosed(object sender, FormClosedEventArgs e)

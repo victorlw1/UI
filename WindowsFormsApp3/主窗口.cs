@@ -228,5 +228,10 @@ namespace FamilySys
                 bulidTreeView(p.LeftChild, ttNode);
             }
         }
+
+        private void 主窗口_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

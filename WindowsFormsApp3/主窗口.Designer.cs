@@ -186,7 +186,7 @@ namespace FamilySys
             // 家庭树ToolStripMenuItem
             // 
             this.家庭树ToolStripMenuItem.Name = "家庭树ToolStripMenuItem";
-            this.家庭树ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.家庭树ToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
             this.家庭树ToolStripMenuItem.Text = "家谱树";
             this.家庭树ToolStripMenuItem.Click += new System.EventHandler(this.家庭树ToolStripMenuItem_Click);
             // 
@@ -236,6 +236,7 @@ namespace FamilySys
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "家谱管理系统UI beta";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.主窗口_FormClosing);
+            this.Load += new System.EventHandler(this.主窗口_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

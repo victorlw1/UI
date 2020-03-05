@@ -24,6 +24,22 @@ namespace FamilySys
             DFS_output(node.LeftChild);
             DFS_output(node.RightChild);
         }
+        public static void DFS_output_all_age(FamilyTreeNode node,int age,int man,int woman)
+        {
+            if (node == null) return;
+            age = age + node.Age;
+            if (node.Gender == "male")
+            {
+                ++man;
+            }
+            else
+                ++woman;
+            DFS_output_all_age(node.LeftChild,age,man,woman);
+            DFS_output_all_age(node.RightChild,age,man,woman);
+
+        }
+        
+
 
 
         public static void DFS_getAll(FamilyTreeNode node,List<FamilyTreeNode> familyTreeNodes)

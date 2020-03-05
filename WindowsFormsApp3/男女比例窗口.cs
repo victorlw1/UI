@@ -19,12 +19,23 @@ namespace FamilySys
 
         private void 男女比例窗口_Load(object sender, EventArgs e)
         {
+            //lw
+            int age = 0;
+            int man = 0;
+            int woman = 0;
+            FamilyTree.DFS_output_all_age(主窗口.myFamilyTree.root, age, man, woman);
+            男女比例展示框.Text = Convert.ToString(man) + ":" + Convert.ToString(woman);
 
         }
 
         private void 男女比例返回_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
