@@ -17,25 +17,6 @@ namespace FamilySys
             InitializeComponent();
         }
 
-        private void 平均寿命_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void 单位岁_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void 平均寿命返回_Click(object sender, EventArgs e)
         {
@@ -47,7 +28,7 @@ namespace FamilySys
             int age = 0;
             int man = 0;
             int woman = 0;
-            FamilyTree.DFS_output_all_age(主窗口.myFamilyTree.root, age,man,woman);
+            FamilyTree.DFS_output_all_age(主窗口.myFamilyTree.root,ref age,ref man,ref woman);
             double average = Convert.ToDouble(age) / (man + woman);
             average=Math.Round(average, 2);
             平均寿命展示框.Text = Convert.ToString(average) + "岁";
