@@ -49,17 +49,7 @@ namespace FamilySys
                 
                 if (queNode != null)
                 {
-                    if (queNode.IsDead)
-                    {
-                        死亡日期.Visible = false;
-                        死亡日期展示框.Visible = false;
 
-                    }
-                    else
-                    {
-
-                        死亡日期展示框.Text = queNode.Deathday.ToShortDateString();
-                    }
                     姓名展示框.Text = queNode.Name;
                     性别展示框.Text = queNode.Gender;
                     年龄展示框.Text = Convert.ToString(queNode.Age);
@@ -69,11 +59,17 @@ namespace FamilySys
                     最高职称展示框.Text = queNode.HighestProfessionRank;
                     if (queNode.IsDead)
                     {
+
                         是否在世展示框.Text = "已故";
+                        死亡日期.Visible = true;
+                        死亡日期展示框.Visible = true;
+                        死亡日期展示框.Text = queNode.Deathday.ToShortDateString();
                     }
                     else
                     {
                         是否在世展示框.Text = "在世";
+                        死亡日期.Visible = false;
+                        死亡日期展示框.Visible = false;
                     }
                 }
                 else

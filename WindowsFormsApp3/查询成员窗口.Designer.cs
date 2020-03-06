@@ -32,7 +32,6 @@ namespace FamilySys
             this.姓名 = new System.Windows.Forms.Label();
             this.性别 = new System.Windows.Forms.Label();
             this.年龄 = new System.Windows.Forms.Label();
-            this.与自己的关系 = new System.Windows.Forms.Label();
             this.最高职称 = new System.Windows.Forms.Label();
             this.学历水平 = new System.Windows.Forms.Label();
             this.死亡日期 = new System.Windows.Forms.Label();
@@ -48,7 +47,6 @@ namespace FamilySys
             this.死亡日期展示框 = new System.Windows.Forms.Label();
             this.学历水平展示框 = new System.Windows.Forms.Label();
             this.最高职称展示框 = new System.Windows.Forms.Label();
-            this.亲戚关系展示框 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,7 +62,6 @@ namespace FamilySys
             this.tableLayoutPanel1.Controls.Add(this.姓名, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.性别, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.年龄, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.与自己的关系, 1, 10);
             this.tableLayoutPanel1.Controls.Add(this.最高职称, 1, 9);
             this.tableLayoutPanel1.Controls.Add(this.学历水平, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.死亡日期, 1, 7);
@@ -80,7 +77,6 @@ namespace FamilySys
             this.tableLayoutPanel1.Controls.Add(this.死亡日期展示框, 2, 7);
             this.tableLayoutPanel1.Controls.Add(this.学历水平展示框, 2, 8);
             this.tableLayoutPanel1.Controls.Add(this.最高职称展示框, 2, 9);
-            this.tableLayoutPanel1.Controls.Add(this.亲戚关系展示框, 2, 10);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -129,16 +125,6 @@ namespace FamilySys
             this.年龄.Size = new System.Drawing.Size(37, 15);
             this.年龄.TabIndex = 2;
             this.年龄.Text = "年龄";
-            // 
-            // 与自己的关系
-            // 
-            this.与自己的关系.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.与自己的关系.AutoSize = true;
-            this.与自己的关系.Location = new System.Drawing.Point(25, 402);
-            this.与自己的关系.Name = "与自己的关系";
-            this.与自己的关系.Size = new System.Drawing.Size(97, 15);
-            this.与自己的关系.TabIndex = 8;
-            this.与自己的关系.Text = "与自己的关系";
             // 
             // 最高职称
             // 
@@ -308,18 +294,6 @@ namespace FamilySys
             this.最高职称展示框.TabIndex = 29;
             this.最高职称展示框.Text = "最高职称展示框";
             // 
-            // 亲戚关系展示框
-            // 
-            this.亲戚关系展示框.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.亲戚关系展示框.AutoSize = true;
-            this.亲戚关系展示框.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tableLayoutPanel1.SetColumnSpan(this.亲戚关系展示框, 2);
-            this.亲戚关系展示框.Location = new System.Drawing.Point(131, 401);
-            this.亲戚关系展示框.Name = "亲戚关系展示框";
-            this.亲戚关系展示框.Size = new System.Drawing.Size(210, 17);
-            this.亲戚关系展示框.TabIndex = 30;
-            this.亲戚关系展示框.Text = "亲戚关系展示框";
-            // 
             // 查询成员窗口
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -347,7 +321,6 @@ namespace FamilySys
         private System.Windows.Forms.Label 姓名;
         private System.Windows.Forms.Label 性别;
         private System.Windows.Forms.Label 年龄;
-        private System.Windows.Forms.Label 与自己的关系;
         private System.Windows.Forms.Label 最高职称;
         private System.Windows.Forms.Label 学历水平;
         private System.Windows.Forms.Label 死亡日期;
@@ -363,6 +336,5 @@ namespace FamilySys
         private System.Windows.Forms.Label 死亡日期展示框;
         private System.Windows.Forms.Label 学历水平展示框;
         private System.Windows.Forms.Label 最高职称展示框;
-        private System.Windows.Forms.Label 亲戚关系展示框;
     }
 }
