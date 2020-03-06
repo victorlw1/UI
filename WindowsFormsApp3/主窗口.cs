@@ -247,7 +247,9 @@ namespace FamilySys
             {
                 打开查询成员窗口时是否打开查找方法选择窗口 = false;
                 查询成员窗口.findName = e.Node.Text;
-                (new 查询成员窗口()).Show();
+                查询成员窗口 查询窗口 = new 查询成员窗口();
+                查询窗口.MdiParent = this;
+                查询窗口.Show();
                 打开查询成员窗口时是否打开查找方法选择窗口 = true;
             }
         }
