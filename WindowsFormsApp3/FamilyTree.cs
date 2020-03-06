@@ -52,6 +52,7 @@ namespace FamilySys
 
         public FamilyTreeNode query(FamilyTreeNode startNode, string name)//HowToQuery
         {
+            if (startNode == null) return null;
             if (startNode.Name == name)
             {
                 return startNode;

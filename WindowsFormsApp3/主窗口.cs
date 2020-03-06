@@ -17,6 +17,11 @@ namespace FamilySys
         public static string title = "家谱管理系统UI beta";
         public static string xml = null;
         public static bool 是否有改动 = false;
+
+        public static bool 打开查询成员窗口时是否打开查找方法选择窗口 = true;
+
+
+        public static List<FamilyTreeNode> familyTreeNodes=new List<FamilyTreeNode>();
         public static FamilyTree myFamilyTree;
 
         public 主窗口()
@@ -24,7 +29,7 @@ namespace FamilySys
             InitializeComponent();
             myFamilyTree = new FamilyTree();
             //压力测试
-            pressureTest();
+            //pressureTest();
 
         }
 
@@ -237,10 +242,24 @@ namespace FamilySys
             }
         }
 
+
         private void 寻找两人亲戚关系ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             关系计算 关系窗口 = new 关系计算();
             关系窗口.Show();
+}
+        private void 树视图展示_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            if (e.Node.Text != "家族树")
+            {
+                打开查询成员窗口时是否打开查找方法选择窗口 = false;
+                查询成员窗口.findName = e.Node.Text;
+                查询成员窗口 查询窗口 = new 查询成员窗口();
+                查询窗口.MdiParent = this;
+                查询窗口.Show();
+                打开查询成员窗口时是否打开查找方法选择窗口 = true;
+            }
+
         }
     }
 }
