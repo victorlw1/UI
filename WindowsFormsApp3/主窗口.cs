@@ -17,9 +17,6 @@ namespace FamilySys
         public static string title = "家谱管理系统UI beta";
         public static string xml = null;
         public static bool 是否有改动 = false;
-
-
-        public static List<FamilyTreeNode> familyTreeNodes=new List<FamilyTreeNode>();
         public static FamilyTree myFamilyTree;
 
         public 主窗口()
@@ -240,6 +237,10 @@ namespace FamilySys
             }
         }
 
-
+        private void 寻找两人亲戚关系ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            关系计算 关系窗口 = new 关系计算();
+            关系窗口.Show();
+        }
     }
 }

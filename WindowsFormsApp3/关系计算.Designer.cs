@@ -29,14 +29,12 @@ namespace FamilySys
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.是 = new System.Windows.Forms.Label();
             this.一个人 = new System.Windows.Forms.ComboBox();
+            this.是 = new System.Windows.Forms.Label();
             this.另一个人 = new System.Windows.Forms.ComboBox();
             this.的 = new System.Windows.Forms.Label();
-            this.称呼 = new System.Windows.Forms.Label();
-            this.关系 = new System.Windows.Forms.Label();
-            this.称呼展示框 = new System.Windows.Forms.Label();
             this.关系展示框 = new System.Windows.Forms.Label();
+            this.称呼 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,10 +52,8 @@ namespace FamilySys
             this.tableLayoutPanel1.Controls.Add(this.是, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.另一个人, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.的, 4, 1);
-            this.tableLayoutPanel1.Controls.Add(this.称呼, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.关系, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.称呼展示框, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.关系展示框, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.称呼, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.关系展示框, 1, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 8);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
@@ -69,6 +65,15 @@ namespace FamilySys
             this.tableLayoutPanel1.Size = new System.Drawing.Size(382, 153);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
+            // 一个人
+            // 
+            this.一个人.FormattingEnabled = true;
+            this.一个人.Location = new System.Drawing.Point(41, 22);
+            this.一个人.Name = "一个人";
+            this.一个人.Size = new System.Drawing.Size(70, 23);
+            this.一个人.TabIndex = 6;
+            this.一个人.SelectedIndexChanged += new System.EventHandler(this.一个人_SelectedIndexChanged);
+            // 
             // 是
             // 
             this.是.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -79,14 +84,6 @@ namespace FamilySys
             this.是.TabIndex = 5;
             this.是.Text = "是";
             // 
-            // 一个人
-            // 
-            this.一个人.FormattingEnabled = true;
-            this.一个人.Location = new System.Drawing.Point(41, 22);
-            this.一个人.Name = "一个人";
-            this.一个人.Size = new System.Drawing.Size(70, 23);
-            this.一个人.TabIndex = 6;
-            // 
             // 另一个人
             // 
             this.另一个人.FormattingEnabled = true;
@@ -94,6 +91,7 @@ namespace FamilySys
             this.另一个人.Name = "另一个人";
             this.另一个人.Size = new System.Drawing.Size(70, 23);
             this.另一个人.TabIndex = 7;
+            this.另一个人.SelectedIndexChanged += new System.EventHandler(this.另一个人_SelectedIndexChanged);
             // 
             // 的
             // 
@@ -105,49 +103,26 @@ namespace FamilySys
             this.的.TabIndex = 8;
             this.的.Text = "的";
             // 
-            // 称呼
-            // 
-            this.称呼.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.称呼.AutoSize = true;
-            this.称呼.Location = new System.Drawing.Point(57, 68);
-            this.称呼.Name = "称呼";
-            this.称呼.Size = new System.Drawing.Size(37, 15);
-            this.称呼.TabIndex = 9;
-            this.称呼.Text = "称呼";
-            // 
-            // 关系
-            // 
-            this.关系.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.关系.AutoSize = true;
-            this.关系.Location = new System.Drawing.Point(57, 106);
-            this.关系.Name = "关系";
-            this.关系.Size = new System.Drawing.Size(37, 15);
-            this.关系.TabIndex = 10;
-            this.关系.Text = "关系";
-            // 
-            // 称呼展示框
-            // 
-            this.称呼展示框.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.称呼展示框.AutoSize = true;
-            this.称呼展示框.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tableLayoutPanel1.SetColumnSpan(this.称呼展示框, 4);
-            this.称呼展示框.Location = new System.Drawing.Point(117, 67);
-            this.称呼展示框.Name = "称呼展示框";
-            this.称呼展示框.Size = new System.Drawing.Size(222, 17);
-            this.称呼展示框.TabIndex = 11;
-            this.称呼展示框.Text = "称呼展示框";
-            // 
             // 关系展示框
             // 
             this.关系展示框.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.关系展示框.AutoSize = true;
             this.关系展示框.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tableLayoutPanel1.SetColumnSpan(this.关系展示框, 4);
-            this.关系展示框.Location = new System.Drawing.Point(117, 105);
+            this.tableLayoutPanel1.SetColumnSpan(this.关系展示框, 5);
+            this.关系展示框.Location = new System.Drawing.Point(41, 67);
             this.关系展示框.Name = "关系展示框";
-            this.关系展示框.Size = new System.Drawing.Size(222, 17);
+            this.关系展示框.Size = new System.Drawing.Size(298, 17);
             this.关系展示框.TabIndex = 12;
             this.关系展示框.Text = "关系展示框";
+            // 
+            // 称呼
+            // 
+            this.称呼.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.称呼.AutoSize = true;
+            this.称呼.Location = new System.Drawing.Point(133, 106);
+            this.称呼.Name = "称呼";
+            this.称呼.Size = new System.Drawing.Size(0, 15);
+            this.称呼.TabIndex = 9;
             // 
             // 关系计算
             // 
@@ -176,8 +151,6 @@ namespace FamilySys
         private System.Windows.Forms.ComboBox 另一个人;
         private System.Windows.Forms.Label 的;
         private System.Windows.Forms.Label 称呼;
-        private System.Windows.Forms.Label 关系;
-        private System.Windows.Forms.Label 称呼展示框;
         private System.Windows.Forms.Label 关系展示框;
     }
 }

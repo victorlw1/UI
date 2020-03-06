@@ -433,7 +433,7 @@ namespace FamilySys
         #endregion
 
         #region//编码解码以及根据编码移动指针
-        void decode(string encodeStr, string decodeResult, string finalResult)
+        public static void decode(string encodeStr, ref string decodeResult,ref string finalResult)
         {
             String decode = "";//迭代关系
             String result = "";//最终称呼
@@ -451,7 +451,11 @@ namespace FamilySys
                         {
                             decode += "父亲";
                             result = "父亲";
-                            for (string unit_1 = encodeStr.Substring(0, 2); encodeStr.Length > 0; encodeStr = encodeStr.Substring(2, encodeStr.Length - 2))
+                            if (encodeStr.Length == 0)
+                            {
+                                break ;
+                            }
+                            for (string unit_1 = encodeStr.Substring(0, 2); encodeStr.Length > 0; )
                             {
                                 encodeStr = encodeStr.Substring(2, encodeStr.Length - 2);
                                 switch (unit_1)
@@ -471,13 +475,13 @@ namespace FamilySys
                                     case "11":
                                         {
                                             decode += "的儿子";
-                                            result = "我（male）、大哥、小弟";
+                                            result = "我（男）、大哥、小弟";
                                             break;
                                         }
                                     case "12":
                                         {
-                                            decode += "的female儿";
-                                            result = "我（female）、大姐、小妹";
+                                            decode += "的女儿";
+                                            result = "我（女）、大姐、小妹";
                                             break;
                                         }
                                     case "21":
@@ -524,7 +528,11 @@ namespace FamilySys
                         {
                             decode += "母亲";
                             result = "母亲";
-                            for (string unit_1 = encodeStr.Substring(0, 2); encodeStr.Length > 0; encodeStr = encodeStr.Substring(2, encodeStr.Length - 2))
+                            if (encodeStr.Length == 0)
+                            {
+                                break;
+                            }
+                            for (string unit_1 = encodeStr.Substring(0, 2); encodeStr.Length > 0;)
                             {
                                 encodeStr = encodeStr.Substring(2, encodeStr.Length - 2);
                                 switch (unit_1)
@@ -544,13 +552,13 @@ namespace FamilySys
                                     case "11":
                                         {
                                             decode += "的儿子";
-                                            result = "我（male）、大哥、小弟";
+                                            result = "我（男）、大哥、小弟";
                                             break;
                                         }
                                     case "12":
                                         {
-                                            decode += "的female儿";
-                                            result = "我（female）、大姐、小妹";
+                                            decode += "的女儿";
+                                            result = "我（女）、大姐、小妹";
                                             break;
                                         }
                                     case "21":
@@ -597,7 +605,11 @@ namespace FamilySys
                         {
                             decode += "儿子";
                             result = "儿子";
-                            for (string unit_1 = encodeStr.Substring(0, 2); encodeStr.Length > 0; encodeStr = encodeStr.Substring(2, encodeStr.Length - 2))
+                            if (encodeStr.Length == 0)
+                            {
+                                break;
+                            }
+                            for (string unit_1 = encodeStr.Substring(0, 2); encodeStr.Length > 0; )
                             {
                                 encodeStr = encodeStr.Substring(2, encodeStr.Length - 2);
                                 switch (unit_1)
@@ -605,13 +617,13 @@ namespace FamilySys
                                     case "01":
                                         {
                                             decode += "的父亲";
-                                            result = "我（male）、丈夫";
+                                            result = "我（男）、丈夫";
                                             break;
                                         }
                                     case "02":
                                         {
                                             decode += "的母亲";
-                                            result = "我（female）、妻子";
+                                            result = "我（女）、妻子";
                                             break;
                                         }
                                     case "11":
@@ -622,8 +634,8 @@ namespace FamilySys
                                         }
                                     case "12":
                                         {
-                                            decode += "的female儿";
-                                            result = "孙female";
+                                            decode += "的女儿";
+                                            result = "孙女";
                                             break;
                                         }
                                     case "21":
@@ -635,7 +647,7 @@ namespace FamilySys
                                     case "22":
                                         {
                                             decode += "的大姐";
-                                            result = "female儿";
+                                            result = "女儿";
                                             break;
                                         }
                                     case "31":
@@ -647,7 +659,7 @@ namespace FamilySys
                                     case "32":
                                         {
                                             decode += "的小妹";
-                                            result = "female儿";
+                                            result = "女儿";
                                             break;
                                         }
                                     case "41":
@@ -666,11 +678,15 @@ namespace FamilySys
                             }
                             break;
                         }
-                    case "12"://female儿
+                    case "12"://女儿
                         {
-                            decode += "female儿";
-                            result = "female儿";
-                            for (string unit_1 = encodeStr.Substring(0, 2); encodeStr.Length > 0; encodeStr = encodeStr.Substring(2, encodeStr.Length - 2))
+                            decode += "女儿";
+                            result = "女儿";
+                            if (encodeStr.Length == 0)
+                            {
+                                break;
+                            }
+                            for (string unit_1 = encodeStr.Substring(0, 2); encodeStr.Length > 0; )
                             {
                                 encodeStr = encodeStr.Substring(2, encodeStr.Length - 2);
                                 switch (unit_1)
@@ -678,13 +694,13 @@ namespace FamilySys
                                     case "01":
                                         {
                                             decode += "的父亲";
-                                            result = "我（male）、丈夫";
+                                            result = "我（男）、丈夫";
                                             break;
                                         }
                                     case "02":
                                         {
                                             decode += "的母亲";
-                                            result = "我（female）、妻子";
+                                            result = "我（女）、妻子";
                                             break;
                                         }
                                     case "11":
@@ -695,8 +711,8 @@ namespace FamilySys
                                         }
                                     case "12":
                                         {
-                                            decode += "的female儿";
-                                            result = "孙female";
+                                            decode += "的女儿";
+                                            result = "孙女";
                                             break;
                                         }
                                     case "21":
@@ -708,7 +724,7 @@ namespace FamilySys
                                     case "22":
                                         {
                                             decode += "的大姐";
-                                            result = "female儿";
+                                            result = "女儿";
                                             break;
                                         }
                                     case "31":
@@ -720,13 +736,13 @@ namespace FamilySys
                                     case "32":
                                         {
                                             decode += "的小妹";
-                                            result = "female儿";
+                                            result = "女儿";
                                             break;
                                         }
                                     case "41":
                                         {
                                             decode += "的丈夫";
-                                            result = "female婿";
+                                            result = "女婿";
                                             break;
                                         }
                                     case "42":
@@ -743,7 +759,11 @@ namespace FamilySys
                         {
                             decode += "大哥";
                             result = "大哥";
-                            for (string unit_1 = encodeStr.Substring(0, 2); encodeStr.Length > 0; encodeStr = encodeStr.Substring(2, encodeStr.Length - 2))
+                            if (encodeStr.Length == 0)
+                            {
+                                break;
+                            }
+                            for (string unit_1 = encodeStr.Substring(0, 2); encodeStr.Length > 0; )
                             {
                                 encodeStr = encodeStr.Substring(2, encodeStr.Length - 2);
                                 switch (unit_1)
@@ -768,8 +788,8 @@ namespace FamilySys
                                         }
                                     case "12":
                                         {
-                                            decode += "的female儿";
-                                            result = "侄female";
+                                            decode += "的女儿";
+                                            result = "侄女";
                                             break;
                                         }
                                     case "21":
@@ -787,13 +807,13 @@ namespace FamilySys
                                     case "31":
                                         {
                                             decode += "的小弟";
-                                            result = "我（male）、大哥、小弟";
+                                            result = "我（男）、大哥、小弟";
                                             break;
                                         }
                                     case "32":
                                         {
                                             decode += "的小妹";
-                                            result = "我（female）、大姐、小妹";
+                                            result = "我（女）、大姐、小妹";
                                             break;
                                         }
                                     case "41":
@@ -816,7 +836,11 @@ namespace FamilySys
                         {
                             decode += "大姐";
                             result = "大姐";
-                            for (string unit_1 = encodeStr.Substring(0, 2); encodeStr.Length > 0; encodeStr = encodeStr.Substring(2, encodeStr.Length - 2))
+                            if (encodeStr.Length == 0)
+                            {
+                                break;
+                            }
+                            for (string unit_1 = encodeStr.Substring(0, 2); encodeStr.Length > 0; )
                             {
                                 encodeStr = encodeStr.Substring(2, encodeStr.Length - 2);
                                 switch (unit_1)
@@ -841,8 +865,8 @@ namespace FamilySys
                                         }
                                     case "12":
                                         {
-                                            decode += "的female儿";
-                                            result = "外甥female";
+                                            decode += "的女儿";
+                                            result = "外甥女";
                                             break;
                                         }
                                     case "21":
@@ -860,13 +884,13 @@ namespace FamilySys
                                     case "31":
                                         {
                                             decode += "的小弟";
-                                            result = "我（male）、大哥、小弟";
+                                            result = "我（男）、大哥、小弟";
                                             break;
                                         }
                                     case "32":
                                         {
                                             decode += "的小妹";
-                                            result = "我（female）、大姐、小妹";
+                                            result = "我（女）、大姐、小妹";
                                             break;
                                         }
                                     case "41":
@@ -889,7 +913,11 @@ namespace FamilySys
                         {
                             decode += "小弟";
                             result = "小弟";
-                            for (string unit_1 = encodeStr.Substring(0, 2); encodeStr.Length > 0; encodeStr = encodeStr.Substring(2, encodeStr.Length - 2))
+                            if (encodeStr.Length == 0)
+                            {
+                                break;
+                            }
+                            for (string unit_1 = encodeStr.Substring(0, 2); encodeStr.Length > 0; )
                             {
                                 encodeStr = encodeStr.Substring(2, encodeStr.Length - 2);
                                 switch (unit_1)
@@ -914,20 +942,20 @@ namespace FamilySys
                                         }
                                     case "12":
                                         {
-                                            decode += "的female儿";
-                                            result = "侄female";
+                                            decode += "的女儿";
+                                            result = "侄女";
                                             break;
                                         }
                                     case "21":
                                         {
                                             decode += "的大哥";
-                                            result = "我（male）、大哥、小弟";
+                                            result = "我（男）、大哥、小弟";
                                             break;
                                         }
                                     case "22":
                                         {
                                             decode += "的大姐";
-                                            result = "我（female）、大姐、小妹";
+                                            result = "我（女）、大姐、小妹";
                                             break;
                                         }
                                     case "31":
@@ -962,7 +990,11 @@ namespace FamilySys
                         {
                             decode += "小妹";
                             result = "小妹";
-                            for (string unit_1 = encodeStr.Substring(0, 2); encodeStr.Length > 0; encodeStr = encodeStr.Substring(2, encodeStr.Length - 2))
+                            if (encodeStr.Length == 0)
+                            {
+                                break;
+                            }
+                            for (string unit_1 = encodeStr.Substring(0, 2); encodeStr.Length > 0; )
                             {
                                 encodeStr = encodeStr.Substring(2, encodeStr.Length - 2);
                                 switch (unit_1)
@@ -987,20 +1019,20 @@ namespace FamilySys
                                         }
                                     case "12":
                                         {
-                                            decode += "的female儿";
-                                            result = "外甥female";
+                                            decode += "的女儿";
+                                            result = "外甥女";
                                             break;
                                         }
                                     case "21":
                                         {
                                             decode += "的大哥";
-                                            result = "我（male）、大哥、小弟";
+                                            result = "我（男）、大哥、小弟";
                                             break;
                                         }
                                     case "22":
                                         {
                                             decode += "的大姐";
-                                            result = "我（female）、大姐、小妹";
+                                            result = "我（女）、大姐、小妹";
                                             break;
                                         }
                                     case "31":
@@ -1035,7 +1067,11 @@ namespace FamilySys
                         {
                             decode += "丈夫";
                             result = "丈夫";
-                            for (string unit_1 = encodeStr.Substring(0, 2); encodeStr.Length > 0; encodeStr = encodeStr.Substring(2, encodeStr.Length - 2))
+                            if (encodeStr.Length == 0)
+                            {
+                                break;
+                            }
+                            for (string unit_1 = encodeStr.Substring(0, 2); encodeStr.Length > 0; )
                             {
                                 encodeStr = encodeStr.Substring(2, encodeStr.Length - 2);
                                 switch (unit_1)
@@ -1060,8 +1096,8 @@ namespace FamilySys
                                         }
                                     case "12":
                                         {
-                                            decode += "的female儿";
-                                            result = "female儿";
+                                            decode += "的女儿";
+                                            result = "女儿";
                                             break;
                                         }
                                     case "21":
@@ -1098,7 +1134,7 @@ namespace FamilySys
                                     case "42":
                                         {
                                             decode += "的妻子";
-                                            result = "我（female）";
+                                            result = "我（女）";
                                             break;
                                         }
                                 }
@@ -1109,7 +1145,11 @@ namespace FamilySys
                         {
                             decode += "妻子";
                             result = "妻子";
-                            for (string unit_1 = encodeStr.Substring(0, 2); encodeStr.Length > 0; encodeStr = encodeStr.Substring(2, encodeStr.Length - 2))
+                            if (encodeStr.Length == 0)
+                            {
+                                break;
+                            }
+                            for (string unit_1 = encodeStr.Substring(0, 2); encodeStr.Length > 0; )
                             {
                                 encodeStr = encodeStr.Substring(2, encodeStr.Length - 2);
                                 switch (unit_1)
@@ -1134,8 +1174,8 @@ namespace FamilySys
                                         }
                                     case "12":
                                         {
-                                            decode += "的female儿";
-                                            result = "female儿";
+                                            decode += "的女儿";
+                                            result = "女儿";
                                             break;
                                         }
                                     case "21":
@@ -1165,7 +1205,7 @@ namespace FamilySys
                                     case "41":
                                         {
                                             decode += "的丈夫";
-                                            result = "我（male）";
+                                            result = "我（男）";
                                             break;
                                         }
                                     case "42":
@@ -1211,7 +1251,7 @@ namespace FamilySys
                             p = p._son;
                             break;
                         }
-                    case "12"://female儿
+                    case "12"://女儿
                         {
                             p = p._daughter;
                             break;
@@ -1282,7 +1322,7 @@ namespace FamilySys
                             p = p._son;
                             break;
                         }
-                    case "12"://female儿
+                    case "12"://女儿
                         {
                             p = p._daughter;
                             break;

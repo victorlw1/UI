@@ -93,7 +93,6 @@ namespace FamilySys
             {
                 学历水平选择框.Items.Add(edu);
             }
-            主窗口.familyTreeNodes.Clear();
             if (主窗口.myFamilyTree != null)
             {
                 List<FamilyTreeNode> allNodes = new List<FamilyTreeNode>();

@@ -39,17 +39,16 @@ namespace FamilySys
             this.删除家庭成员ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.修改家庭成员ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.查询家庭成员ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.寻找两人亲戚关系ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.统计ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.平均寿命ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.男女比例ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.家庭平均人口ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.视图ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.家庭树ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.树视图展示 = new System.Windows.Forms.TreeView();
-            this.寻找两人亲戚关系ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,28 +81,28 @@ namespace FamilySys
             // 新建ToolStripMenuItem1
             // 
             this.新建ToolStripMenuItem1.Name = "新建ToolStripMenuItem1";
-            this.新建ToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.新建ToolStripMenuItem1.Size = new System.Drawing.Size(122, 26);
             this.新建ToolStripMenuItem1.Text = "新建";
             this.新建ToolStripMenuItem1.Click += new System.EventHandler(this.新建ToolStripMenuItem1_Click);
             // 
             // 打开ToolStripMenuItem
             // 
             this.打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
-            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
             this.打开ToolStripMenuItem.Text = "打开";
             this.打开ToolStripMenuItem.Click += new System.EventHandler(this.打开ToolStripMenuItem_Click);
             // 
             // 保存ToolStripMenuItem
             // 
             this.保存ToolStripMenuItem.Name = "保存ToolStripMenuItem";
-            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
             this.保存ToolStripMenuItem.Text = "保存";
             this.保存ToolStripMenuItem.Click += new System.EventHandler(this.保存ToolStripMenuItem_Click);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
@@ -147,12 +146,18 @@ namespace FamilySys
             this.查询家庭成员ToolStripMenuItem.Text = "查询家庭成员信息";
             this.查询家庭成员ToolStripMenuItem.Click += new System.EventHandler(this.查询家庭成员ToolStripMenuItem_Click);
             // 
+            // 寻找两人亲戚关系ToolStripMenuItem
+            // 
+            this.寻找两人亲戚关系ToolStripMenuItem.Name = "寻找两人亲戚关系ToolStripMenuItem";
+            this.寻找两人亲戚关系ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.寻找两人亲戚关系ToolStripMenuItem.Text = "寻找两人亲戚关系";
+            this.寻找两人亲戚关系ToolStripMenuItem.Click += new System.EventHandler(this.寻找两人亲戚关系ToolStripMenuItem_Click);
+            // 
             // 统计ToolStripMenuItem
             // 
             this.统计ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.平均寿命ToolStripMenuItem,
-            this.男女比例ToolStripMenuItem,
-            this.家庭平均人口ToolStripMenuItem});
+            this.男女比例ToolStripMenuItem});
             this.统计ToolStripMenuItem.Name = "统计ToolStripMenuItem";
             this.统计ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.统计ToolStripMenuItem.Text = "统计";
@@ -160,23 +165,16 @@ namespace FamilySys
             // 平均寿命ToolStripMenuItem
             // 
             this.平均寿命ToolStripMenuItem.Name = "平均寿命ToolStripMenuItem";
-            this.平均寿命ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.平均寿命ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.平均寿命ToolStripMenuItem.Text = "平均寿命";
             this.平均寿命ToolStripMenuItem.Click += new System.EventHandler(this.平均寿命ToolStripMenuItem_Click);
             // 
             // 男女比例ToolStripMenuItem
             // 
             this.男女比例ToolStripMenuItem.Name = "男女比例ToolStripMenuItem";
-            this.男女比例ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.男女比例ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.男女比例ToolStripMenuItem.Text = "男女比例";
             this.男女比例ToolStripMenuItem.Click += new System.EventHandler(this.男女比例ToolStripMenuItem_Click);
-            // 
-            // 家庭平均人口ToolStripMenuItem
-            // 
-            this.家庭平均人口ToolStripMenuItem.Name = "家庭平均人口ToolStripMenuItem";
-            this.家庭平均人口ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
-            this.家庭平均人口ToolStripMenuItem.Text = "家庭平均人口";
-            
             // 
             // 视图ToolStripMenuItem
             // 
@@ -189,7 +187,7 @@ namespace FamilySys
             // 家庭树ToolStripMenuItem
             // 
             this.家庭树ToolStripMenuItem.Name = "家庭树ToolStripMenuItem";
-            this.家庭树ToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
+            this.家庭树ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.家庭树ToolStripMenuItem.Text = "家谱树";
             this.家庭树ToolStripMenuItem.Click += new System.EventHandler(this.家庭树ToolStripMenuItem_Click);
             // 
@@ -204,7 +202,7 @@ namespace FamilySys
             // 关于ToolStripMenuItem
             // 
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.关于ToolStripMenuItem.Text = "关于";
             // 
             // statusStrip1
@@ -223,12 +221,6 @@ namespace FamilySys
             this.树视图展示.Name = "树视图展示";
             this.树视图展示.Size = new System.Drawing.Size(267, 623);
             this.树视图展示.TabIndex = 7;
-            // 
-            // 寻找两人亲戚关系ToolStripMenuItem
-            // 
-            this.寻找两人亲戚关系ToolStripMenuItem.Name = "寻找两人亲戚关系ToolStripMenuItem";
-            this.寻找两人亲戚关系ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.寻找两人亲戚关系ToolStripMenuItem.Text = "寻找两人亲戚关系";
             // 
             // 主窗口
             // 
@@ -263,7 +255,6 @@ namespace FamilySys
         private System.Windows.Forms.ToolStripMenuItem 统计ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 平均寿命ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 男女比例ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 家庭平均人口ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 保存ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 视图ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 家庭树ToolStripMenuItem;
