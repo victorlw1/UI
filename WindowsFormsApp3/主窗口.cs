@@ -17,6 +17,7 @@ namespace FamilySys
         public static string title = "家谱管理系统UI beta";
         public static string xml = null;
         public static bool 是否有改动 = false;
+        public static bool 打开查询成员窗口时是否打开查找方法选择窗口 = true;
 
 
         public static List<FamilyTreeNode> familyTreeNodes=new List<FamilyTreeNode>();
@@ -27,7 +28,7 @@ namespace FamilySys
             InitializeComponent();
             myFamilyTree = new FamilyTree();
             //压力测试
-            pressureTest();
+            //pressureTest();
 
         }
 
@@ -240,6 +241,13 @@ namespace FamilySys
             }
         }
 
+        private void 树视图展示_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            打开查询成员窗口时是否打开查找方法选择窗口 = false;
+            查询成员窗口.findName = e.Node.Text;
+            (new 查询成员窗口()).Show();
+            打开查询成员窗口时是否打开查找方法选择窗口 = true;
 
+        }
     }
 }
