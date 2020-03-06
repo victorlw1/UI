@@ -374,6 +374,8 @@ namespace FamilySys
             string result_rev = "";
             FamilyTreeNode node1 = query(root, name1);
             FamilyTreeNode node2 = query(root, name2);
+            if (node1 == node2)
+                return "00";
             if (node1.Level > node2.Level)
             {
                 while (node1.Level != node2.Level)
