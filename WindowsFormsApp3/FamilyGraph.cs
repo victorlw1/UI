@@ -291,7 +291,7 @@ namespace FamilySys
         public string compressRelation(string code)
         {
             FamilyGraphNode p = 我;
-            string res = "我";
+            string res = "";
             string temp_code;
             string temp_res = "";
            
@@ -330,7 +330,14 @@ namespace FamilySys
                 }
             }
             res = res + "的" + p.Name;
-            res = res.Substring(2, res.Length-2);
+            if (res.Length != 0)
+            {
+                res = res.Substring(1, res.Length - 1);
+            }
+            else
+            {
+                res = "我自己";
+            }
             return res;
         }
         FamilyGraphNode first(FamilyGraphNode startPoi)
