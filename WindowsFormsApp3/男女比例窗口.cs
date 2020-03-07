@@ -23,7 +23,7 @@ namespace FamilySys
             int age = 0;
             int man = 0;
             int woman = 0;
-            FamilyTree.DFS_output_all_age(主窗口.myFamilyTree.root, age, man, woman);
+            FamilyTree.DFS_output_all_age(主窗口.myFamilyTree.root,ref age,ref man,ref woman);
             男女比例展示框.Text = Convert.ToString(man) + ":" + Convert.ToString(woman);
 
         }

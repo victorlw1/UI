@@ -24,7 +24,7 @@ namespace FamilySys
             DFS_output(node.LeftChild);
             DFS_output(node.RightChild);
         }
-        public static void DFS_output_all_age(FamilyTreeNode node,int age,int man,int woman)
+        public static void DFS_output_all_age(FamilyTreeNode node,ref int age,ref int man,ref int woman)
         {
             if (node == null) return;
             age = age + node.Age;
@@ -34,8 +34,8 @@ namespace FamilySys
             }
             else
                 ++woman;
-            DFS_output_all_age(node.LeftChild,age,man,woman);
-            DFS_output_all_age(node.RightChild,age,man,woman);
+            DFS_output_all_age(node.LeftChild,ref age,ref man,ref woman);
+            DFS_output_all_age(node.RightChild,ref age,ref man,ref woman);
 
         }
         
@@ -356,7 +356,7 @@ namespace FamilySys
         /*
         * 基础关系：最短编码
         * 
-        * 我 00
+        * 自己 00
         * 父亲 01
         * 母亲 02
         * 儿子 11

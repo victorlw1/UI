@@ -46,7 +46,6 @@ namespace FamilySys
             this.平均寿命.Size = new System.Drawing.Size(82, 15);
             this.平均寿命.TabIndex = 0;
             this.平均寿命.Text = "平均寿命：";
-            this.平均寿命.Click += new System.EventHandler(this.平均寿命_Click);
             // 
             // 平均寿命展示框
             // 
@@ -57,7 +56,6 @@ namespace FamilySys
             this.平均寿命展示框.Size = new System.Drawing.Size(38, 15);
             this.平均寿命展示框.TabIndex = 1;
             this.平均寿命展示框.Text = "xx岁";
-            this.平均寿命展示框.Click += new System.EventHandler(this.单位岁_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -73,7 +71,6 @@ namespace FamilySys
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(280, 80);
             this.tableLayoutPanel1.TabIndex = 2;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint_1);
             // 
             // tableLayoutPanel2
             // 
