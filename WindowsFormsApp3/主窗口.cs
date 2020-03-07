@@ -31,7 +31,7 @@ namespace FamilySys
             myFamilyTree = new FamilyTree();
             myFamilyGraph = new FamilyGraph();
             //压力测试
-            pressureTest();
+            //pressureTest();
 
         }
 
