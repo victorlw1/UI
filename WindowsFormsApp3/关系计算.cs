@@ -35,7 +35,8 @@ namespace FamilySys
             if (一个人.SelectedItem != null && 另一个人.SelectedItem != null)
             {
                 string encode = 主窗口.myFamilyTree.findRelation(另一个人.SelectedItem.ToString(), 一个人.SelectedItem.ToString());
-                FamilyGraph.decode(encode, ref _decode, ref _result);
+                //FamilyGraph.decode(encode, ref _decode, ref _result);
+                _decode = 主窗口.myFamilyGraph.compressRelation(encode);
                 关系展示框.Text = _decode;
                 //称呼展示框.Text = _result;
             }
@@ -48,7 +49,8 @@ namespace FamilySys
             if (一个人.SelectedItem != null && 另一个人.SelectedItem != null)
             {
                 string encode = 主窗口.myFamilyTree.findRelation(另一个人.SelectedItem.ToString(), 一个人.SelectedItem.ToString());
-                FamilyGraph.decode(encode, ref _decode, ref _result);
+                //FamilyGraph.decode(encode, ref _decode, ref _result);
+                _decode = 主窗口.myFamilyGraph.compressRelation(encode);
                 关系展示框.Text = _decode;
                 //称呼
             }

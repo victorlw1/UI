@@ -23,11 +23,13 @@ namespace FamilySys
 
         public static List<FamilyTreeNode> familyTreeNodes=new List<FamilyTreeNode>();
         public static FamilyTree myFamilyTree;
+        public static FamilyGraph myFamilyGraph;
 
         public 主窗口()
         {
             InitializeComponent();
             myFamilyTree = new FamilyTree();
+            myFamilyGraph = new FamilyGraph();
             //压力测试
             //pressureTest();
 

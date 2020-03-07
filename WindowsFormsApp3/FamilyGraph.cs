@@ -8,6 +8,7 @@ namespace FamilySys
 {
     public class FamilyGraph
     {
+        FamilyGraphNode 我;
         FamilyGraphNode me_startPoi;
         FamilyGraphNode curr;
         int memberCount;
@@ -17,9 +18,320 @@ namespace FamilySys
 
         public FamilyGraph()
         {
+            initializeGraph();
             me_startPoi = null;
             curr = null;
             memberCount = 0;
+        }
+
+        public void initializeGraph()//基本关系：爸 妈 兄 弟 姐 妹 儿 女
+        {
+            我 = new FamilyGraphNode("我");
+            FamilyGraphNode 爸爸 = new FamilyGraphNode("爸爸");
+            FamilyGraphNode 妈妈 = new FamilyGraphNode("妈妈");
+            FamilyGraphNode 哥哥 = new FamilyGraphNode("哥哥");
+            FamilyGraphNode 弟弟 = new FamilyGraphNode("弟弟");
+            FamilyGraphNode 姐姐 = new FamilyGraphNode("姐姐");
+            FamilyGraphNode 妹妹 = new FamilyGraphNode("妹妹");
+            FamilyGraphNode 儿子 = new FamilyGraphNode("儿子");
+            FamilyGraphNode 女儿 = new FamilyGraphNode("女儿");
+            FamilyGraphNode 爷爷 = new FamilyGraphNode("爷爷");
+            FamilyGraphNode 奶奶 = new FamilyGraphNode("奶奶");
+            FamilyGraphNode 伯父 = new FamilyGraphNode("伯父");//爸爸的哥哥
+            FamilyGraphNode 叔父 = new FamilyGraphNode("叔父");//爸爸的弟弟
+            FamilyGraphNode 姑姑 = new FamilyGraphNode("姑姑");//爸爸的姐妹
+            FamilyGraphNode 外公 = new FamilyGraphNode("外公");
+            FamilyGraphNode 外婆 = new FamilyGraphNode("外婆");
+            FamilyGraphNode 舅舅 = new FamilyGraphNode("舅舅");//妈妈的兄弟
+            FamilyGraphNode 姨妈 = new FamilyGraphNode("姨妈");//妈妈的姐妹
+            FamilyGraphNode 侄子 = new FamilyGraphNode("侄子");//兄弟的儿子
+            FamilyGraphNode 侄女 = new FamilyGraphNode("侄女");//兄弟的女儿
+            FamilyGraphNode 外甥 = new FamilyGraphNode("外甥");//姐妹的儿子
+            FamilyGraphNode 外甥女 = new FamilyGraphNode("外甥女");//姐妹的女儿
+            FamilyGraphNode 孙子 = new FamilyGraphNode("孙子");//儿子的儿子
+            FamilyGraphNode 孙女 = new FamilyGraphNode("孙女");//儿子的女儿
+            FamilyGraphNode 外孙 = new FamilyGraphNode("外孙");//女儿的儿子
+            FamilyGraphNode 外孙女 = new FamilyGraphNode("外孙女");//女儿的女儿
+            FamilyGraphNode 伯祖父 = new FamilyGraphNode("伯祖父");//爷爷的哥哥
+            FamilyGraphNode 叔祖父 = new FamilyGraphNode("叔祖父");//爷爷的弟弟
+            FamilyGraphNode 姑奶奶 = new FamilyGraphNode("姑奶奶");//爷爷的姐妹
+            FamilyGraphNode 舅爷爷 = new FamilyGraphNode("舅爷爷");//奶奶的兄弟
+            FamilyGraphNode 姨奶奶 = new FamilyGraphNode("姨奶奶");//奶奶的姐妹
+            FamilyGraphNode 堂兄弟 = new FamilyGraphNode("堂兄弟");//伯父/叔父的儿子
+            FamilyGraphNode 堂姐妹 = new FamilyGraphNode("堂姐妹");//伯父/叔父的女儿
+            FamilyGraphNode 表兄弟 = new FamilyGraphNode("表兄弟");//姑姑/舅舅/姨妈的儿子
+            FamilyGraphNode 表姐妹 = new FamilyGraphNode("表姐妹");//姑姑/舅舅/姨妈的女儿
+            FamilyGraphNode 伯外祖父 = new FamilyGraphNode("伯外祖父");//外公的哥哥
+            FamilyGraphNode 叔外祖父 = new FamilyGraphNode("叔外祖父");//外公的弟弟
+            FamilyGraphNode 姑姥姥 = new FamilyGraphNode("姑姥姥");//外公的姐妹
+            FamilyGraphNode 舅老爷 = new FamilyGraphNode("舅老爷");//外婆的兄弟
+            FamilyGraphNode 姨姥姥 = new FamilyGraphNode("姨姥姥");//外婆的姐妹
+            FamilyGraphNode 侄孙 = new FamilyGraphNode("侄孙");//侄子的儿子
+            FamilyGraphNode 侄孙女 = new FamilyGraphNode("侄孙女");//侄子的女儿
+            FamilyGraphNode 外侄孙子= new FamilyGraphNode("外侄孙子");//侄女的儿子
+            FamilyGraphNode 外侄孙女 = new FamilyGraphNode("外侄孙女");//侄女的女儿
+            FamilyGraphNode 甥孙 = new FamilyGraphNode("甥孙");//外甥的儿子
+            FamilyGraphNode 甥孙女 = new FamilyGraphNode("甥孙女");//外甥的女儿
+            FamilyGraphNode 甥外孙 = new FamilyGraphNode("甥外孙");//外甥女的儿子
+            FamilyGraphNode 甥外孙女 = new FamilyGraphNode("甥外孙女");//外甥女的女儿
+
+            我._father = 爸爸;
+            我._mother = 妈妈;
+            我._elderBrother = 哥哥;
+            我._elderSister = 姐姐;
+            我._littleBrother = 弟弟;
+            我._littleSister = 妹妹;
+            我._son = 儿子;
+            我._daughter = 女儿;
+
+            爸爸._father = 爷爷;
+            爸爸._mother = 奶奶;
+            爸爸._elderBrother = 伯父;
+            爸爸._elderSister = 姑姑;
+            爸爸._littleBrother = 叔父;
+            爸爸._littleSister = 姑姑;
+            爸爸._son = 哥哥;        //findRelation的代码不会出现这种情况，不过以防万一，假设：我就是个弟弟
+            爸爸._daughter = 姐姐;
+
+            妈妈._father = 外公;
+            妈妈._mother = 外婆;
+            妈妈._elderBrother = 舅舅;
+            妈妈._elderSister = 姨妈;
+            妈妈._littleBrother = 舅舅;
+            妈妈._littleSister = 姨妈;
+            妈妈._son = 哥哥;
+            妈妈._daughter = 姐姐;
+
+            哥哥._father = 爸爸;
+            哥哥._mother = 妈妈;
+            哥哥._elderBrother = 哥哥;
+            哥哥._elderSister = 姐姐;
+            哥哥._littleBrother = 哥哥;
+            哥哥._littleSister = 姐姐;
+            哥哥._son = 侄子;
+            哥哥._daughter = 侄女;
+
+            弟弟._father = 爸爸;
+            弟弟._mother = 妈妈;
+            弟弟._elderBrother = 哥哥;
+            弟弟._elderSister = 姐姐;
+            弟弟._littleBrother = 弟弟;
+            弟弟._littleSister = 妹妹;
+            弟弟._son = 侄子;
+            弟弟._daughter = 侄女;
+
+            姐姐._father = 爸爸;
+            姐姐._mother = 妈妈;
+            姐姐._elderBrother = 哥哥;
+            姐姐._elderSister = 姐姐;
+            姐姐._littleBrother = 哥哥;
+            姐姐._littleSister = 姐姐;
+            姐姐._son = 外甥;
+            姐姐._daughter = 外甥女;
+
+            妹妹._father = 爸爸;
+            妹妹._mother = 妈妈;
+            妹妹._elderBrother = 哥哥;
+            妹妹._elderSister = 姐姐;
+            妹妹._littleBrother = 弟弟;
+            妹妹._littleSister = 妹妹;
+            妹妹._son = 外甥;
+            妹妹._daughter = 外甥女;
+
+            儿子._father = 我;
+            儿子._mother = 我;
+            儿子._elderBrother = 儿子;
+            儿子._elderSister = 女儿;
+            儿子._littleBrother = 儿子;
+            儿子._littleSister = 女儿;
+            儿子._son = 孙子;
+            儿子._daughter = 孙女;
+
+            女儿._father = 我;
+            女儿._mother = 我;
+            女儿._elderBrother = 儿子;
+            女儿._elderSister = 女儿;
+            女儿._littleBrother = 儿子;
+            女儿._littleSister = 女儿;
+            女儿._son = 外孙;
+            女儿._daughter = 外孙女;
+
+            爷爷._father = null;
+            爷爷._mother = null;
+            爷爷._elderBrother = 伯祖父;
+            爷爷._elderSister = 姑奶奶;
+            爷爷._littleBrother = 叔祖父;
+            爷爷._littleSister = 姑奶奶;
+            爷爷._son = 爸爸;
+            爷爷._daughter = 姑姑;
+
+            奶奶._father = null;
+            奶奶._mother = null;
+            奶奶._elderBrother = 舅爷爷;
+            奶奶._elderSister = 姨奶奶;
+            奶奶._littleBrother = 舅爷爷;
+            奶奶._littleSister = 姨奶奶;
+            奶奶._son = 舅舅;
+            奶奶._daughter = 妈妈;
+
+            伯父._father = 爷爷;
+            伯父._mother = 奶奶;
+            伯父._elderBrother = 伯父;
+            伯父._elderSister = 姑姑;
+            伯父._littleBrother = 伯父;
+            伯父._littleSister = 姑姑;
+            伯父._son = 堂兄弟;
+            伯父._daughter = 堂姐妹;
+
+            叔父._father = 爷爷;
+            叔父._mother = 奶奶;
+            叔父._elderBrother = 伯父;
+            叔父._elderSister = 姑姑;
+            叔父._littleBrother = 叔父;
+            叔父._littleSister = 姑姑;
+            叔父._son = 堂兄弟;
+            叔父._daughter = 堂姐妹;
+
+            姑姑._father = 爷爷;
+            姑姑._mother = 奶奶;
+            姑姑._elderBrother = 伯父;
+            姑姑._elderSister = 姑姑;
+            姑姑._littleBrother = 伯父;
+            姑姑._littleSister = 姑姑;
+            姑姑._son = 表兄弟;
+            姑姑._daughter = 表姐妹;
+
+            外公._father = null;
+            外公._mother = null;
+            外公._elderBrother = 伯外祖父;
+            外公._elderSister = 姑姥姥;
+            外公._littleBrother = 叔外祖父;
+            外公._littleSister = 姑姥姥;
+            外公._son = 舅舅;
+            外公._daughter = 妈妈;
+
+            外婆._father = null;
+            外婆._mother = null;
+            外婆._elderBrother = 舅老爷;
+            外婆._elderSister = 姨姥姥;
+            外婆._littleBrother = 舅老爷;
+            外婆._littleSister = 姨姥姥;
+            外婆._son = 舅舅;
+            外婆._daughter = 妈妈;
+
+            舅舅._father = 外公;
+            舅舅._mother = 外婆;
+            舅舅._elderBrother = 舅舅;
+            舅舅._elderSister = 姨妈;
+            舅舅._littleBrother = 舅舅;
+            舅舅._littleSister = 姨妈;
+            舅舅._son = 表兄弟;
+            舅舅._daughter = 表姐妹;
+
+            姨妈._father = 外公;
+            姨妈._mother = 外婆;
+            姨妈._elderBrother = 舅舅;
+            姨妈._elderSister = 姨妈;
+            姨妈._littleBrother = 舅舅;
+            姨妈._littleSister = 姨妈;
+            姨妈._son = 表兄弟;
+            姨妈._daughter = 表姐妹;
+
+            侄子._father = 哥哥;
+            侄子._mother = null;
+            侄子._elderBrother = 侄子;
+            侄子._elderSister = 侄女;
+            侄子._littleBrother = 侄子;
+            侄子._littleSister = 侄女;
+            侄子._son = 侄孙;
+            侄子._daughter = 侄孙女;
+
+            侄女._father = 哥哥;
+            侄女._mother = null;
+            侄女._elderBrother = 侄子;
+            侄女._elderSister = 侄女;
+            侄女._littleBrother = 侄子;
+            侄女._littleSister = 侄女;
+            侄女._son = 外侄孙子;
+            侄女._daughter = 外侄孙女;
+
+            外甥._father = null;
+            外甥._mother = 姐姐;
+            外甥._elderBrother = 外甥;
+            外甥._elderSister = 外甥女;
+            外甥._littleBrother = 外甥;
+            外甥._littleSister = 外甥女;
+            外甥._son = 甥孙;
+            外甥._daughter = 甥孙女;
+
+            外甥女._father = null;
+            外甥女._mother = 姐姐;
+            外甥女._elderBrother = 外甥;
+            外甥女._elderSister = 外甥女;
+            外甥女._littleBrother = 外甥;
+            外甥女._littleSister = 外甥女;
+            外甥女._son = 甥外孙;
+            外甥女._daughter = 甥外孙女;
+        }
+        /*
+        * 基础关系：最短编码
+        * 
+        * 我 00
+        * 父亲 01
+        * 母亲 02
+        * 儿子 11
+        * female儿 12
+        * 大哥 21
+        * 大姐 22
+        * 小弟 31
+        * 小妹 32
+        * 丈夫 41
+        * 妻子 42
+        */
+        public string compressRelation(string code)
+        {
+            FamilyGraphNode p = 我;
+            string res = "我";
+            string temp_code;
+            string temp_res = "";
+           
+            for (;code.Length>0 ;code=code.Substring(2,code.Length-2))
+            {
+                
+                temp_code = code.Substring(0, 2);
+                switch (temp_code)
+                {
+                    case "00": break;
+                    case "01": temp_res = p.Name; p = p._father; break;
+                    case "02": temp_res = p.Name; p = p._mother; break;
+                    case "11": temp_res = p.Name; p = p._son; break;
+                    case "12": temp_res = p.Name; p = p._daughter; break;
+                    case "21": temp_res = p.Name; p = p._elderBrother; break;
+                    case "22": temp_res = p.Name; p = p._elderSister; break;
+                    case "31": temp_res = p.Name; p = p._littleBrother; break;
+                    case "32": temp_res = p.Name; p = p._littleSister; break;
+                }
+                if (p == null)
+                {
+                    res = res + "的" + temp_res;
+                    p = 我;
+                    switch (temp_code)
+                    {
+                        case "00": break;
+                        case "01": temp_res = p.Name; p = p._father; break;
+                        case "02": temp_res = p.Name; p = p._mother; break;
+                        case "11": temp_res = p.Name; p = p._son; break;
+                        case "12": temp_res = p.Name; p = p._daughter; break;
+                        case "21": temp_res = p.Name; p = p._elderBrother; break;
+                        case "22": temp_res = p.Name; p = p._elderSister; break;
+                        case "31": temp_res = p.Name; p = p._littleBrother; break;
+                        case "32": temp_res = p.Name; p = p._littleSister; break;
+                    }
+                }
+            }
+            res = res + "的" + p.Name;
+            res = res.Substring(2, res.Length-2);
+            return res;
         }
         FamilyGraphNode first(FamilyGraphNode startPoi)
         {
