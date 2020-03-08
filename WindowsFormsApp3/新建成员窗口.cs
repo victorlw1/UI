@@ -137,10 +137,6 @@ namespace FamilySys
             }
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void 是否在世_在世_CheckedChanged(object sender, EventArgs e)
         {
@@ -162,6 +158,33 @@ namespace FamilySys
                 死亡日期选择框.Value = new DateTime(2000,1,1);
             }
 
+        }
+
+        private void 已有的人_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            亲戚关系.Items.Clear();
+            亲戚关系.Text = "";
+            if (性别_male.Checked)
+            {
+                亲戚关系.Items.Clear();
+                亲戚关系.Text = "";
+                foreach (string relation in R.male_relation)
+                {
+                    亲戚关系.Items.Add(relation);
+                }
+
+            }else
+                            if (性别_female.Checked)
+            {
+                亲戚关系.Items.Clear();
+                亲戚关系.Text = "";
+                foreach (string relation in R.female_relation)
+                {
+                    亲戚关系.Items.Add(relation);
+                }
+
+            }
+            亲戚关系.SelectedIndex = 1;
         }
     }
 }
