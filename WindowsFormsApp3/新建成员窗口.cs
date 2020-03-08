@@ -68,7 +68,11 @@ namespace FamilySys
                         //需要一个添加兄弟的函数
                         //或者添加一个找到父亲的函数，再给父亲加孩子，相当于加兄弟
                         //szm
-                        主窗口.myFamilyTree.insert_child(newNode, 主窗口.myFamilyTree.query(主窗口.myFamilyTree.root, Name).Parent.Name);
+                        FamilyTreeNode temp = 主窗口.myFamilyTree.query(主窗口.myFamilyTree.root, Name);
+                        if (temp != 主窗口.myFamilyTree.root)
+                            主窗口.myFamilyTree.insert_child(newNode, temp.Parent.Name);
+                        else
+                            MessageBox.Show("添加失败，不能给根节点添加兄弟");
                     }
                 }
             }
