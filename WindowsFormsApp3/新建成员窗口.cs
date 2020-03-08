@@ -184,7 +184,7 @@ namespace FamilySys
                 }
 
             }
-            亲戚关系.SelectedIndex = 1;
+            亲戚关系.SelectedIndex = 0;
         }
     }
 }
