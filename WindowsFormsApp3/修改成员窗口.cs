@@ -66,27 +66,6 @@ namespace FamilySys
             //出生日期和死亡日期是date类型，没办法转到String去（已经解决）
 
 
-            //if (已有的人.SelectedIndex == -1)//没有选择与“已有的人”来设置亲戚关系
-            //{
-            //    //将newNode默认设置成为root的父亲，作为老祖宗
-            //}
-            //else
-            //{
-            //    string Name = 已有的人.SelectedItem.ToString();
-            //    {
-            //        string relation = 亲戚关系.SelectedItem.ToString();
-            //        if (relation == "儿子" || relation == "女儿")
-            //        {
-            //            主窗口.myFamilyTree.insert_child(altNode, Name);
-            //        }
-            //        else//兄弟姐妹关系
-            //        {
-            //            //需要一个添加兄弟的函数
-            //            //或者添加一个找到父亲的函数，再给父亲加孩子，相当于加兄弟
-            //            //szm
-            //        }
-            //    }
-            //}
 
             ((主窗口)(this.MdiParent)).树视图展示.Nodes.Clear();
             TreeNode rootNode = new TreeNode("家族树");

@@ -52,6 +52,7 @@ namespace FamilySys
             if (已有的人.SelectedIndex == -1)//没有选择与“已有的人”来设置亲戚关系
             {
                 //将newNode默认设置成为root的父亲，作为老祖宗
+                主窗口.myFamilyTree.root = newNode;
             }
             else
             {
