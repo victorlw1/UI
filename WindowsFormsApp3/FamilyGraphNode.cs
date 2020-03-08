@@ -170,6 +170,19 @@ namespace FamilySys
             _littleBrother = null;
             _littleSister = null;
         }
+        public FamilyGraphNode(string name)
+        {
+            this.Name = name;
+            _me = this;
+            _father = null;
+            _mother = null;
+            _son = null;
+            _daughter = null;
+            _elderBrother = null;
+            _elderSister = null;
+            _littleBrother = null;
+            _littleSister = null;
+        }
         public FamilyGraphNode(string name, int age, string gender, bool isDead, string encodeStr)
             : this()
         {

@@ -23,11 +23,13 @@ namespace FamilySys
 
         public static List<FamilyTreeNode> familyTreeNodes=new List<FamilyTreeNode>();
         public static FamilyTree myFamilyTree;
+        public static FamilyGraph myFamilyGraph;
 
         public 主窗口()
         {
             InitializeComponent();
             myFamilyTree = new FamilyTree();
+            myFamilyGraph = new FamilyGraph();
             //压力测试
             //pressureTest();
 
@@ -43,7 +45,7 @@ namespace FamilySys
                 
                 list.Add(name);
                 int index = rd.Next(0, list.Count);
-                FamilyTreeNode familyTreeNode = new FamilyTreeNode(name, 1, "man", false, new DateTime(rd.Next(1800,9000),rd.Next(1,13),rd.Next(1,28)), "china", new DateTime(rd.Next(1800, 9000), rd.Next(1, 13), rd.Next(1, 28)), "180", "stu", "hhh", "hhhhh");
+                FamilyTreeNode familyTreeNode = new FamilyTreeNode(name, 1, "male", false, new DateTime(rd.Next(1800,9000),rd.Next(1,13),rd.Next(1,28)), "china", new DateTime(rd.Next(1800, 9000), rd.Next(1, 13), rd.Next(1, 28)), "180", "stu", "hhh", "hhhhh");
                 myFamilyTree.insert_child(familyTreeNode, list[index].ToString());
             }
             myFamilyTree.saveTree("treeTest.xml");
