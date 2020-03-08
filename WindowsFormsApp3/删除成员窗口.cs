@@ -28,7 +28,8 @@ namespace FamilySys
 
 
 
-
+            //删除的逻辑代码
+            主窗口.myFamilyTree.delete(delName);
 
 
 

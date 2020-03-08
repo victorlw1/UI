@@ -13,12 +13,13 @@ namespace FamilySys
     public partial class 查询成员窗口 : Form
     {
         public static FamilyTreeNode queNode;
+        public static string findName = null;
         public 查询成员窗口()
         {
             InitializeComponent();
         }
 
-        public static string findName = null;
+
 
         private void 查询成员窗口_Load(object sender, EventArgs e)
         {
@@ -49,7 +50,7 @@ namespace FamilySys
                 
                 if (queNode != null)
                 {
-
+                    //拆封
                     姓名展示框.Text = queNode.Name;
                     性别展示框.Text = queNode.Gender;
                     年龄展示框.Text = Convert.ToString(queNode.Age);

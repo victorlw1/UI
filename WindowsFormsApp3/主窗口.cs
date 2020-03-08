@@ -15,8 +15,8 @@ namespace FamilySys
     public partial class 主窗口 : Form
     {
         public static string title = "家谱管理系统UI beta";
-        public static string xml = null;
-        public static bool 是否有改动 = false;
+        public static string xml = null;//存储xml路径
+        public static bool 是否有改动 = false;//加*
 
         public static bool 打开查询成员窗口时是否打开查找方法选择窗口 = true;
 

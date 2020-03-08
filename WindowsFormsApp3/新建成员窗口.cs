@@ -173,7 +173,8 @@ namespace FamilySys
                     亲戚关系.Items.Add(relation);
                 }
 
-            }else
+            }
+            else
                             if (性别_female.Checked)
             {
                 亲戚关系.Items.Clear();
