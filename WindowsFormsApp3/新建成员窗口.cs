@@ -172,10 +172,9 @@ namespace FamilySys
                 {
                     亲戚关系.Items.Add(relation);
                 }
-
+                亲戚关系.SelectedIndex = 0;
             }
-            else
-                            if (性别_female.Checked)
+            else if (性别_female.Checked)
             {
                 亲戚关系.Items.Clear();
                 亲戚关系.Text = "";
@@ -183,9 +182,8 @@ namespace FamilySys
                 {
                     亲戚关系.Items.Add(relation);
                 }
-
+                亲戚关系.SelectedIndex = 0;
             }
-            亲戚关系.SelectedIndex = 0;
         }
     }
 }
