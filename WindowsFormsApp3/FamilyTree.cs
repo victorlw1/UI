@@ -27,7 +27,7 @@ namespace FamilySys
         public static void DFS_output_all_age(FamilyTreeNode node,ref int age,ref int man,ref int woman)
         {
             if (node == null) return;
-            age = age + node.Age;
+            age += node.Age;
             if (node.Gender == "male")
             {
                 ++man;

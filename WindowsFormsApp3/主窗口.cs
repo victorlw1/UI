@@ -122,7 +122,7 @@ namespace FamilySys
             if (导入窗口.ShowDialog() == DialogResult.OK)
             {
                 xml = 导入窗口.FileName;
-                this.Text = xml;
+                this.Text = 主窗口.title + " - " + 主窗口.xml;
 
 
                 //需要加载操作
@@ -189,6 +189,8 @@ namespace FamilySys
                 string foldPath = dialog.FileName;
 
                 myFamilyTree.saveTree(foldPath);
+                this.Text = 主窗口.title + " - " + 主窗口.xml;
+                主窗口.是否有改动 = false;
 
             }
         }
