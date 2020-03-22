@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FamliySysSetup", "FamliySysSetup\FamliySysSetup.vdproj", "{8AD1C2C0-4E89-4952-8295-C516C2C79A15}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,8 @@ Global
 		{70B4B8D8-4345-46A2-AEF8-AC5FF4860E7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70B4B8D8-4345-46A2-AEF8-AC5FF4860E7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70B4B8D8-4345-46A2-AEF8-AC5FF4860E7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AD1C2C0-4E89-4952-8295-C516C2C79A15}.Debug|Any CPU.ActiveCfg = Debug
+		{8AD1C2C0-4E89-4952-8295-C516C2C79A15}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
